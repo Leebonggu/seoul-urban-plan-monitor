@@ -35,37 +35,6 @@ export default function AdminDashboard({ records }: Props) {
     []
   );
 
-  // 인증
-  if (!authenticated) {
-    return (
-      <div className="min-h-screen flex items-center justify-center bg-gray-50">
-        <div className="bg-white rounded-xl border border-gray-200 p-8 w-80">
-          <h1 className="text-lg font-bold mb-4">관리자 인증</h1>
-          <input
-            type="password"
-            value={pwInput}
-            onChange={(e) => setPwInput(e.target.value)}
-            onKeyDown={(e) => {
-              if (e.key === "Enter" && pwInput === ADMIN_PW)
-                setAuthenticated(true);
-            }}
-            placeholder="비밀번호"
-            className="w-full border border-gray-200 rounded-lg px-3 py-2 text-sm mb-3"
-          />
-          <button
-            onClick={() => {
-              if (pwInput === ADMIN_PW) setAuthenticated(true);
-              else alert("비밀번호가 틀렸습니다.");
-            }}
-            className="w-full bg-blue-600 text-white rounded-lg py-2 text-sm font-medium hover:bg-blue-700"
-          >
-            확인
-          </button>
-        </div>
-      </div>
-    );
-  }
-
   const centerOptions = useMemo(() => {
     if (!grade || grade === "미매칭") return [];
     return CENTERS.filter((c) => c.grade === grade);
@@ -141,6 +110,37 @@ export default function AdminDashboard({ records }: Props) {
   };
 
   const postedCount = getPostedCount();
+
+  // 인증
+  if (!authenticated) {
+    return (
+      <div className="min-h-screen flex items-center justify-center bg-gray-50">
+        <div className="bg-white rounded-xl border border-gray-200 p-8 w-80">
+          <h1 className="text-lg font-bold mb-4">관리자 인증</h1>
+          <input
+            type="password"
+            value={pwInput}
+            onChange={(e) => setPwInput(e.target.value)}
+            onKeyDown={(e) => {
+              if (e.key === "Enter" && pwInput === ADMIN_PW)
+                setAuthenticated(true);
+            }}
+            placeholder="비밀번호"
+            className="w-full border border-gray-200 rounded-lg px-3 py-2 text-sm mb-3"
+          />
+          <button
+            onClick={() => {
+              if (pwInput === ADMIN_PW) setAuthenticated(true);
+              else alert("비밀번호가 틀렸습니다.");
+            }}
+            className="w-full bg-blue-600 text-white rounded-lg py-2 text-sm font-medium hover:bg-blue-700"
+          >
+            확인
+          </button>
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div className="max-w-6xl mx-auto px-4 py-6 space-y-6">
