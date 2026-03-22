@@ -1,12 +1,19 @@
 """
-매일 크롤링 후 실행. 신규 고시문을 워드프레스에 자동 발행.
-Usage: python publish_daily.py
+워드프레스 자동/수동 발행 스크립트.
+
+Usage:
+  python publish_daily.py              # 당일 수집분만 발행 (GitHub Actions용)
+  python publish_daily.py --backfill   # 미발행 전체 중 최신 10건 발행 (수동)
+  python publish_daily.py --backfill --count 20  # 미발행 20건 발행
+
 Env vars: WP_URL, WP_USER, WP_APP_PASSWORD
 """
 import os
+import sys
 import json
 import glob
 import tempfile
+from datetime import date
 
 from wp_config import validate_config
 from wp_blog_template import generate_wp_content
@@ -24,6 +31,16 @@ CATEGORY_MAP = {
     "지역중심": [2, 5],    # 서울 > 지역중심
 }
 DEFAULT_CATEGORIES = [2, 6]  # 서울 > 기타
+
+
+def get_today_records() -> list[dict]:
+    """오늘 날짜 파일의 고시문만 로드."""
+    today = date.today().isoformat()
+    filepath = os.path.join(DATA_DIR, f"{today}.json")
+    if not os.path.exists(filepath):
+        return []
+    with open(filepath, "r", encoding="utf-8") as f:
+        return json.load(f)
 
 
 def get_all_records() -> list[dict]:
@@ -83,20 +100,11 @@ def publish_record(record: dict, tmp_dir: str) -> str | None:
         return None
 
 
-def main():
-    validate_config()
+def publish_batch(records: list[dict], published: dict, limit: int = 10):
+    """미발행 레코드를 배치로 발행."""
+    unpublished = [r for r in records if r["notice_code"] not in published]
 
-    published = load_published(PUBLISHED_PATH)
-    records = get_all_records()
-
-    # 미발행 고시문 필터
-    unpublished = [
-        r for r in records
-        if r["notice_code"] not in published
-    ]
-
-    # 한 번에 너무 많이 발행하지 않도록 제한
-    batch = unpublished[:10]
+    batch = unpublished[:limit]
 
     if not batch:
         print("새로 발행할 고시문이 없습니다.")
@@ -119,6 +127,32 @@ def main():
 
     total = len([c for c, u in published.items() if u])
     print(f"완료. 총 {total}건 발행됨.")
+
+
+def main():
+    validate_config()
+    published = load_published(PUBLISHED_PATH)
+
+    args = sys.argv[1:]
+    backfill = "--backfill" in args
+
+    # 배치 크기
+    count = 10
+    if "--count" in args:
+        idx = args.index("--count")
+        if idx + 1 < len(args):
+            count = int(args[idx + 1])
+
+    if backfill:
+        # 수동: 미발행 전체에서 최신순으로 발행
+        print(f"[백필 모드] 미발행 고시문 최대 {count}건 발행")
+        records = get_all_records()
+    else:
+        # 자동: 오늘 수집분만 발행
+        print("[일일 모드] 오늘 수집된 고시문만 발행")
+        records = get_today_records()
+
+    publish_batch(records, published, limit=count)
 
 
 if __name__ == "__main__":
