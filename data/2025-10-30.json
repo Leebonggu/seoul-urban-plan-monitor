@@ -13,7 +13,7 @@
     "site_code": "11000",
     "site_name": "서울특별시",
     "location": "종로구 종로3가 175-4번지 일대",
-    "doc_url": "https://urban.seoul.go.kr/UpisArchive/DATA/PM/pdf/11110TTC202509150006/서울특별시_제2025-536호_고시.pdf",
+    "doc_url": "https://urban.seoul.go.kr/UpisArchive/DATA/PM/pdf/11110TTC202509150006/%EC%84%9C%EC%9A%B8%ED%8A%B9%EB%B3%84%EC%8B%9C_%EC%A0%9C2025-536%ED%98%B8_%EA%B3%A0%EC%8B%9C.pdf",
     "page_url": "https://urban.seoul.go.kr/view/html/PMNU4030100001?noticeCode=11110NTC202509150006",
     "center_grade": "도심",
     "center_name": "한양도성(서울도심)"
@@ -32,7 +32,7 @@
     "site_code": "11000",
     "site_name": "서울특별시",
     "location": "용산구 문배동 30-10",
-    "doc_url": "https://urban.seoul.go.kr/UpisArchive/DATA/PM/pdf/11170NTC202511190003/서울특별시_제2025-588호_고시.pdf",
+    "doc_url": "https://urban.seoul.go.kr/UpisArchive/DATA/PM/pdf/11170NTC202511190003/%EC%84%9C%EC%9A%B8%ED%8A%B9%EB%B3%84%EC%8B%9C_%EC%A0%9C2025-588%ED%98%B8_%EA%B3%A0%EC%8B%9C.pdf",
     "page_url": "https://urban.seoul.go.kr/view/html/PMNU4030100001?noticeCode=11170NTC202511190003",
     "center_grade": "광역중심",
     "center_name": "용산"
@@ -51,7 +51,7 @@
     "site_code": "11000",
     "site_name": "서울특별시",
     "location": "용두동 47-1번지",
-    "doc_url": "https://urban.seoul.go.kr/UpisArchive/DATA/PM/pdf/11230NTC202510310001/동대문구_제2025-187호_고시.pdf",
+    "doc_url": "https://urban.seoul.go.kr/UpisArchive/DATA/PM/pdf/11230NTC202510310001/%EB%8F%99%EB%8C%80%EB%AC%B8%EA%B5%AC_%EC%A0%9C2025-187%ED%98%B8_%EA%B3%A0%EC%8B%9C.pdf",
     "page_url": "https://urban.seoul.go.kr/view/html/PMNU4030100001?noticeCode=11230NTC202510310001",
     "center_grade": null,
     "center_name": null
@@ -70,7 +70,7 @@
     "site_code": "11000",
     "site_name": "서울특별시",
     "location": "성북구 안암동 5가 1-2일대",
-    "doc_url": "https://urban.seoul.go.kr/UpisArchive/DATA/PM/pdf/11000NTC202512290005/서울특별시_제2025-585호_고시.pdf",
+    "doc_url": "https://urban.seoul.go.kr/UpisArchive/DATA/PM/pdf/11000NTC202512290005/%EC%84%9C%EC%9A%B8%ED%8A%B9%EB%B3%84%EC%8B%9C_%EC%A0%9C2025-585%ED%98%B8_%EA%B3%A0%EC%8B%9C.pdf",
     "page_url": "https://urban.seoul.go.kr/view/html/PMNU4030100001?noticeCode=11000NTC202512290005",
     "center_grade": null,
     "center_name": null
@@ -89,7 +89,7 @@
     "site_code": "11000",
     "site_name": "서울특별시",
     "location": "서초구 반포동, 잠원동 일대",
-    "doc_url": "https://urban.seoul.go.kr/UpisArchive/DATA/PM/pdf/11650NTC202511190008/서초구_제2025-203호_고시.pdf",
+    "doc_url": "https://urban.seoul.go.kr/UpisArchive/DATA/PM/pdf/11650NTC202511190008/%EC%84%9C%EC%B4%88%EA%B5%AC_%EC%A0%9C2025-203%ED%98%B8_%EA%B3%A0%EC%8B%9C.pdf",
     "page_url": "https://urban.seoul.go.kr/view/html/PMNU4030100001?noticeCode=11650NTC202511190008",
     "center_grade": null,
     "center_name": null
@@ -108,7 +108,7 @@
     "site_code": "11620",
     "site_name": "관악구",
     "location": "서울특별시 관악구 신림동 409-151",
-    "doc_url": "https://urban.seoul.go.kr/UpisArchive/DATA/PM/pdf/11620TTC202510310003/고시문.pdf",
+    "doc_url": "https://urban.seoul.go.kr/UpisArchive/DATA/PM/pdf/11620TTC202510310003/%EA%B3%A0%EC%8B%9C%EB%AC%B8.pdf",
     "page_url": "https://urban.seoul.go.kr/view/html/PMNU4030100001?noticeCode=11620NTC202510310003",
     "center_grade": null,
     "center_name": null

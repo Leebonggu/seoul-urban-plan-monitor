@@ -2,6 +2,7 @@
 
 import logging
 from datetime import datetime
+from urllib.parse import quote
 
 import requests
 
@@ -18,7 +19,8 @@ def _build_doc_url(item: dict) -> str:
     path = ntfc_img.get("aImagePath", "")
     name = ntfc_img.get("aImageName", "")
     if path and name:
-        return f"https://urban.seoul.go.kr/{path}/{name}"
+        encoded_name = quote(name, safe="")
+        return f"https://urban.seoul.go.kr/{path}/{encoded_name}"
     return ""
 
 

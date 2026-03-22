@@ -6,6 +6,7 @@ import os
 import logging
 from datetime import datetime
 from collections import defaultdict
+from urllib.parse import quote
 
 import requests
 
@@ -88,7 +89,8 @@ def parse_item(item: dict) -> dict:
     img_path = ntfc_img.get("aImagePath", "")
     img_name = ntfc_img.get("aImageName", "")
     if img_path and img_name:
-        doc_url = f"https://urban.seoul.go.kr/{img_path}/{img_name}"
+        encoded_name = quote(img_name, safe="")
+        doc_url = f"https://urban.seoul.go.kr/{img_path}/{encoded_name}"
 
     return {
         "notice_code": item.get("noticeCode", ""),

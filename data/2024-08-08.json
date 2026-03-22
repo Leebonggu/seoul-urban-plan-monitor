@@ -13,7 +13,7 @@
     "site_code": "11000",
     "site_name": "서울특별시",
     "location": "동대문구 신설동 92-5번지 일대",
-    "doc_url": "https://urban.seoul.go.kr/UpisArchive/DATA/PM/pdf/11230NTC202408260008/동대문구_제2024-115호_고시.pdf",
+    "doc_url": "https://urban.seoul.go.kr/UpisArchive/DATA/PM/pdf/11230NTC202408260008/%EB%8F%99%EB%8C%80%EB%AC%B8%EA%B5%AC_%EC%A0%9C2024-115%ED%98%B8_%EA%B3%A0%EC%8B%9C.pdf",
     "page_url": "https://urban.seoul.go.kr/view/html/PMNU4030100001?noticeCode=11230NTC202408260008",
     "center_grade": "지역중심",
     "center_name": "동대문"
@@ -32,7 +32,7 @@
     "site_code": "11000",
     "site_name": "서울특별시",
     "location": "서울특별시 강남구 율현동 538",
-    "doc_url": "https://urban.seoul.go.kr/UpisArchive/DATA/PM/pdf/11000NTC202408230004/서울특별시_제2024-383호_고시.pdf",
+    "doc_url": "https://urban.seoul.go.kr/UpisArchive/DATA/PM/pdf/11000NTC202408230004/%EC%84%9C%EC%9A%B8%ED%8A%B9%EB%B3%84%EC%8B%9C_%EC%A0%9C2024-383%ED%98%B8_%EA%B3%A0%EC%8B%9C.pdf",
     "page_url": "https://urban.seoul.go.kr/view/html/PMNU4030100001?noticeCode=11000NTC202408230004",
     "center_grade": "도심",
     "center_name": "강남"
@@ -51,7 +51,7 @@
     "site_code": "11000",
     "site_name": "서울특별시",
     "location": "서울시 동대문구 이문동 86-1번지 일대",
-    "doc_url": "https://urban.seoul.go.kr/UpisArchive/DATA/PM/pdf/11000NTC202408270011/서울특별시_제2024-391호_고시.pdf",
+    "doc_url": "https://urban.seoul.go.kr/UpisArchive/DATA/PM/pdf/11000NTC202408270011/%EC%84%9C%EC%9A%B8%ED%8A%B9%EB%B3%84%EC%8B%9C_%EC%A0%9C2024-391%ED%98%B8_%EA%B3%A0%EC%8B%9C.pdf",
     "page_url": "https://urban.seoul.go.kr/view/html/PMNU4030100001?noticeCode=11000NTC202408270011",
     "center_grade": "지역중심",
     "center_name": "동대문"
@@ -70,7 +70,7 @@
     "site_code": "11000",
     "site_name": "서울특별시",
     "location": "영등포동4가 442-2",
-    "doc_url": "https://urban.seoul.go.kr/UpisArchive/DATA/PM/pdf/11560TTC202408230006/고시문(영등포구고시 제2024-98호, 2024.08.08.).pdf",
+    "doc_url": "https://urban.seoul.go.kr/UpisArchive/DATA/PM/pdf/11560TTC202408230006/%EA%B3%A0%EC%8B%9C%EB%AC%B8%28%EC%98%81%EB%93%B1%ED%8F%AC%EA%B5%AC%EA%B3%A0%EC%8B%9C%20%EC%A0%9C2024-98%ED%98%B8%2C%202024.08.08.%29.pdf",
     "page_url": "https://urban.seoul.go.kr/view/html/PMNU4030100001?noticeCode=11560NTC202408230006",
     "center_grade": "도심",
     "center_name": "여의도·영등포"
@@ -89,7 +89,7 @@
     "site_code": "11000",
     "site_name": "서울특별시",
     "location": "관악구 신림동 240-3",
-    "doc_url": "https://urban.seoul.go.kr/UpisArchive/DATA/PM/pdf/11000NTC202408270010/서울특별시_제2024-392호_고시.pdf",
+    "doc_url": "https://urban.seoul.go.kr/UpisArchive/DATA/PM/pdf/11000NTC202408270010/%EC%84%9C%EC%9A%B8%ED%8A%B9%EB%B3%84%EC%8B%9C_%EC%A0%9C2024-392%ED%98%B8_%EA%B3%A0%EC%8B%9C.pdf",
     "page_url": "https://urban.seoul.go.kr/view/html/PMNU4030100001?noticeCode=11000NTC202408270010",
     "center_grade": null,
     "center_name": null
@@ -108,7 +108,7 @@
     "site_code": "11000",
     "site_name": "서울특별시",
     "location": "영등포구 신길동 3608번지",
-    "doc_url": "https://urban.seoul.go.kr/UpisArchive/DATA/PM/pdf/11000NTC202408270004/서울특별시_제2024-384호_고시.pdf",
+    "doc_url": "https://urban.seoul.go.kr/UpisArchive/DATA/PM/pdf/11000NTC202408270004/%EC%84%9C%EC%9A%B8%ED%8A%B9%EB%B3%84%EC%8B%9C_%EC%A0%9C2024-384%ED%98%B8_%EA%B3%A0%EC%8B%9C.pdf",
     "page_url": "https://urban.seoul.go.kr/view/html/PMNU4030100001?noticeCode=11000NTC202408270004",
     "center_grade": "도심",
     "center_name": "여의도·영등포"
@@ -127,7 +127,7 @@
     "site_code": "11740",
     "site_name": "강동구",
     "location": "",
-    "doc_url": "https://urban.seoul.go.kr/UpisArchive/DATA/PM/pdf/11740TTC202504300001/고시문(도시계획시설 도로).pdf",
+    "doc_url": "https://urban.seoul.go.kr/UpisArchive/DATA/PM/pdf/11740TTC202504300001/%EA%B3%A0%EC%8B%9C%EB%AC%B8%28%EB%8F%84%EC%8B%9C%EA%B3%84%ED%9A%8D%EC%8B%9C%EC%84%A4%20%EB%8F%84%EB%A1%9C%29.pdf",
     "page_url": "https://urban.seoul.go.kr/view/html/PMNU4030100001?noticeCode=11740NTC202504300001",
     "center_grade": "지역중심",
     "center_name": "사당·이수"

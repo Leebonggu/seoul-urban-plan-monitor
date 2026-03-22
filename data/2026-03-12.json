@@ -13,7 +13,7 @@
     "site_code": "11000",
     "site_name": "서울특별시",
     "location": "동대문구 용두동 33-1번지 일대",
-    "doc_url": "https://urban.seoul.go.kr/UpisArchive/DATA/PM/pdf/11230NTC202603170001/동대문구_제2026-46호_고시.pdf",
+    "doc_url": "https://urban.seoul.go.kr/UpisArchive/DATA/PM/pdf/11230NTC202603170001/%EB%8F%99%EB%8C%80%EB%AC%B8%EA%B5%AC_%EC%A0%9C2026-46%ED%98%B8_%EA%B3%A0%EC%8B%9C.pdf",
     "page_url": "https://urban.seoul.go.kr/view/html/PMNU4030100001?noticeCode=11230NTC202603170001",
     "center_grade": "지역중심",
     "center_name": "동대문"
@@ -32,7 +32,7 @@
     "site_code": "11000",
     "site_name": "서울특별시",
     "location": "마포구 공덕동 105-84번지 일대",
-    "doc_url": "https://urban.seoul.go.kr/UpisArchive/DATA/PM/pdf/11000TTC202603180001/고시문(공덕1주택재건축정비사업 정비구역 및 정비계획 변경 결정).pdf",
+    "doc_url": "https://urban.seoul.go.kr/UpisArchive/DATA/PM/pdf/11000TTC202603180001/%EA%B3%A0%EC%8B%9C%EB%AC%B8%28%EA%B3%B5%EB%8D%951%EC%A3%BC%ED%83%9D%EC%9E%AC%EA%B1%B4%EC%B6%95%EC%A0%95%EB%B9%84%EC%82%AC%EC%97%85%20%EC%A0%95%EB%B9%84%EA%B5%AC%EC%97%AD%20%EB%B0%8F%20%EC%A0%95%EB%B9%84%EA%B3%84%ED%9A%8D%20%EB%B3%80%EA%B2%BD%20%EA%B2%B0%EC%A0%95%29.pdf",
     "page_url": "https://urban.seoul.go.kr/view/html/PMNU4030100001?noticeCode=11000NTC202603180001",
     "center_grade": "지역중심",
     "center_name": "마포"
@@ -51,7 +51,7 @@
     "site_code": "11000",
     "site_name": "서울특별시",
     "location": "종로구 창신동 330-1 일원",
-    "doc_url": "https://urban.seoul.go.kr/UpisArchive/DATA/PM/pdf/11000TTC202603170009/고시문(서울특별시고시 제2026-133호).pdf",
+    "doc_url": "https://urban.seoul.go.kr/UpisArchive/DATA/PM/pdf/11000TTC202603170009/%EA%B3%A0%EC%8B%9C%EB%AC%B8%28%EC%84%9C%EC%9A%B8%ED%8A%B9%EB%B3%84%EC%8B%9C%EA%B3%A0%EC%8B%9C%20%EC%A0%9C2026-133%ED%98%B8%29.pdf",
     "page_url": "https://urban.seoul.go.kr/view/html/PMNU4030100001?noticeCode=11000NTC202603170009",
     "center_grade": "도심",
     "center_name": "한양도성(서울도심)"
@@ -70,7 +70,7 @@
     "site_code": "11000",
     "site_name": "서울특별시",
     "location": "",
-    "doc_url": "https://urban.seoul.go.kr/UpisArchive/DATA/PM/pdf/11000TTC202603120009/서울특별시 고시 제2026-137호(2026.3.12.).pdf",
+    "doc_url": "https://urban.seoul.go.kr/UpisArchive/DATA/PM/pdf/11000TTC202603120009/%EC%84%9C%EC%9A%B8%ED%8A%B9%EB%B3%84%EC%8B%9C%20%EA%B3%A0%EC%8B%9C%20%EC%A0%9C2026-137%ED%98%B8%282026.3.12.%29.pdf",
     "page_url": "https://urban.seoul.go.kr/view/html/PMNU4030100001?noticeCode=11000NTC202603120009",
     "center_grade": "도심",
     "center_name": "한양도성(서울도심)"
@@ -89,7 +89,7 @@
     "site_code": "11000",
     "site_name": "서울특별시",
     "location": "강동구",
-    "doc_url": "https://urban.seoul.go.kr/UpisArchive/DATA/PM/pdf/11740NTC202603180003/강동구_제2026-37호_고시.pdf",
+    "doc_url": "https://urban.seoul.go.kr/UpisArchive/DATA/PM/pdf/11740NTC202603180003/%EA%B0%95%EB%8F%99%EA%B5%AC_%EC%A0%9C2026-37%ED%98%B8_%EA%B3%A0%EC%8B%9C.pdf",
     "page_url": "https://urban.seoul.go.kr/view/html/PMNU4030100001?noticeCode=11740NTC202603180003",
     "center_grade": null,
     "center_name": null
@@ -108,7 +108,7 @@
     "site_code": "11000",
     "site_name": "서울특별시",
     "location": "강동구 길동역, 굽은다리역, 명일역 역세권 일대",
-    "doc_url": "https://urban.seoul.go.kr/UpisArchive/DATA/PM/pdf/11740NTC202602100001/서울특별시_제2026-126호_고시.pdf",
+    "doc_url": "https://urban.seoul.go.kr/UpisArchive/DATA/PM/pdf/11740NTC202602100001/%EC%84%9C%EC%9A%B8%ED%8A%B9%EB%B3%84%EC%8B%9C_%EC%A0%9C2026-126%ED%98%B8_%EA%B3%A0%EC%8B%9C.pdf",
     "page_url": "https://urban.seoul.go.kr/view/html/PMNU4030100001?noticeCode=11740NTC202602100001",
     "center_grade": "지역중심",
     "center_name": "천호·길동"

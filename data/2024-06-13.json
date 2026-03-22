@@ -13,7 +13,7 @@
     "site_code": "11000",
     "site_name": "서울특별시",
     "location": "답십리동 952-2번지",
-    "doc_url": "https://urban.seoul.go.kr/UpisArchive/DATA/PM/pdf/11230NTC202407300001/동대문구_제2024-80호_고시.pdf",
+    "doc_url": "https://urban.seoul.go.kr/UpisArchive/DATA/PM/pdf/11230NTC202407300001/%EB%8F%99%EB%8C%80%EB%AC%B8%EA%B5%AC_%EC%A0%9C2024-80%ED%98%B8_%EA%B3%A0%EC%8B%9C.pdf",
     "page_url": "https://urban.seoul.go.kr/view/html/PMNU4030100001?noticeCode=11230NTC202407300001",
     "center_grade": null,
     "center_name": null
@@ -32,7 +32,7 @@
     "site_code": "11000",
     "site_name": "서울특별시",
     "location": "강남구 자곡동 389~율현동 300-18 일원",
-    "doc_url": "https://urban.seoul.go.kr/UpisArchive/DATA/PM/pdf/11680TTC202404120003/강남구_제2024-86호_고시.pdf",
+    "doc_url": "https://urban.seoul.go.kr/UpisArchive/DATA/PM/pdf/11680TTC202404120003/%EA%B0%95%EB%82%A8%EA%B5%AC_%EC%A0%9C2024-86%ED%98%B8_%EA%B3%A0%EC%8B%9C.pdf",
     "page_url": "https://urban.seoul.go.kr/view/html/PMNU4030100001?noticeCode=11680NTC202404120003",
     "center_grade": "도심",
     "center_name": "강남"
@@ -51,7 +51,7 @@
     "site_code": "11000",
     "site_name": "서울특별시",
     "location": "성동구 행당동 377번지 일원",
-    "doc_url": "https://urban.seoul.go.kr/UpisArchive/DATA/PM/pdf/11000NTC202407020001/서울특별시_제2024-289호_고시.pdf",
+    "doc_url": "https://urban.seoul.go.kr/UpisArchive/DATA/PM/pdf/11000NTC202407020001/%EC%84%9C%EC%9A%B8%ED%8A%B9%EB%B3%84%EC%8B%9C_%EC%A0%9C2024-289%ED%98%B8_%EA%B3%A0%EC%8B%9C.pdf",
     "page_url": "https://urban.seoul.go.kr/view/html/PMNU4030100001?noticeCode=11000NTC202407020001",
     "center_grade": null,
     "center_name": null
@@ -70,7 +70,7 @@
     "site_code": "11710",
     "site_name": "송파구",
     "location": "송파구 가락동 161번지 일원",
-    "doc_url": "https://urban.seoul.go.kr/UpisArchive/DATA/PM/pdf/11710TTC202406180004/서울특별시_제2024-284호_고시.pdf",
+    "doc_url": "https://urban.seoul.go.kr/UpisArchive/DATA/PM/pdf/11710TTC202406180004/%EC%84%9C%EC%9A%B8%ED%8A%B9%EB%B3%84%EC%8B%9C_%EC%A0%9C2024-284%ED%98%B8_%EA%B3%A0%EC%8B%9C.pdf",
     "page_url": "https://urban.seoul.go.kr/view/html/PMNU4030100001?noticeCode=11710NTC202406180004",
     "center_grade": null,
     "center_name": null
@@ -89,7 +89,7 @@
     "site_code": "11000",
     "site_name": "서울특별시",
     "location": "서울특별시 중랑구 신내동 122-3 일원",
-    "doc_url": "https://urban.seoul.go.kr/UpisArchive/DATA/PM/pdf/11000NTC202406170001/서울특별시_제2024-290호_고시.pdf",
+    "doc_url": "https://urban.seoul.go.kr/UpisArchive/DATA/PM/pdf/11000NTC202406170001/%EC%84%9C%EC%9A%B8%ED%8A%B9%EB%B3%84%EC%8B%9C_%EC%A0%9C2024-290%ED%98%B8_%EA%B3%A0%EC%8B%9C.pdf",
     "page_url": "https://urban.seoul.go.kr/view/html/PMNU4030100001?noticeCode=11000NTC202406170001",
     "center_grade": null,
     "center_name": null
@@ -108,7 +108,7 @@
     "site_code": "11620",
     "site_name": "관악구",
     "location": "신림동 1428번지 일대",
-    "doc_url": "https://urban.seoul.go.kr/UpisArchive/DATA/PM/pdf/11620TTC202406170003/신림지구중심 지구단위계획 결정(변경) 고시문(민간부문 시행지침 변경).hwp",
+    "doc_url": "https://urban.seoul.go.kr/UpisArchive/DATA/PM/pdf/11620TTC202406170003/%EC%8B%A0%EB%A6%BC%EC%A7%80%EA%B5%AC%EC%A4%91%EC%8B%AC%20%EC%A7%80%EA%B5%AC%EB%8B%A8%EC%9C%84%EA%B3%84%ED%9A%8D%20%EA%B2%B0%EC%A0%95%28%EB%B3%80%EA%B2%BD%29%20%EA%B3%A0%EC%8B%9C%EB%AC%B8%28%EB%AF%BC%EA%B0%84%EB%B6%80%EB%AC%B8%20%EC%8B%9C%ED%96%89%EC%A7%80%EC%B9%A8%20%EB%B3%80%EA%B2%BD%29.hwp",
     "page_url": "https://urban.seoul.go.kr/view/html/PMNU4030100001?noticeCode=11620NTC202406170003",
     "center_grade": null,
     "center_name": null
@@ -127,7 +127,7 @@
     "site_code": "11230",
     "site_name": "동대문구",
     "location": "서울시 동대문구 이문동 168-1번지 일대",
-    "doc_url": "https://urban.seoul.go.kr/UpisArchive/DATA/PM/pdf/11230TTC202403060117/서울특별시_제2024-278호_고시.pdf",
+    "doc_url": "https://urban.seoul.go.kr/UpisArchive/DATA/PM/pdf/11230TTC202403060117/%EC%84%9C%EC%9A%B8%ED%8A%B9%EB%B3%84%EC%8B%9C_%EC%A0%9C2024-278%ED%98%B8_%EA%B3%A0%EC%8B%9C.pdf",
     "page_url": "https://urban.seoul.go.kr/view/html/PMNU4030100001?noticeCode=11230NTC202403060117",
     "center_grade": "지역중심",
     "center_name": "동대문"
@@ -146,7 +146,7 @@
     "site_code": "11500",
     "site_name": "강서구",
     "location": "구로동 440번지일대",
-    "doc_url": "https://urban.seoul.go.kr/UpisArchive/DATA/PM/pdf/11530NTC202406250011/구로구_제2024-114호_고시.pdf",
+    "doc_url": "https://urban.seoul.go.kr/UpisArchive/DATA/PM/pdf/11530NTC202406250011/%EA%B5%AC%EB%A1%9C%EA%B5%AC_%EC%A0%9C2024-114%ED%98%B8_%EA%B3%A0%EC%8B%9C.pdf",
     "page_url": "https://urban.seoul.go.kr/view/html/PMNU4030100001?noticeCode=11530NTC202406250011",
     "center_grade": null,
     "center_name": null
@@ -165,7 +165,7 @@
     "site_code": "11000",
     "site_name": "서울특별시",
     "location": "서울특별시 강서구 개화동로27나길 8-9 일원",
-    "doc_url": "https://urban.seoul.go.kr/UpisArchive/DATA/PM/pdf/11500NTC202406170002/강서구_제2024-43호_고시.pdf",
+    "doc_url": "https://urban.seoul.go.kr/UpisArchive/DATA/PM/pdf/11500NTC202406170002/%EA%B0%95%EC%84%9C%EA%B5%AC_%EC%A0%9C2024-43%ED%98%B8_%EA%B3%A0%EC%8B%9C.pdf",
     "page_url": "https://urban.seoul.go.kr/view/html/PMNU4030100001?noticeCode=11500NTC202406170002",
     "center_grade": null,
     "center_name": null
@@ -184,7 +184,7 @@
     "site_code": "11000",
     "site_name": "서울특별시",
     "location": "신림동 1428번지 일대",
-    "doc_url": "https://urban.seoul.go.kr/UpisArchive/DATA/PM/pdf/11620NTC202406170004/관악구_제2024-66호_고시.pdf",
+    "doc_url": "https://urban.seoul.go.kr/UpisArchive/DATA/PM/pdf/11620NTC202406170004/%EA%B4%80%EC%95%85%EA%B5%AC_%EC%A0%9C2024-66%ED%98%B8_%EA%B3%A0%EC%8B%9C.pdf",
     "page_url": "https://urban.seoul.go.kr/view/html/PMNU4030100001?noticeCode=11620NTC202406170004",
     "center_grade": null,
     "center_name": null
