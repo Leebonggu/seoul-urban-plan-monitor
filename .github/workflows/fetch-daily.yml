@@ -1,0 +1,36 @@
+name: 결정고시 일일 수집
+
+on:
+  schedule:
+    - cron: '0 0 * * *'  # 매일 UTC 00:00 (KST 09:00)
+  workflow_dispatch:  # 수동 실행 가능
+
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install dependencies
+        run: pip install requests
+
+      - name: Fetch new gosi data
+        run: python fetch_daily.py
+
+      - name: Commit and push if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/
+          if git diff --staged --quiet; then
+            echo "No new data"
+          else
+            COUNT=$(git diff --staged --stat | grep -c '.json')
+            git commit -m "data: 고시문 업데이트 (${COUNT}개 파일 변경)"
+            git push
+          fi
