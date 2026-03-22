@@ -26,7 +26,7 @@ def upload_image(image_path: str) -> dict:
     return resp.json()
 
 
-def create_post(title: str, html: str, status: str = "publish", categories: list[int] | None = None) -> dict:
+def create_post(title: str, html: str, status: str = "publish", categories: list[int] | None = None, featured_image_id: int | None = None) -> dict:
     """WordPress 포스트 생성."""
     payload = {
         "title": title,
@@ -35,6 +35,8 @@ def create_post(title: str, html: str, status: str = "publish", categories: list
     }
     if categories:
         payload["categories"] = categories
+    if featured_image_id:
+        payload["featured_media"] = featured_image_id
     resp = requests.post(
         f"{WP_API_BASE}/posts",
         auth=_auth(),

@@ -35,13 +35,13 @@ jobs:
             git push
           fi
 
-      - name: Install poppler for PDF conversion
+      - name: Install poppler and Korean fonts
         if: env.WP_URL != ''
-        run: sudo apt-get update && sudo apt-get install -y poppler-utils
+        run: sudo apt-get update && sudo apt-get install -y poppler-utils fonts-noto-cjk
 
       - name: Install Python dependencies for publishing
         if: env.WP_URL != ''
-        run: pip install pdf2image
+        run: pip install pdf2image Pillow
         env:
           WP_URL: ${{ secrets.WP_URL }}
 
