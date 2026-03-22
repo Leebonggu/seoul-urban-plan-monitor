@@ -22,7 +22,7 @@ export const CENTERS = [
   { name: "사당·이수", grade: "지역중심", lat: 37.4765, lng: 126.9816 },
   { name: "수서·문정", grade: "지역중심", lat: 37.4848, lng: 127.1190 },
   { name: "천호·길동", grade: "지역중심", lat: 37.5381, lng: 127.1237 },
-] as const;
+];
 
 export const GRADE_COLORS: Record<string, string> = {
   도심: "#ef4444",

@@ -12,7 +12,7 @@ import {
   Cell,
 } from "recharts";
 import { GosiRecord } from "@/lib/types";
-import { GRADE_COLORS } from "@/lib/centers";
+import { CENTERS, GRADE_COLORS } from "@/lib/centers";
 
 interface Props {
   records: GosiRecord[];
@@ -84,6 +84,12 @@ export function GradeChart({ records }: Props) {
 }
 
 export function CenterRanking({ records }: Props) {
+  // 중심지명 → 등급 매핑
+  const centerToGrade: Record<string, string> = {};
+  for (const c of CENTERS) {
+    centerToGrade[c.name] = c.grade;
+  }
+
   const counts: Record<string, number> = {};
   for (const r of records) {
     if (r.center_name) {
@@ -93,19 +99,37 @@ export function CenterRanking({ records }: Props) {
   const data = Object.entries(counts)
     .sort(([, a], [, b]) => b - a)
     .slice(0, 15)
-    .map(([name, count]) => ({ name, count }));
+    .map(([name, count]) => ({
+      name,
+      count,
+      grade: centerToGrade[name] || "",
+    }));
 
   return (
     <div>
-      <h3 className="text-sm font-medium text-gray-500 mb-2">
-        중심지별 TOP 15
-      </h3>
+      <div className="flex items-center justify-between mb-2">
+        <h3 className="text-sm font-medium text-gray-500">
+          중심지별 TOP 15
+        </h3>
+        <div className="flex gap-3 text-xs text-gray-400">
+          <span><span style={{ color: GRADE_COLORS["도심"] }}>●</span> 도심</span>
+          <span><span style={{ color: GRADE_COLORS["광역중심"] }}>●</span> 광역중심</span>
+          <span><span style={{ color: GRADE_COLORS["지역중심"] }}>●</span> 지역중심</span>
+        </div>
+      </div>
       <ResponsiveContainer width="100%" height={400}>
         <BarChart data={data} layout="vertical">
           <XAxis type="number" tick={{ fontSize: 11 }} />
           <YAxis dataKey="name" type="category" tick={{ fontSize: 11 }} width={120} />
           <Tooltip />
-          <Bar dataKey="count" name="건수" fill="#f59e0b" radius={[0, 4, 4, 0]} />
+          <Bar dataKey="count" name="건수" radius={[0, 4, 4, 0]}>
+            {data.map((entry) => (
+              <Cell
+                key={entry.name}
+                fill={GRADE_COLORS[entry.grade] || "#d1d5db"}
+              />
+            ))}
+          </Bar>
         </BarChart>
       </ResponsiveContainer>
     </div>

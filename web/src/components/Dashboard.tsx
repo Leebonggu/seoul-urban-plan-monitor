@@ -19,8 +19,15 @@ type Tab = "list" | "chart" | "center";
 
 export default function Dashboard({ records }: Props) {
   const [grade, setGrade] = useState("");
+  const [centerName, setCenterName] = useState("");
   const [keyword, setKeyword] = useState("");
   const [tab, setTab] = useState<Tab>("list");
+
+  // 선택된 등급에 해당하는 중심지 목록
+  const centerOptions = useMemo(() => {
+    if (!grade || grade === "미매칭") return [];
+    return CENTERS.filter((c) => c.grade === grade);
+  }, [grade]);
 
   const filtered = useMemo(() => {
     let result = records;
@@ -30,6 +37,9 @@ export default function Dashboard({ records }: Props) {
       } else {
         result = result.filter((r) => r.center_grade === grade);
       }
+    }
+    if (centerName) {
+      result = result.filter((r) => r.center_name === centerName);
     }
     if (keyword) {
       const kw = keyword.toLowerCase();
@@ -41,7 +51,7 @@ export default function Dashboard({ records }: Props) {
       );
     }
     return result;
-  }, [records, grade, keyword]);
+  }, [records, grade, centerName, keyword]);
 
   const centers: Center[] = useMemo(() => {
     const counts: Record<string, number> = {};
@@ -50,7 +60,13 @@ export default function Dashboard({ records }: Props) {
         counts[r.center_name] = (counts[r.center_name] || 0) + 1;
       }
     }
-    return CENTERS.map((c) => ({ ...c, count: counts[c.name] || 0 }));
+    return CENTERS.map((c) => ({
+      name: c.name,
+      grade: c.grade,
+      lat: c.lat,
+      lng: c.lng,
+      count: counts[c.name] || 0,
+    }));
   }, [filtered]);
 
   const centerMatched = filtered.filter((r) => r.center_grade).length;
@@ -77,7 +93,10 @@ export default function Dashboard({ records }: Props) {
       <div className="flex flex-wrap gap-3">
         <select
           value={grade}
-          onChange={(e) => setGrade(e.target.value)}
+          onChange={(e) => {
+            setGrade(e.target.value);
+            setCenterName("");
+          }}
           className="text-sm border border-gray-200 rounded-lg px-3 py-2 bg-white"
         >
           <option value="">전체 등급</option>
@@ -86,6 +105,20 @@ export default function Dashboard({ records }: Props) {
           <option value="지역중심">지역중심</option>
           <option value="미매칭">미매칭</option>
         </select>
+        {centerOptions.length > 0 && (
+          <select
+            value={centerName}
+            onChange={(e) => setCenterName(e.target.value)}
+            className="text-sm border border-gray-200 rounded-lg px-3 py-2 bg-white"
+          >
+            <option value="">전체 중심지</option>
+            {centerOptions.map((c) => (
+              <option key={c.name} value={c.name}>
+                {c.name}
+              </option>
+            ))}
+          </select>
+        )}
         <input
           type="text"
           value={keyword}
@@ -93,10 +126,11 @@ export default function Dashboard({ records }: Props) {
           placeholder="키워드 검색 (재개발, 용적률...)"
           className="text-sm border border-gray-200 rounded-lg px-3 py-2 bg-white min-w-[250px]"
         />
-        {(grade || keyword) && (
+        {(grade || centerName || keyword) && (
           <button
             onClick={() => {
               setGrade("");
+              setCenterName("");
               setKeyword("");
             }}
             className="text-sm text-gray-400 hover:text-gray-600 px-2"
