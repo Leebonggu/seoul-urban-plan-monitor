@@ -26,16 +26,19 @@ def upload_image(image_path: str) -> dict:
     return resp.json()
 
 
-def create_post(title: str, html: str, status: str = "publish") -> dict:
+def create_post(title: str, html: str, status: str = "publish", categories: list[int] | None = None) -> dict:
     """WordPress 포스트 생성."""
+    payload = {
+        "title": title,
+        "content": html,
+        "status": status,
+    }
+    if categories:
+        payload["categories"] = categories
     resp = requests.post(
         f"{WP_API_BASE}/posts",
         auth=_auth(),
-        json={
-            "title": title,
-            "content": html,
-            "status": status,
-        },
+        json=payload,
         timeout=30,
     )
     resp.raise_for_status()

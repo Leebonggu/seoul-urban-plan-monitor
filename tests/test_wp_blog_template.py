@@ -18,10 +18,12 @@ def test_basic_post():
     result = generate_wp_content(record)
     assert "title" in result
     assert "html" in result
+    assert "excerpt" in result
     assert "강남구" in result["title"]
-    assert "2026-03-20" in result["html"]
+    assert "2026-03-20" in result["title"]
     assert "도심" in result["html"]
     assert "테스트 본문 내용입니다." in result["html"]
+    assert "원문 다운로드" in result["html"]
 
 def test_no_center():
     record = {
@@ -41,6 +43,7 @@ def test_no_center():
     result = generate_wp_content(record)
     assert "title" in result
     assert "중심지" not in result["html"]
+    assert "중심지" not in result["excerpt"]
 
 def test_no_doc_url():
     record = {

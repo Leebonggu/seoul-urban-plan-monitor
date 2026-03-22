@@ -18,7 +18,14 @@ def download_doc(url: str, output_dir: str) -> str | None:
     if resp.status_code != 200:
         return None
 
-    filename = os.path.basename(parsed.path)
+    original = os.path.basename(parsed.path)
+    # 파일명이 너무 긴 경우 해시로 축약
+    if len(original.encode("utf-8")) > 200:
+        import hashlib
+        name_hash = hashlib.md5(original.encode()).hexdigest()[:12]
+        filename = f"{name_hash}.pdf"
+    else:
+        filename = original
     filepath = os.path.join(output_dir, filename)
     with open(filepath, "wb") as f:
         f.write(resp.content)

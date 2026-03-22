@@ -6,49 +6,73 @@ def generate_wp_content(record: dict) -> dict:
     doc_url = record.get("doc_url") or ""
     page_url = record.get("page_url") or ""
     content = record.get("content") or "상세 내용은 원문을 확인해주세요."
+    notice_type = record.get("notice_type") or "도시계획"
 
-    # SEO 최적화 제목: [지역] 키워드 결정고시 (날짜)
+    # SEO 최적화 제목: [지역] 고시제목 (날짜)
     title_location = location.split(" ")[0] if location else record.get("organ_name", "서울")
-    title = f"{title_location} {record['notice_type']} 결정고시 ({record['notice_date']}) — {record['title']}"
-    if len(title) > 100:
-        title = title[:97] + "..."
+    raw_title = record["title"]
+    if len(raw_title) > 50:
+        raw_title = raw_title[:47] + "..."
+    title = f"[{title_location}] {raw_title} ({record['notice_date']})"
+
+    # 요약문 (excerpt)
+    excerpt_parts = []
+    excerpt_parts.append(f"{record['notice_date']} {record['organ_name']} {notice_type} 고시.")
+    if location:
+        excerpt_parts.append(f"위치: {location}.")
+    if center_grade and center_name:
+        excerpt_parts.append(f"2040 서울플랜 {center_grade} — {center_name}.")
+    excerpt = " ".join(excerpt_parts)
 
     # HTML 본문 생성
     parts = []
 
-    # 기본정보 테이블
-    parts.append('<div style="background:#f8f9fa;padding:16px;border-radius:8px;margin-bottom:20px;">')
-    parts.append(f'<p><strong>고시번호:</strong> {record["notice_no"]}</p>')
-    parts.append(f'<p><strong>고시일자:</strong> {record["notice_date"]}</p>')
-    parts.append(f'<p><strong>고시기관:</strong> {record["organ_name"]}</p>')
-    if location:
-        parts.append(f'<p><strong>위치:</strong> {location}</p>')
-    parts.append(f'<p><strong>고시유형:</strong> {record["notice_type"]}</p>')
-    if center_grade and center_name:
-        parts.append(f'<p><strong>2040 서울플랜 중심지:</strong> {center_grade} — {center_name}</p>')
+    # 요약 박스
+    parts.append('<div style="background:#f0f7ff;border-left:4px solid #3b82f6;padding:16px;border-radius:4px;margin-bottom:24px;">')
+    parts.append(f'<p style="margin:0;font-size:15px;line-height:1.6;">{excerpt}</p>')
     parts.append('</div>')
 
-    # 고시 내용
-    parts.append('<h2>고시 내용</h2>')
-    # 줄바꿈을 <br>로 변환
-    formatted_content = content.replace("\n", "<br>")
-    parts.append(f'<div style="line-height:1.8;">{formatted_content}</div>')
+    # 기본정보 테이블
+    parts.append('<h2>📋 고시 기본정보</h2>')
+    parts.append('<table style="width:100%;border-collapse:collapse;margin-bottom:24px;">')
+    info_rows = [
+        ("고시번호", record["notice_no"]),
+        ("고시일자", record["notice_date"]),
+        ("고시기관", record["organ_name"]),
+        ("고시유형", notice_type),
+    ]
+    if location:
+        info_rows.append(("위치", location))
+    if center_grade and center_name:
+        info_rows.append(("2040 서울플랜 중심지", f"{center_grade} — {center_name}"))
 
-    # 이미지 삽입 위치 (placeholder — publish_daily.py에서 교체)
-    parts.append('<!-- IMAGES_PLACEHOLDER -->')
+    for label, value in info_rows:
+        parts.append(
+            f'<tr>'
+            f'<td style="padding:8px 12px;border:1px solid #e5e7eb;background:#f9fafb;font-weight:bold;width:140px;">{label}</td>'
+            f'<td style="padding:8px 12px;border:1px solid #e5e7eb;">{value}</td>'
+            f'</tr>'
+        )
+    parts.append('</table>')
+
+    # 고시 내용
+    parts.append('<h2>📄 고시 내용</h2>')
+    formatted_content = content.replace("\n", "<br>")
+    parts.append(f'<div style="line-height:1.8;padding:16px;background:#fafafa;border-radius:4px;margin-bottom:24px;">{formatted_content}</div>')
 
     # 관련 링크
-    parts.append('<h2>관련 링크</h2>')
-    parts.append('<ul>')
-    if page_url:
-        parts.append(f'<li><a href="{page_url}" target="_blank">상세 페이지 (서울도시공간포털)</a></li>')
-    if doc_url:
-        parts.append(f'<li><a href="{doc_url}" target="_blank">원문 다운로드</a></li>')
-    parts.append('</ul>')
+    if page_url or doc_url:
+        parts.append('<h2>🔗 관련 링크</h2>')
+        parts.append('<ul style="margin-bottom:24px;">')
+        if page_url:
+            parts.append(f'<li><a href="{page_url}" target="_blank" rel="noopener">📌 상세 페이지 (서울도시공간포털)</a></li>')
+        if doc_url:
+            parts.append(f'<li><a href="{doc_url}" target="_blank" rel="noopener">📎 원문 다운로드 (PDF)</a></li>')
+        parts.append('</ul>')
 
     # 출처
-    parts.append('<hr>')
-    parts.append('<p style="font-size:12px;color:#999;">출처: 서울도시공간포털 (urban.seoul.go.kr)</p>')
+    parts.append('<hr style="margin:32px 0 16px;">')
+    parts.append('<p style="font-size:12px;color:#999;">데이터 출처: <a href="https://urban.seoul.go.kr" target="_blank" rel="noopener">서울도시공간포털</a> (urban.seoul.go.kr)</p>')
 
     html = "\n".join(parts)
-    return {"title": title, "html": html}
+    return {"title": title, "html": html, "excerpt": excerpt}
