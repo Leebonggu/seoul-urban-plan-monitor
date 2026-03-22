@@ -6,3 +6,4 @@ plotly>=5.18.0
 folium>=0.15.0
 streamlit-folium>=0.18.0
 pandas>=2.1.0
+pdf2image>=1.16.0

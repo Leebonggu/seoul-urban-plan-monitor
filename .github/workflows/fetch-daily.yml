@@ -34,3 +34,30 @@ jobs:
             git commit -m "data: 고시문 업데이트 (${COUNT}개 파일 변경)"
             git push
           fi
+
+      - name: Install poppler for PDF conversion
+        if: env.WP_URL != ''
+        run: sudo apt-get update && sudo apt-get install -y poppler-utils
+
+      - name: Install Python dependencies for publishing
+        if: env.WP_URL != ''
+        run: pip install pdf2image
+        env:
+          WP_URL: ${{ secrets.WP_URL }}
+
+      - name: Publish to WordPress
+        if: env.WP_URL != ''
+        env:
+          WP_URL: ${{ secrets.WP_URL }}
+          WP_USER: ${{ secrets.WP_USER }}
+          WP_APP_PASSWORD: ${{ secrets.WP_APP_PASSWORD }}
+        run: python publish_daily.py
+
+      - name: Commit published records
+        if: env.WP_URL != ''
+        env:
+          WP_URL: ${{ secrets.WP_URL }}
+        run: |
+          git add data/wp_published.json || true
+          git diff --staged --quiet || git commit -m "data: WP 발행 기록 업데이트"
+          git push || true
