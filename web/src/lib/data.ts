@@ -8,7 +8,7 @@ const DATA_DIR =
 export function loadAllData(): GosiRecord[] {
   const files = fs
     .readdirSync(DATA_DIR)
-    .filter((f) => f.endsWith(".json") && f !== "latest.json" && f !== "posted.json")
+    .filter((f) => f.endsWith(".json") && f !== "latest.json" && f !== "posted.json" && f !== "wp_published.json")
     .sort()
     .reverse();
 
