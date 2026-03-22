@@ -1,0 +1,31 @@
+export const CENTERS = [
+  { name: "한양도성(서울도심)", grade: "도심", lat: 37.5704, lng: 126.9922 },
+  { name: "여의도·영등포", grade: "도심", lat: 37.5219, lng: 126.9245 },
+  { name: "강남", grade: "도심", lat: 37.4979, lng: 127.0276 },
+  { name: "용산", grade: "광역중심", lat: 37.5299, lng: 126.9648 },
+  { name: "청량리·왕십리", grade: "광역중심", lat: 37.5804, lng: 127.0470 },
+  { name: "창동·상계", grade: "광역중심", lat: 37.6538, lng: 127.0474 },
+  { name: "상암·수색", grade: "광역중심", lat: 37.5791, lng: 126.8908 },
+  { name: "마곡", grade: "광역중심", lat: 37.5596, lng: 126.8260 },
+  { name: "가산·대림", grade: "광역중심", lat: 37.4816, lng: 126.8826 },
+  { name: "잠실", grade: "광역중심", lat: 37.5133, lng: 127.1001 },
+  { name: "동대문", grade: "지역중심", lat: 37.5714, lng: 127.0096 },
+  { name: "망우", grade: "지역중심", lat: 37.5983, lng: 127.0920 },
+  { name: "미아", grade: "지역중심", lat: 37.6134, lng: 127.0300 },
+  { name: "성수", grade: "지역중심", lat: 37.5445, lng: 127.0560 },
+  { name: "신촌", grade: "지역중심", lat: 37.5596, lng: 126.9370 },
+  { name: "마포", grade: "지역중심", lat: 37.5539, lng: 126.9513 },
+  { name: "공덕", grade: "지역중심", lat: 37.5441, lng: 126.9516 },
+  { name: "연신내·불광", grade: "지역중심", lat: 37.6190, lng: 126.9215 },
+  { name: "목동", grade: "지역중심", lat: 37.5264, lng: 126.8750 },
+  { name: "봉천", grade: "지역중심", lat: 37.4813, lng: 126.9418 },
+  { name: "사당·이수", grade: "지역중심", lat: 37.4765, lng: 126.9816 },
+  { name: "수서·문정", grade: "지역중심", lat: 37.4848, lng: 127.1190 },
+  { name: "천호·길동", grade: "지역중심", lat: 37.5381, lng: 127.1237 },
+] as const;
+
+export const GRADE_COLORS: Record<string, string> = {
+  도심: "#ef4444",
+  광역중심: "#3b82f6",
+  지역중심: "#f59e0b",
+};
