@@ -3,7 +3,16 @@ name: 결정고시 일일 수집
 on:
   schedule:
     - cron: '0 0 * * *'  # 매일 UTC 00:00 (KST 09:00)
-  workflow_dispatch:  # 수동 실행 가능
+  workflow_dispatch:
+    inputs:
+      backfill:
+        description: '과거 미발행 고시문 백필 발행'
+        type: boolean
+        default: false
+      count:
+        description: '백필 시 발행 건수'
+        type: number
+        default: 10
 
 jobs:
   fetch:
@@ -51,7 +60,12 @@ jobs:
           WP_URL: ${{ secrets.WP_URL }}
           WP_USER: ${{ secrets.WP_USER }}
           WP_APP_PASSWORD: ${{ secrets.WP_APP_PASSWORD }}
-        run: python publish_daily.py
+        run: |
+          if [ "${{ github.event.inputs.backfill }}" = "true" ]; then
+            python publish_daily.py --backfill --count ${{ github.event.inputs.count || 10 }}
+          else
+            python publish_daily.py
+          fi
 
       - name: Commit published records
         if: env.WP_URL != ''
