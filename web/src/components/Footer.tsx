@@ -8,6 +8,9 @@ export default function Footer() {
           데이터 출처: 서울도시공간포털 (urban.seoul.go.kr)
         </p>
         <div className="flex gap-4 text-xs text-gray-400">
+          <a href="https://2lee.kr" target="_blank" rel="noopener noreferrer" className="hover:text-gray-600">
+            봉수네 돈공부 블로그
+          </a>
           <Link href="/privacy" className="hover:text-gray-600">
             개인정보처리방침
           </Link>
