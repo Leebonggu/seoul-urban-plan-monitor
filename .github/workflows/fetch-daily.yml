@@ -2,7 +2,7 @@ name: 결정고시 일일 수집
 
 on:
   schedule:
-    - cron: '0 0 * * *'  # 매일 UTC 00:00 (KST 09:00)
+    - cron: '0 1 * * *'  # 매일 UTC 01:00 (KST 10:00)
   workflow_dispatch:
     inputs:
       backfill:

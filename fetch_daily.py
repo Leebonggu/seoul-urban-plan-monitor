@@ -34,7 +34,7 @@ def load_existing_codes() -> set:
     """이미 저장된 모든 notice_code를 수집"""
     codes = set()
     for fname in os.listdir(DATA_DIR):
-        if not fname.endswith(".json") or fname == "latest.json":
+        if not fname.endswith(".json") or fname in ("latest.json", "wp_published.json"):
             continue
         filepath = os.path.join(DATA_DIR, fname)
         with open(filepath, "r", encoding="utf-8") as f:
@@ -173,7 +173,7 @@ def main():
 
     # latest.json 업데이트
     all_dates = [f.replace(".json", "") for f in os.listdir(DATA_DIR)
-                 if f.endswith(".json") and f != "latest.json"]
+                 if f.endswith(".json") and f not in ("latest.json", "wp_published.json")]
     latest_date = max(all_dates) if all_dates else latest["last_fetched"]
     total_records = latest.get("total_records", 0) + total_new
 
