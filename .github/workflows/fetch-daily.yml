@@ -14,6 +14,9 @@ on:
         type: number
         default: 10
 
+permissions:
+  contents: write
+
 jobs:
   fetch:
     runs-on: ubuntu-latest
