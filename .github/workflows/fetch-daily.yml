@@ -24,6 +24,7 @@ jobs:
       WP_URL: ${{ secrets.WP_URL }}
       WP_USER: ${{ secrets.WP_USER }}
       WP_APP_PASSWORD: ${{ secrets.WP_APP_PASSWORD }}
+      ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
 
     steps:
       - uses: actions/checkout@v4
@@ -57,7 +58,7 @@ jobs:
 
       - name: Install Python dependencies for publishing
         if: env.WP_URL != ''
-        run: pip install pdf2image Pillow
+        run: pip install pdf2image Pillow anthropic
 
       - name: Publish to WordPress
         if: env.WP_URL != ''

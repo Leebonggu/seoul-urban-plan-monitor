@@ -20,6 +20,7 @@ from wp_blog_template import generate_wp_content
 from pdf_to_images import download_doc, convert_pdf_to_images
 from thumbnail import create_thumbnail
 from wp_publisher import upload_image, create_post, load_published, save_published
+from insight_generator import generate_insight
 
 DATA_DIR = os.environ.get("DATA_DIR", "data")
 PUBLISHED_PATH = os.path.join(DATA_DIR, "wp_published.json")
@@ -59,7 +60,12 @@ def get_all_records() -> list[dict]:
 
 def publish_record(record: dict, tmp_dir: str) -> str | None:
     """단일 고시문을 WP에 발행. 성공 시 포스트 URL 반환."""
-    post = generate_wp_content(record)
+    # LLM 인사이트 생성
+    insight = generate_insight(record)
+    if insight:
+        print(f"    인사이트 생성 완료 (키워드: {', '.join(insight.get('keywords', []))})")
+
+    post = generate_wp_content(record, insight=insight)
     html = post["html"]
 
     # 중심지 등급에 따라 카테고리 매핑

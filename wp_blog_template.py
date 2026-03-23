@@ -1,5 +1,10 @@
-def generate_wp_content(record: dict) -> dict:
-    """고시문 레코드를 WordPress HTML 포스트로 변환."""
+def generate_wp_content(record: dict, insight: dict | None = None) -> dict:
+    """고시문 레코드를 WordPress HTML 포스트로 변환.
+
+    Args:
+        record: 고시문 레코드
+        insight: LLM 인사이트 (summary, impact, policy_context, keywords)
+    """
     location = record.get("location") or ""
     center_grade = record.get("center_grade")
     center_name = record.get("center_name")
@@ -31,6 +36,26 @@ def generate_wp_content(record: dict) -> dict:
     parts.append('<div style="background:#f0f7ff;border-left:4px solid #3b82f6;padding:16px;border-radius:4px;margin-bottom:24px;">')
     parts.append(f'<p style="margin:0;font-size:15px;line-height:1.6;">{excerpt}</p>')
     parts.append('</div>')
+
+    # AI 인사이트 섹션
+    if insight:
+        parts.append('<div style="background:#fffbeb;border-left:4px solid #f59e0b;padding:16px;border-radius:4px;margin-bottom:24px;">')
+        parts.append('<h2 style="margin:0 0 12px;font-size:18px;color:#92400e;">💡 AI 해설</h2>')
+
+        if insight.get("summary"):
+            parts.append(f'<p style="margin:0 0 10px;line-height:1.7;font-size:15px;">{insight["summary"]}</p>')
+
+        if insight.get("impact"):
+            parts.append(f'<p style="margin:0 0 10px;line-height:1.7;font-size:15px;"><strong>영향 분석:</strong> {insight["impact"]}</p>')
+
+        if insight.get("policy_context"):
+            parts.append(f'<p style="margin:0 0 10px;line-height:1.7;font-size:15px;"><strong>관련 정책:</strong> {insight["policy_context"]}</p>')
+
+        if insight.get("keywords"):
+            tags = " ".join(f'<span style="display:inline-block;background:#fef3c7;color:#92400e;padding:2px 8px;border-radius:12px;font-size:13px;margin:2px;">{kw}</span>' for kw in insight["keywords"])
+            parts.append(f'<p style="margin:0;">{tags}</p>')
+
+        parts.append('</div>')
 
     # 기본정보 테이블
     parts.append('<h2>📋 고시 기본정보</h2>')
