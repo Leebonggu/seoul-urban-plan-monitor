@@ -4,7 +4,13 @@ export function generateBlogContent(record: GosiRecord): {
   title: string;
   body: string;
 } {
-  const title = `[서울 도시계획] ${record.title}`;
+  // SEO 최적화 제목: [지역구] 키워드 결정고시 (날짜) — 상세
+  const location = record.location?.split(" ")[0] || record.organ_name || "서울";
+  const titleText =
+    record.title.length > 40
+      ? record.title.substring(0, 40) + "..."
+      : record.title;
+  const title = `${location} ${record.notice_type || "도시계획"} 결정고시 (${record.notice_date}) — ${titleText}`;
 
   const centerInfo =
     record.center_grade && record.center_name
@@ -35,6 +41,10 @@ ${record.doc_url ? `- 원문 다운로드: ${record.doc_url}` : ""}
 
 ━━━━━━━━━━━━━━━━━━━━
 출처: 서울도시공간포털 (urban.seoul.go.kr)
+
+---
+더 많은 서울시 결정고시를 한눈에 보려면:
+서울 결정고시 모니터: https://seoul-gosi-monitor.vercel.app
 `;
 
   return { title, body };
