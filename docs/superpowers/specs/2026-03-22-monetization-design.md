@@ -121,18 +121,47 @@
 
 **목적:** 고시문마다 일반인이 이해할 수 있는 요약과 해설을 자동 생성하여, 애드센스 심사 시 "고유 콘텐츠"로 인정받고 SEO 품질을 높인다.
 
-**생성 내용:**
+**생성 내용 (JSON 응답):**
 
-- 2~3줄 요약 (이 고시가 뭔지)
-- 일반인 해설 1줄 (주변 부동산/생활에 미칠 영향)
-- 핵심 키워드 추출 (태그 자동 부여와 연계)
+- `summary`: 2~3줄 요약 (이 고시가 뭔지)
+- `impact`: 일반인 해설 1~2줄 (주변 부동산/생활에 미칠 영향)
+- `policy_context`: 관련 정책과의 연결고리 (관련 없으면 null)
+- `keywords`: 핵심 키워드 3~7개 (태그 자동 부여와 연계)
 
-**구현:**
+**워크플로우:**
 
-- `publish_daily.py`에서 발행 직전에 Claude API 호출
-- 프롬프트: 고시문 원문 + 메타데이터 → 구조화된 요약 응답
-- 응답을 `wp_blog_template.py`에서 본문 상단에 "한눈에 보기" 섹션으로 삽입
-- API 키: GitHub Secrets에 `ANTHROPIC_API_KEY` 추가
+```
+publish_daily.py
+  │
+  ├─ 고시문 로드
+  │
+  ├─ 위치/키워드로 관련 정책 판별
+  │   ├─ 관련 정책 있음 → policy_reference.md를 컨텍스트로 포함
+  │   └─ 관련 정책 없음 → 원문만으로 인사이트 추출
+  │
+  ├─ Claude API 호출 (prompts/insight_prompt.md 기반)
+  │   └─ 시스템 프롬프트 + 고시문 + 정책 레퍼런스(해당 시)
+  │
+  ├─ JSON 응답 파싱
+  │   ├─ summary + impact + policy_context → wp_blog_template "한눈에 보기" 섹션
+  │   └─ keywords → WP 태그 API 자동 부여
+  │
+  └─ WP 발행
+```
+
+**정책 레퍼런스 파일:**
+
+- `prompts/policy_reference.md` — 3대 정책(2040 서울플랜, 강북전성시대 2.0, 서남권 대개조 2.0) 핵심 데이터
+- `prompts/insight_prompt.md` — LLM 프롬프트 템플릿 (시스템 + 유저 프롬프트)
+- 고시문 위치가 정책 관련 지역에 해당하면 레퍼런스 포함, 아니면 원문만으로 요약
+
+**구현 파일:**
+
+- `insight_generator.py` — Claude API 호출 + 응답 파싱 모듈
+- `publish_daily.py` — 발행 전 인사이트 생성 호출 추가
+- `wp_blog_template.py` — "한눈에 보기" 섹션 삽입 로직 추가
+
+**환경변수:** GitHub Secrets에 `ANTHROPIC_API_KEY` 추가
 
 **비용:** 하루 1~5건 × 건당 ~10원 = 월 1,000원 미만
 
