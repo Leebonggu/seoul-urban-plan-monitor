@@ -8,6 +8,7 @@ import MetricCards from "./MetricCards";
 import GosiList from "./GosiList";
 import GosiTable from "./GosiTable";
 import { MonthlyChart, GradeChart, CenterRanking } from "./Charts";
+import AdBanner from "./AdBanner";
 
 const CenterMap = dynamic(() => import("./CenterMap"), { ssr: false });
 
@@ -209,6 +210,8 @@ export default function Dashboard({ records }: Props) {
           {tab === "center" && <CenterRanking records={filtered} />}
         </div>
       </div>
+
+      <AdBanner slot="SLOT_DASHBOARD" className="mt-6" />
     </div>
   );
 }

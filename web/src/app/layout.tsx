@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 import "./globals.css";
 import Nav from "@/components/Nav";
+import Footer from "@/components/Footer";
 
 const SITE_URL = "https://seoul-gosi-monitor.vercel.app";
 const SITE_NAME = "서울 결정고시 모니터";
@@ -60,9 +62,20 @@ export default function RootLayout({
 }) {
   return (
     <html lang="ko">
+      <head>
+        {process.env.NEXT_PUBLIC_ADSENSE_ID && (
+          <Script
+            async
+            src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${process.env.NEXT_PUBLIC_ADSENSE_ID}`}
+            crossOrigin="anonymous"
+            strategy="afterInteractive"
+          />
+        )}
+      </head>
       <body className="bg-gray-50 text-gray-900 antialiased">
         <Nav />
         {children}
+        <Footer />
       </body>
     </html>
   );

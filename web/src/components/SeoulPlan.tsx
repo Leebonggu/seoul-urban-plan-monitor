@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import AdBanner from "./AdBanner";
 
 const GOALS = [
   {
@@ -324,6 +325,8 @@ export default function SeoulPlan() {
           ))}
         </div>
       </section>
+
+      <AdBanner slot="SLOT_SEOUL_PLAN" className="my-6" />
 
       {/* 중심지 체계 상세 */}
       <section>

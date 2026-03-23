@@ -1,5 +1,7 @@
 "use client";
 
+import AdBanner from "./AdBanner";
+
 /* ── 강남북 불균형 ── */
 const GAP_DATA = [
   { label: "사업체 수", south: "24만", north: "8만", ratio: "2.7배" },
@@ -295,6 +297,8 @@ export default function GangbukPlan() {
           ))}
         </div>
       </section>
+
+      <AdBanner slot="SLOT_GANGBUK" className="my-6" />
 
       {/* 성장거점 10개소 */}
       <section>
