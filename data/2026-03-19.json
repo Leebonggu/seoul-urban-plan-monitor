@@ -55,5 +55,24 @@
     "page_url": "https://urban.seoul.go.kr/view/html/PMNU4030100001?noticeCode=11000NTC202603120010",
     "center_grade": "지역중심",
     "center_name": "동대문"
+  },
+  {
+    "notice_code": "11380NTC202603230001",
+    "notice_no": "2026-21",
+    "notice_date": "2026-03-19",
+    "title": "도시관리계획(도시계획시설:철도) 결정(변경) 및 지형도면 고시",
+    "content": "  서울특별시고시 제287호(1981.07.30.)로 결정되고, 서울특별시 은평구고시 2017-57호(2017.06.15.), 서울특별시 은평구고시 제2018-46호(2018.04.26.) 및 은평구고시 2022-124호(2022.07.28.)로 변경결정된 도시계획시설(철도)에 대하여 「국토의 계획 및 이용에 관한 법률」 제30조 및 같은법 시행령 제25조의 규정에 의하여 변경 결정하고, 같은 법 제32조 및 같은법 시행령 제27조와 「토지이용규제기본법」 제8조, 같은 법 시행령 제7조 규정에 의거 지형도면을 작성하고 이를 고시합니다.",
+    "organ_code": "3110000",
+    "organ_name": "은평구",
+    "notice_type": "결정+지적",
+    "classify_g": "",
+    "classify_m": "",
+    "site_code": "11380",
+    "site_name": "은평구",
+    "location": "은평구 응암동 770-2번지 일대",
+    "doc_url": "https://urban.seoul.go.kr/UpisArchive/DATA/PM/pdf/11380TTC202603230001/%EC%9D%80%ED%8F%89%EA%B5%AC%20%EA%B3%A0%EC%8B%9C%20%EC%A0%9C2026-21%ED%98%B8.hwp",
+    "page_url": "https://urban.seoul.go.kr/view/html/PMNU4030100001?noticeCode=11380NTC202603230001",
+    "center_grade": null,
+    "center_name": null
   }
 ]
