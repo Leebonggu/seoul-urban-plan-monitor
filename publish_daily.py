@@ -88,11 +88,15 @@ def publish_record(record: dict, tmp_dir: str) -> str | None:
     except Exception as e:
         print(f"    썸네일 생성/업로드 실패: {e}")
 
+    # 고시 날짜를 포스트 날짜로 설정 (백필 시 시간순 정렬)
+    post_date = f"{record['notice_date']}T09:00:00"
+
     try:
         result = create_post(
             post["title"], html,
             categories=categories,
             featured_image_id=featured_image_id,
+            post_date=post_date,
         )
         return result.get("link", "")
     except Exception as e:

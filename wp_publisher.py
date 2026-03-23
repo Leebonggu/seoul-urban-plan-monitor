@@ -26,8 +26,8 @@ def upload_image(image_path: str) -> dict:
     return resp.json()
 
 
-def create_post(title: str, html: str, status: str = "publish", categories: list[int] | None = None, featured_image_id: int | None = None) -> dict:
-    """WordPress 포스트 생성."""
+def create_post(title: str, html: str, status: str = "publish", categories: list[int] | None = None, featured_image_id: int | None = None, post_date: str | None = None) -> dict:
+    """WordPress 포스트 생성. post_date는 ISO 8601 형식 (예: 2026-03-20T09:00:00)."""
     payload = {
         "title": title,
         "content": html,
@@ -37,6 +37,8 @@ def create_post(title: str, html: str, status: str = "publish", categories: list
         payload["categories"] = categories
     if featured_image_id:
         payload["featured_media"] = featured_image_id
+    if post_date:
+        payload["date"] = post_date
     resp = requests.post(
         f"{WP_API_BASE}/posts",
         auth=_auth(),
