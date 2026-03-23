@@ -20,6 +20,10 @@ permissions:
 jobs:
   fetch:
     runs-on: ubuntu-latest
+    env:
+      WP_URL: ${{ secrets.WP_URL }}
+      WP_USER: ${{ secrets.WP_USER }}
+      WP_APP_PASSWORD: ${{ secrets.WP_APP_PASSWORD }}
 
     steps:
       - uses: actions/checkout@v4
@@ -48,19 +52,15 @@ jobs:
           fi
 
       - name: Install poppler and Korean fonts
-        if: ${{ secrets.WP_URL != '' }}
+        if: env.WP_URL != ''
         run: sudo apt-get update && sudo apt-get install -y poppler-utils fonts-noto-cjk
 
       - name: Install Python dependencies for publishing
-        if: ${{ secrets.WP_URL != '' }}
+        if: env.WP_URL != ''
         run: pip install pdf2image Pillow
 
       - name: Publish to WordPress
-        if: ${{ secrets.WP_URL != '' }}
-        env:
-          WP_URL: ${{ secrets.WP_URL }}
-          WP_USER: ${{ secrets.WP_USER }}
-          WP_APP_PASSWORD: ${{ secrets.WP_APP_PASSWORD }}
+        if: env.WP_URL != ''
         run: |
           if [ "${{ github.event.inputs.backfill }}" = "true" ]; then
             python publish_daily.py --backfill --count ${{ github.event.inputs.count || 10 }}
@@ -69,9 +69,7 @@ jobs:
           fi
 
       - name: Commit published records
-        if: ${{ secrets.WP_URL != '' }}
-        env:
-          WP_URL: ${{ secrets.WP_URL }}
+        if: env.WP_URL != ''
         run: |
           git pull --rebase || true
           git add data/wp_published.json || true
