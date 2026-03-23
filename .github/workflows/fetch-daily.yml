@@ -48,17 +48,15 @@ jobs:
           fi
 
       - name: Install poppler and Korean fonts
-        if: env.WP_URL != ''
+        if: ${{ secrets.WP_URL != '' }}
         run: sudo apt-get update && sudo apt-get install -y poppler-utils fonts-noto-cjk
 
       - name: Install Python dependencies for publishing
-        if: env.WP_URL != ''
+        if: ${{ secrets.WP_URL != '' }}
         run: pip install pdf2image Pillow
-        env:
-          WP_URL: ${{ secrets.WP_URL }}
 
       - name: Publish to WordPress
-        if: env.WP_URL != ''
+        if: ${{ secrets.WP_URL != '' }}
         env:
           WP_URL: ${{ secrets.WP_URL }}
           WP_USER: ${{ secrets.WP_USER }}
@@ -71,10 +69,11 @@ jobs:
           fi
 
       - name: Commit published records
-        if: env.WP_URL != ''
+        if: ${{ secrets.WP_URL != '' }}
         env:
           WP_URL: ${{ secrets.WP_URL }}
         run: |
+          git pull --rebase || true
           git add data/wp_published.json || true
           git diff --staged --quiet || git commit -m "data: WP 발행 기록 업데이트"
           git push || true
