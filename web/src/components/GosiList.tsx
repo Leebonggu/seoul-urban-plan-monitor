@@ -40,6 +40,11 @@ export default function GosiList({ records, maxItems = 20 }: Props) {
                 {r.center_grade}·{r.center_name}
               </span>
             )}
+            {r.category && r.category !== "결정고시" && (
+              <span className="text-xs px-1.5 py-0.5 rounded bg-purple-100 text-purple-700 font-medium">
+                {r.category}
+              </span>
+            )}
             <span className="text-xs text-gray-400">{r.organ_name}</span>
           </div>
           <p className="text-sm font-medium leading-snug">

@@ -22,6 +22,7 @@ export default function Dashboard({ records }: Props) {
   const [grade, setGrade] = useState("");
   const [centerName, setCenterName] = useState("");
   const [keyword, setKeyword] = useState("");
+  const [category, setCategory] = useState("");
   const [tab, setTab] = useState<Tab>("list");
 
   // 선택된 등급에 해당하는 중심지 목록
@@ -32,6 +33,9 @@ export default function Dashboard({ records }: Props) {
 
   const filtered = useMemo(() => {
     let result = records;
+    if (category) {
+      result = result.filter((r) => (r.category || "결정고시") === category);
+    }
     if (grade) {
       if (grade === "미매칭") {
         result = result.filter((r) => !r.center_grade);
@@ -52,7 +56,7 @@ export default function Dashboard({ records }: Props) {
       );
     }
     return result;
-  }, [records, grade, centerName, keyword]);
+  }, [records, grade, centerName, keyword, category]);
 
   const centers: Center[] = useMemo(() => {
     const counts: Record<string, number> = {};
@@ -93,6 +97,15 @@ export default function Dashboard({ records }: Props) {
       {/* 필터 */}
       <div className="flex flex-wrap gap-3">
         <select
+          value={category}
+          onChange={(e) => setCategory(e.target.value)}
+          className="text-sm border border-gray-200 rounded-lg px-3 py-2 bg-white"
+        >
+          <option value="">전체 범주</option>
+          <option value="결정고시">결정고시</option>
+          <option value="지구단위계획">지구단위계획</option>
+        </select>
+        <select
           value={grade}
           onChange={(e) => {
             setGrade(e.target.value);
@@ -127,12 +140,13 @@ export default function Dashboard({ records }: Props) {
           placeholder="키워드 검색 (재개발, 용적률...)"
           className="text-sm border border-gray-200 rounded-lg px-3 py-2 bg-white min-w-[250px]"
         />
-        {(grade || centerName || keyword) && (
+        {(grade || centerName || keyword || category) && (
           <button
             onClick={() => {
               setGrade("");
               setCenterName("");
               setKeyword("");
+              setCategory("");
             }}
             className="text-sm text-gray-400 hover:text-gray-600 px-2"
           >

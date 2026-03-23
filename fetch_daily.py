@@ -18,7 +18,16 @@ logging.basicConfig(
 )
 logger = logging.getLogger(__name__)
 
-API_URL = "https://urban.seoul.go.kr/ntfc/getNtfcList.json"
+API_SOURCES = {
+    "결정고시": {
+        "url": "https://urban.seoul.go.kr/ntfc/getNtfcList.json",
+        "page_url_base": "https://urban.seoul.go.kr/view/html/PMNU4030100001",
+    },
+    "지구단위계획": {
+        "url": "https://urban.seoul.go.kr/dstplan/getDstplanList.json",
+        "page_url_base": "https://urban.seoul.go.kr/view/html/PMNU4030200001",
+    },
+}
 DATA_DIR = os.path.join(os.path.dirname(__file__), "data")
 LATEST_FILE = os.path.join(DATA_DIR, "latest.json")
 
@@ -44,9 +53,9 @@ def load_existing_codes() -> set:
     return codes
 
 
-def fetch_page(page_no: int, page_size: int = 100) -> dict:
+def fetch_page(api_url: str, page_no: int, page_size: int = 100) -> dict:
     resp = requests.post(
-        API_URL,
+        api_url,
         json={
             "pageNo": page_no,
             "pageSize": page_size,
@@ -65,7 +74,8 @@ def fetch_page(page_no: int, page_size: int = 100) -> dict:
     return resp.json()
 
 
-def parse_item(item: dict) -> dict:
+def parse_ntfc_item(item: dict, category: str, page_url_base: str) -> dict:
+    """결정고시 API 응답 아이템 파싱."""
     organ = item.get("organ") or {}
     notice_classify = item.get("noticeClassifyNm") or {}
     classify_g = item.get("classifyGnm") or {}
@@ -107,10 +117,102 @@ def parse_item(item: dict) -> dict:
         "site_name": site_cd.get("siteName", "") if isinstance(site_cd, dict) else "",
         "location": location,
         "doc_url": doc_url,
-        "page_url": f"https://urban.seoul.go.kr/view/html/PMNU4030100001?noticeCode={item.get('noticeCode', '')}",
+        "page_url": f"{page_url_base}?noticeCode={item.get('noticeCode', '')}",
         "center_grade": center_grade,
         "center_name": center_name,
+        "category": category,
     }
+
+
+def parse_dstplan_item(item: dict, page_url_base: str) -> dict:
+    """지구단위계획 API 응답 아이템 파싱."""
+    ntfc = item.get("tnNtfc") or {}
+    organ = ntfc.get("organ") or {}
+    ntfc_img = ntfc.get("tnNtfcImage") or {}
+
+    title = ntfc.get("title") or item.get("zoneName") or ""
+    content = ntfc.get("content") or ""
+    location = item.get("locationName") or ""
+
+    match_text = location if location else f"{title} {content}"
+    center_grade, center_name = match_center(match_text)
+
+    notice_date_raw = ntfc.get("noticeDate") or ""
+    notice_date = notice_date_raw[:10] if notice_date_raw else ""
+
+    notice_code = ntfc.get("noticeCode") or item.get("recordCode", "")
+
+    # 원문 URL
+    doc_url = ""
+    img_path = ntfc_img.get("aImagePath", "")
+    img_name = ntfc_img.get("aImageName", "")
+    if img_path and img_name:
+        encoded_name = quote(img_name, safe="")
+        doc_url = f"https://urban.seoul.go.kr/{img_path}/{encoded_name}"
+
+    return {
+        "notice_code": notice_code,
+        "notice_no": ntfc.get("noticeNo", ""),
+        "notice_date": notice_date,
+        "title": title,
+        "content": content,
+        "organ_code": organ.get("insttCode", ""),
+        "organ_name": organ.get("insttName", ""),
+        "notice_type": "지구단위계획",
+        "classify_g": "",
+        "classify_m": "",
+        "site_code": item.get("siteCode", ""),
+        "site_name": "",
+        "location": location,
+        "doc_url": doc_url,
+        "page_url": f"{page_url_base}?noticeCode={notice_code}",
+        "center_grade": center_grade,
+        "center_name": center_name,
+        "category": "지구단위계획",
+        "zone_name": (item.get("zoneName") or "").strip(),
+        "area": item.get("areaAfter"),
+    }
+
+
+def fetch_source(source_name: str, api_url: str, page_url_base: str,
+                  existing_codes: set) -> dict[str, list]:
+    """단일 API 소스에서 신규 레코드 수집."""
+    new_records = defaultdict(list)
+    page_no = 1
+    consecutive_existing = 0
+    is_dstplan = "dstplan" in api_url
+
+    while True:
+        logger.info(f"[{source_name}] Fetching page {page_no}...")
+        data = fetch_page(api_url, page_no)
+        items = data.get("content", [])
+
+        if not items:
+            break
+
+        for item in items:
+            if is_dstplan:
+                record = parse_dstplan_item(item, page_url_base)
+            else:
+                record = parse_ntfc_item(item, source_name, page_url_base)
+
+            if not record["notice_code"] or record["notice_code"] in existing_codes:
+                consecutive_existing += 1
+            else:
+                consecutive_existing = 0
+                new_records[record["notice_date"]].append(record)
+                existing_codes.add(record["notice_code"])
+
+        if consecutive_existing >= 200:
+            logger.info(f"[{source_name}] 신규 데이터 없음, 중단.")
+            break
+
+        total_pages = data.get("totalPages", 1)
+        if page_no >= total_pages:
+            break
+        page_no += 1
+
+    return new_records
 
 
 def main():
@@ -120,43 +222,23 @@ def main():
     existing_codes = load_existing_codes()
     logger.info(f"기존 데이터: {len(existing_codes)}건, 마지막 수집일: {latest['last_fetched']}")
 
-    new_records = defaultdict(list)
-    page_no = 1
-    consecutive_existing = 0
+    all_new_records = defaultdict(list)
 
-    while True:
-        logger.info(f"Fetching page {page_no}...")
-        data = fetch_page(page_no)
-        items = data.get("content", [])
-
-        if not items:
-            break
-
-        for item in items:
-            record = parse_item(item)
-            if record["notice_code"] in existing_codes:
-                consecutive_existing += 1
-            else:
-                consecutive_existing = 0
-                new_records[record["notice_date"]].append(record)
-                existing_codes.add(record["notice_code"])
-
-        # 연속 200건이 모두 기존 데이터면 중단
-        if consecutive_existing >= 200:
-            logger.info("신규 데이터 없음, 중단.")
-            break
-
-        total_pages = data.get("totalPages", 1)
-        if page_no >= total_pages:
-            break
-        page_no += 1
+    for source_name, source_cfg in API_SOURCES.items():
+        new_records = fetch_source(
+            source_name,
+            source_cfg["url"],
+            source_cfg["page_url_base"],
+            existing_codes,
+        )
+        for date_key, records in new_records.items():
+            all_new_records[date_key].extend(records)
 
     # 신규분 JSON 저장
     total_new = 0
-    for date, records in new_records.items():
+    for date, records in all_new_records.items():
         filepath = os.path.join(DATA_DIR, f"{date}.json")
 
-        # 기존 파일이 있으면 병합
         existing = []
         if os.path.exists(filepath):
             with open(filepath, "r", encoding="utf-8") as f:
@@ -185,7 +267,6 @@ def main():
         }, f, ensure_ascii=False, indent=2)
 
     logger.info(f"완료: 신규 {total_new}건 저장")
-    # GitHub Actions 출력용
     print(f"::set-output name=new_count::{total_new}")
 
 

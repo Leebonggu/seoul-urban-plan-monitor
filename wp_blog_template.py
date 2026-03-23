@@ -13,16 +13,22 @@ def generate_wp_content(record: dict, insight: dict | None = None) -> dict:
     content = record.get("content") or "상세 내용은 원문을 확인해주세요."
     notice_type = record.get("notice_type") or "도시계획"
 
-    # SEO 최적화 제목: [지역] 고시제목 (날짜)
+    # SEO 최적화 제목: [범주·지역] 고시제목 (날짜)
     title_location = location.split(" ")[0] if location else record.get("organ_name", "서울")
+    record_category = record.get("category", "결정고시")
+    category_prefix = "지구단위" if record_category == "지구단위계획" else ""
     raw_title = record["title"]
     if len(raw_title) > 50:
         raw_title = raw_title[:47] + "..."
-    title = f"[{title_location}] {raw_title} ({record['notice_date']})"
+    if category_prefix:
+        title = f"[{category_prefix}·{title_location}] {raw_title} ({record['notice_date']})"
+    else:
+        title = f"[{title_location}] {raw_title} ({record['notice_date']})"
 
     # 요약문 (excerpt)
     excerpt_parts = []
-    excerpt_parts.append(f"{record['notice_date']} {record['organ_name']} {notice_type} 고시.")
+    category_label = f"[{record_category}] " if record_category != "결정고시" else ""
+    excerpt_parts.append(f"{category_label}{record['notice_date']} {record['organ_name']} {notice_type} 고시.")
     if location:
         excerpt_parts.append(f"위치: {location}.")
     if center_grade and center_name:

@@ -68,9 +68,16 @@ def publish_record(record: dict, tmp_dir: str) -> str | None:
     post = generate_wp_content(record, insight=insight)
     html = post["html"]
 
-    # 중심지 등급에 따라 카테고리 매핑
+    # 카테고리 매핑
     center_grade = record.get("center_grade") or ""
-    categories = CATEGORY_MAP.get(center_grade, DEFAULT_CATEGORIES)
+    categories = list(CATEGORY_MAP.get(center_grade, DEFAULT_CATEGORIES))
+
+    # 지구단위계획이면 추가 카테고리
+    record_category = record.get("category", "결정고시")
+    if record_category == "지구단위계획":
+        wp_dstplan_cat = int(os.environ.get("WP_CAT_DSTPLAN", "0"))
+        if wp_dstplan_cat:
+            categories.append(wp_dstplan_cat)
 
     # 썸네일 생성
     featured_image_id = None

@@ -16,6 +16,7 @@ export interface GosiRecord {
   page_url: string;
   center_grade: string | null;
   center_name: string | null;
+  category?: string;
 }
 
 export interface Center {
