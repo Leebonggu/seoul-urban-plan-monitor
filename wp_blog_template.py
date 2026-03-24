@@ -91,6 +91,18 @@ def generate_wp_content(record: dict, insight: dict | None = None) -> dict:
     formatted_content = content.replace("\n", "<br>")
     parts.append(f'<div style="line-height:1.8;padding:16px;background:#fafafa;border-radius:4px;margin-bottom:24px;">{formatted_content}</div>')
 
+    # 위치 지도
+    if location:
+        map_query = location.replace(" ", "+")
+        parts.append('<h2>🗺️ 위치</h2>')
+        parts.append(
+            f'<iframe '
+            f'src="https://maps.google.com/maps?q={map_query}&amp;output=embed&amp;hl=ko" '
+            f'width="100%" height="400" style="border:0;border-radius:4px;margin-bottom:24px;" '
+            f'allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">'
+            f'</iframe>'
+        )
+
     # 관련 링크
     if page_url or doc_url:
         parts.append('<h2>🔗 관련 링크</h2>')
