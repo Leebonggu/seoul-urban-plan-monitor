@@ -4,6 +4,7 @@
 import json
 import os
 import re
+import sys
 import logging
 import time
 from datetime import datetime
@@ -244,9 +245,15 @@ def fetch_source(source_name: str, api_url: str, page_url_base: str,
 def main():
     os.makedirs(DATA_DIR, exist_ok=True)
 
+    full_mode = "--full" in sys.argv
     latest = load_latest()
     existing_codes = load_existing_codes()
-    logger.info(f"기존 데이터: {len(existing_codes)}건, 마지막 수집일: {latest['last_fetched']}")
+    bgn_date = "" if full_mode else latest["last_fetched"]
+
+    if full_mode:
+        logger.info(f"[전체 수집 모드] 기존 데이터: {len(existing_codes)}건")
+    else:
+        logger.info(f"기존 데이터: {len(existing_codes)}건, 마지막 수집일: {latest['last_fetched']}")
 
     all_new_records = defaultdict(list)
 
@@ -256,7 +263,7 @@ def main():
             source_cfg["url"],
             source_cfg["page_url_base"],
             existing_codes,
-            bgn_date=latest["last_fetched"],
+            bgn_date=bgn_date,
         )
         for date_key, records in new_records.items():
             all_new_records[date_key].extend(records)
