@@ -3,7 +3,9 @@
 
 import json
 import os
+import re
 import logging
+import time
 from datetime import datetime
 from collections import defaultdict
 from urllib.parse import quote
@@ -41,9 +43,10 @@ def load_latest() -> dict:
 
 def load_existing_codes() -> set:
     """이미 저장된 모든 notice_code를 수집"""
+    date_pattern = re.compile(r"^\d{4}-\d{2}-\d{2}\.json$")
     codes = set()
     for fname in os.listdir(DATA_DIR):
-        if not fname.endswith(".json") or fname in ("latest.json", "wp_published.json"):
+        if not date_pattern.match(fname):
             continue
         filepath = os.path.join(DATA_DIR, fname)
         with open(filepath, "r", encoding="utf-8") as f:
@@ -53,25 +56,39 @@ def load_existing_codes() -> set:
     return codes
 
 
-def fetch_page(api_url: str, page_no: int, page_size: int = 100) -> dict:
-    resp = requests.post(
-        api_url,
-        json={
-            "pageNo": page_no,
-            "pageSize": page_size,
-            "keywordList": [],
-            "pubSiteCode": "",
-            "organCode": "",
-            "bgnDate": "",
-            "endDate": "",
-            "srchType": "title",
-            "noticeCode": "",
-        },
-        headers={"Content-Type": "application/json; charset=UTF-8"},
-        timeout=30,
-    )
-    resp.raise_for_status()
-    return resp.json()
+MAX_PAGES = 30
+MAX_RETRIES = 3
+
+
+def fetch_page(api_url: str, page_no: int, page_size: int = 100,
+               bgn_date: str = "") -> dict:
+    for attempt in range(1, MAX_RETRIES + 1):
+        resp = requests.post(
+            api_url,
+            json={
+                "pageNo": page_no,
+                "pageSize": page_size,
+                "keywordList": [],
+                "pubSiteCode": "",
+                "organCode": "",
+                "bgnDate": bgn_date,
+                "endDate": "",
+                "srchType": "title",
+                "noticeCode": "",
+            },
+            headers={"Content-Type": "application/json; charset=UTF-8"},
+            timeout=60,
+        )
+        resp.raise_for_status()
+        try:
+            return resp.json()
+        except requests.exceptions.JSONDecodeError:
+            if attempt < MAX_RETRIES:
+                logger.warning(f"JSON 파싱 실패 (시도 {attempt}/{MAX_RETRIES}), 재시도...")
+                time.sleep(2 * attempt)
+            else:
+                logger.error(f"JSON 파싱 {MAX_RETRIES}회 실패, 건너뜀")
+                return {"content": [], "totalPages": 0}
 
 
 def parse_ntfc_item(item: dict, category: str, page_url_base: str) -> dict:
@@ -174,8 +191,11 @@ def parse_dstplan_item(item: dict, page_url_base: str) -> dict:
     }
 
 
+_DATE_RE = re.compile(r"^\d{4}-\d{2}-\d{2}$")
+
+
 def fetch_source(source_name: str, api_url: str, page_url_base: str,
-                  existing_codes: set) -> dict[str, list]:
+                  existing_codes: set, bgn_date: str = "") -> dict[str, list]:
     """단일 API 소스에서 신규 레코드 수집."""
     new_records = defaultdict(list)
     page_no = 1
@@ -184,7 +204,7 @@ def fetch_source(source_name: str, api_url: str, page_url_base: str,
 
     while True:
         logger.info(f"[{source_name}] Fetching page {page_no}...")
-        data = fetch_page(api_url, page_no)
+        data = fetch_page(api_url, page_no, bgn_date=bgn_date)
         items = data.get("content", [])
 
         if not items:
@@ -198,17 +218,23 @@ def fetch_source(source_name: str, api_url: str, page_url_base: str,
 
             if not record["notice_code"] or record["notice_code"] in existing_codes:
                 consecutive_existing += 1
+            elif not _DATE_RE.match(record["notice_date"]):
+                logger.warning(f"[{source_name}] 비정상 날짜 건너뜀: {record['notice_date']!r}")
+                consecutive_existing += 1
             else:
                 consecutive_existing = 0
                 new_records[record["notice_date"]].append(record)
                 existing_codes.add(record["notice_code"])
 
-        if consecutive_existing >= 200:
+        if consecutive_existing >= 100:
             logger.info(f"[{source_name}] 신규 데이터 없음, 중단.")
             break
 
         total_pages = data.get("totalPages", 1)
         if page_no >= total_pages:
+            break
+        if page_no >= MAX_PAGES:
+            logger.warning(f"[{source_name}] 최대 페이지({MAX_PAGES}) 도달, 중단.")
             break
         page_no += 1
 
@@ -230,6 +256,7 @@ def main():
             source_cfg["url"],
             source_cfg["page_url_base"],
             existing_codes,
+            bgn_date=latest["last_fetched"],
         )
         for date_key, records in new_records.items():
             all_new_records[date_key].extend(records)
@@ -254,8 +281,9 @@ def main():
             json.dump(existing, f, ensure_ascii=False, indent=2)
 
     # latest.json 업데이트
+    date_pattern = re.compile(r"^\d{4}-\d{2}-\d{2}$")
     all_dates = [f.replace(".json", "") for f in os.listdir(DATA_DIR)
-                 if f.endswith(".json") and f not in ("latest.json", "wp_published.json")]
+                 if f.endswith(".json") and date_pattern.match(f.replace(".json", ""))]
     latest_date = max(all_dates) if all_dates else latest["last_fetched"]
     total_records = latest.get("total_records", 0) + total_new
 
