@@ -97,7 +97,7 @@ def generate_wp_content(record: dict, insight: dict | None = None) -> dict:
         parts.append('<h2>🗺️ 위치</h2>')
         parts.append(
             f'<iframe '
-            f'src="https://maps.google.com/maps?q={map_query}&amp;output=embed&amp;hl=ko" '
+            f'src="https://maps.google.com/maps?q={map_query}&amp;output=embed&amp;hl=ko&amp;z=17" '
             f'width="100%" height="400" style="border:0;border-radius:4px;margin-bottom:24px;" '
             f'allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">'
             f'</iframe>'
