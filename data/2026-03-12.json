@@ -112,5 +112,25 @@
     "page_url": "https://urban.seoul.go.kr/view/html/PMNU4030100001?noticeCode=11740NTC202602100001",
     "center_grade": "지역중심",
     "center_name": "천호·길동"
+  },
+  {
+    "notice_code": "11000NTC202603250001",
+    "notice_no": "2026-119",
+    "notice_date": "2026-03-12",
+    "title": "수색·증산 재정비촉진지구 재정비촉진계획(수색7구역) (경미한)변경 결정 및 지형도면 고시",
+    "content": "수색7구역 내 봉산근린공원 유지관리용 도로 조성에 따른 기반시설 변경(소로3-1 폐지)",
+    "organ_code": "6110000",
+    "organ_name": "서울특별시",
+    "notice_type": "결정+지적",
+    "classify_g": "",
+    "classify_m": "",
+    "site_code": "11000",
+    "site_name": "서울특별시",
+    "location": "수색동 412",
+    "doc_url": "https://urban.seoul.go.kr/UpisArchive/DATA/PM/pdf/11000TTC202603250001/%EA%B3%A0%EC%8B%9C%EB%AC%B8.hwp",
+    "page_url": "https://urban.seoul.go.kr/view/html/PMNU4030100001?noticeCode=11000NTC202603250001",
+    "center_grade": "광역중심",
+    "center_name": "상암·수색",
+    "category": "결정고시"
   }
 ]
