@@ -6,6 +6,22 @@ import "leaflet/dist/leaflet.css";
 import { Center } from "@/lib/types";
 import { GRADE_COLORS } from "@/lib/centers";
 
+const LABEL_STYLE = `
+  .center-label {
+    background: none !important;
+    border: none !important;
+    box-shadow: none !important;
+    font-size: 11px !important;
+    font-weight: 600;
+    color: #374151;
+    text-shadow: 1px 1px 2px white, -1px -1px 2px white, 1px -1px 2px white, -1px 1px 2px white;
+    white-space: nowrap;
+  }
+  .center-label::before {
+    display: none !important;
+  }
+`;
+
 function FitBounds() {
   const map = useMap();
   useEffect(() => {
@@ -25,8 +41,9 @@ export default function CenterMap({ centers, onCenterClick }: Props) {
       center={[37.5665, 126.978]}
       zoom={11}
       className="h-full w-full rounded-xl"
-      style={{ minHeight: "400px" }}
+      style={{ minHeight: "400px", zIndex: 0 }}
     >
+      <style dangerouslySetInnerHTML={{ __html: LABEL_STYLE }} />
       <FitBounds />
       <TileLayer
         attribution='&copy; <a href="https://carto.com/">CARTO</a>'
@@ -50,8 +67,8 @@ export default function CenterMap({ centers, onCenterClick }: Props) {
               click: () => onCenterClick?.(c.name),
             }}
           >
-            <Tooltip direction="top" offset={[0, -10]}>
-              {c.name} ({c.count}건)
+            <Tooltip direction="top" offset={[0, -10]} permanent className="center-label">
+              {c.name}
             </Tooltip>
             <Popup>
               <div className="text-sm">

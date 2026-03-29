@@ -5,7 +5,12 @@ import { GosiRecord } from "./types";
 const DATA_DIR =
   process.env.DATA_DIR || path.join(process.cwd(), "..", "data");
 
+let _cachedRecords: GosiRecord[] | null = null;
+let _cachedIndex: Map<string, GosiRecord> | null = null;
+
 export function loadAllData(): GosiRecord[] {
+  if (_cachedRecords) return _cachedRecords;
+
   const files = fs
     .readdirSync(DATA_DIR)
     .filter((f) => f.endsWith(".json") && f !== "latest.json" && f !== "posted.json" && f !== "wp_published.json")
@@ -24,7 +29,14 @@ export function loadAllData(): GosiRecord[] {
       new Date(b.notice_date).getTime() - new Date(a.notice_date).getTime()
   );
 
+  _cachedRecords = records;
   return records;
+}
+
+function getIndex(): Map<string, GosiRecord> {
+  if (_cachedIndex) return _cachedIndex;
+  _cachedIndex = new Map(loadAllData().map((r) => [r.notice_code, r]));
+  return _cachedIndex;
 }
 
 export function loadAllNoticeCodes(): string[] {
@@ -32,5 +44,5 @@ export function loadAllNoticeCodes(): string[] {
 }
 
 export function loadRecordByCode(code: string): GosiRecord | undefined {
-  return loadAllData().find((r) => r.notice_code === code);
+  return getIndex().get(code);
 }
