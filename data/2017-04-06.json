@@ -20,5 +20,25 @@
     "category": "지구단위계획",
     "zone_name": "서초구 서초동 1582-3일대",
     "area": 9241.8
+  },
+  {
+    "notice_code": "11000NTC201704068075",
+    "notice_no": "2017-29",
+    "notice_date": "2017-04-06",
+    "title": "대림3주택재건축정비구역 변경(경미한사항) 지정 및 지형도면 고시",
+    "content": "영등포구 대림동 917-49번지 일대 대림3주택재건축정비구역 변경(경미한사항) 지정",
+    "organ_code": "3180000",
+    "organ_name": "영등포구",
+    "notice_type": "정비사업구역계",
+    "classify_g": "",
+    "classify_m": "",
+    "site_code": "11000",
+    "site_name": "",
+    "location": "영등포구 대림동 917-49번지 일대",
+    "doc_url": "https://urban.seoul.go.kr/UpisArchive/DATA/PM/pdf/%EC%98%81%EB%93%B1%ED%8F%AC%EA%B5%AC2017-29.PDF",
+    "page_url": "https://urban.seoul.go.kr/view/html/PMNU4030600001?noticeCode=11000NTC201704068075",
+    "center_grade": "도심",
+    "center_name": "여의도·영등포",
+    "category": "정비사업구역계"
   }
 ]

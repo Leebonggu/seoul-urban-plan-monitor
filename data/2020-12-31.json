@@ -20,5 +20,25 @@
     "category": "지구단위계획",
     "zone_name": "개봉역 지구단위계획구역",
     "area": 2637
+  },
+  {
+    "notice_code": "11290NTC202101050001",
+    "notice_no": "2020-232",
+    "notice_date": "2020-12-31",
+    "title": "삼선제5주택재개발 정비구역 (경미한)변경 지정",
+    "content": "삼선제5주택재개발 정비구역 (경미한)변경 지정",
+    "organ_code": "3070000",
+    "organ_name": "성북구",
+    "notice_type": "정비사업구역계",
+    "classify_g": "",
+    "classify_m": "",
+    "site_code": "11290",
+    "site_name": "",
+    "location": "성북구 삼선동2가 296번지 일대",
+    "doc_url": "https://urban.seoul.go.kr/UpisArchive/DATA/PM/pdf/11290NTC202101050001/%EC%84%B1%EB%B6%81%EA%B5%AC_2020-232%ED%98%B8_%EA%B3%A0%EC%8B%9C.pdf",
+    "page_url": "https://urban.seoul.go.kr/view/html/PMNU4030600001?noticeCode=11290NTC202101050001",
+    "center_grade": null,
+    "center_name": null,
+    "category": "정비사업구역계"
   }
 ]

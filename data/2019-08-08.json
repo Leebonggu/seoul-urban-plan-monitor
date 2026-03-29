@@ -20,5 +20,25 @@
     "category": "지구단위계획",
     "zone_name": "세종로 지구단위계획구역",
     "area": 208156.3
+  },
+  {
+    "notice_code": "11000NTC201908081063",
+    "notice_no": "2019-268",
+    "notice_date": "2019-08-08",
+    "title": "도봉구 도봉동 안골마을 관리형 주거환경개선사업 정비구역 및 지형도면 고시",
+    "content": "도봉구 도봉동 안골마을(도봉동 350번지 일대)에 「도시 및 주거환경정비법」 제8조 규정에 의거 관리형 주거환경개선사업 정비구역을 지정하고, 같은 법 제16조제2항, 「토지이용규제 기본법」 제8조 규정에 따라 지형도면을 고시",
+    "organ_code": "6110000",
+    "organ_name": "서울특별시",
+    "notice_type": "정비사업구역계",
+    "classify_g": "",
+    "classify_m": "",
+    "site_code": "11000",
+    "site_name": "",
+    "location": "도봉구 도봉동 350번지 일대",
+    "doc_url": "",
+    "page_url": "https://urban.seoul.go.kr/view/html/PMNU4030600001?noticeCode=11000NTC201908081063",
+    "center_grade": null,
+    "center_name": null,
+    "category": "정비사업구역계"
   }
 ]

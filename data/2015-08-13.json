@@ -42,5 +42,25 @@
     "category": "지구단위계획",
     "zone_name": "영등포 삼성아파트 재건축정비사업",
     "area": 15945
+  },
+  {
+    "notice_code": "11000NTC201508137567",
+    "notice_no": "2015-128",
+    "notice_date": "2015-08-13",
+    "title": "보문제2주택재개발 정비구역지정 변경(경미한 변경) 고시",
+    "content": "서울특별시고시 제2007-383호(2007.10.25.)호로 정비구역 지정되고, 서울특별시성북구고 시 제2012-143호(2012.09.27.)로 정비구역지정변경 고시 및 서울특별시성북구고시 제2014-41호 (2014.03.20.)호로 사업시행인가 된 성북구 보문로26길 13-9일대 보문제2구역에 대하여「도 시 및 주거환경정비법」제4조, 같은법 시행령 제12조 및 서울특별시 도시및주거환경정비조례 제7 조 규정에 따라 다음과 같이 정비구역지정 변경(경미한 변경)하고 고시합니다.",
+    "organ_code": "3070000",
+    "organ_name": "성북구",
+    "notice_type": "정비사업구역계",
+    "classify_g": "",
+    "classify_m": "",
+    "site_code": "11000",
+    "site_name": "",
+    "location": "성북구 보문동1가 60-28번지 일대",
+    "doc_url": "https://urban.seoul.go.kr/UpisArchive/DATA/PM/pdf/%EC%84%B1%EB%B6%81%EA%B5%AC2015-128.HWP",
+    "page_url": "https://urban.seoul.go.kr/view/html/PMNU4030600001?noticeCode=11000NTC201508137567",
+    "center_grade": null,
+    "center_name": null,
+    "category": "정비사업구역계"
   }
 ]

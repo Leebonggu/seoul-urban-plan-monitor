@@ -20,5 +20,25 @@
     "category": "지구단위계획",
     "zone_name": "동대문지구단위계획구역",
     "area": 39154
+  },
+  {
+    "notice_code": "11000NTC201707278219",
+    "notice_no": "2017-75",
+    "notice_date": "2017-07-27",
+    "title": "당산제4주택재재개발 정비계획(경미한 사항) 변경 지정 고시",
+    "content": "서울특별시고시 제2007-259호(2007.08.02.)로 지정된 영등포구 당산동4가 2-1 일대 당산4 주택재개발 정비구역에 대하여 「도시 및 주거환경정비법」 제4조 및 동법 시행령 제12조 규정에 따라 정비계획(경미한 사항) 변경 지정하고, 동법 제4조 제5항 규정에 따라 이를 고시합니다.",
+    "organ_code": "3180000",
+    "organ_name": "영등포구",
+    "notice_type": "정비사업구역계",
+    "classify_g": "",
+    "classify_m": "",
+    "site_code": "11000",
+    "site_name": "",
+    "location": "영등포구 영신로 235(당산2동4가 2-1) 일대",
+    "doc_url": "https://urban.seoul.go.kr/UpisArchive/DATA/PM/pdf/%EC%98%81%EB%93%B1%ED%8F%AC%EA%B5%AC2017-75.PDF",
+    "page_url": "https://urban.seoul.go.kr/view/html/PMNU4030600001?noticeCode=11000NTC201707278219",
+    "center_grade": "도심",
+    "center_name": "여의도·영등포",
+    "category": "정비사업구역계"
   }
 ]

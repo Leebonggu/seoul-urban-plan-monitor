@@ -20,5 +20,25 @@
     "category": "지구단위계획",
     "zone_name": "거여지구 제1종지구단위계획구역",
     "area": 50853
+  },
+  {
+    "notice_code": "11290NTC202103190001",
+    "notice_no": "2021-55",
+    "notice_date": "2021-03-18",
+    "title": "동선제2주택재개발정비구역 (경미한)변경 지정 및 지형도면 고시",
+    "content": "필지 분할에 따른 공부상 면적 변경 반영\n- 정비구역 면적 29.1 감소\n- 소공원 -> 공공청사\n- 공동이용시설 설치계획 변경 등\n",
+    "organ_code": "3070000",
+    "organ_name": "성북구",
+    "notice_type": "정비사업구역계",
+    "classify_g": "",
+    "classify_m": "",
+    "site_code": "11290",
+    "site_name": "",
+    "location": "성북구 동선동4가 304-2일대",
+    "doc_url": "https://urban.seoul.go.kr/UpisArchive/DATA/PM/pdf/11290NTC202103190001/%EC%84%9C%EC%9A%B8%ED%8A%B9%EB%B3%84%EC%8B%9C_2021-55%ED%98%B8_%EA%B3%A0%EC%8B%9C.pdf",
+    "page_url": "https://urban.seoul.go.kr/view/html/PMNU4030600001?noticeCode=11290NTC202103190001",
+    "center_grade": null,
+    "center_name": null,
+    "category": "정비사업구역계"
   }
 ]

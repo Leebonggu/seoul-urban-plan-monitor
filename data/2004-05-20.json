@@ -20,5 +20,25 @@
     "category": "지구단위계획",
     "zone_name": "거여지구",
     "area": 360.1
+  },
+  {
+    "notice_code": "11000NTC200405206260",
+    "notice_no": "2004-143",
+    "notice_date": "2004-05-20",
+    "title": "도시관리계획용도지구(문화지구)결정",
+    "content": "국토의계획및이용에관한법률 제30조 및 같은법률시행령 제25조의 규정에 의하여 도시관리계획용도지구(문화지구)를 결정하고, 같은법률 제30조제6항 및 같은법률시행령 제25조제5항의 규정에 따라 이를 고시합니다. 2004년 5월 20일 서울특별시장",
+    "organ_code": "6110000",
+    "organ_name": "서울특별시",
+    "notice_type": "용도지구",
+    "classify_g": "",
+    "classify_m": "",
+    "site_code": "11000",
+    "site_name": "",
+    "location": "종로구 혜화동·동숭동·이화동·연건동·명륜동 일대",
+    "doc_url": "",
+    "page_url": "https://urban.seoul.go.kr/view/html/PMNU4030400001?noticeCode=11000NTC200405206260",
+    "center_grade": "도심",
+    "center_name": "한양도성(서울도심)",
+    "category": "용도지구"
   }
 ]

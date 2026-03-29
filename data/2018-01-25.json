@@ -20,5 +20,25 @@
     "category": "지구단위계획",
     "zone_name": "마포구 청사 이전부지 지구단위계획구역",
     "area": 13497.6
+  },
+  {
+    "notice_code": "11000NTC201801250007",
+    "notice_no": "2018-15",
+    "notice_date": "2018-01-25",
+    "title": "방배경남아파트 주택재건축정비사업 정비구역 및 정비계획의 (경미한 변경) 결정 및 지형도면 고시",
+    "content": "정비구역변경",
+    "organ_code": "3210000",
+    "organ_name": "서초구",
+    "notice_type": "정비사업구역계",
+    "classify_g": "",
+    "classify_m": "",
+    "site_code": "11000",
+    "site_name": "",
+    "location": "서초구 방배동 1028-1번지 일대",
+    "doc_url": "https://urban.seoul.go.kr/UpisArchive/DATA/PM/pdf/%EC%84%9C%EC%B4%88%EA%B5%AC2018-15.PDF",
+    "page_url": "https://urban.seoul.go.kr/view/html/PMNU4030600001?noticeCode=11000NTC201801250007",
+    "center_grade": null,
+    "center_name": null,
+    "category": "정비사업구역계"
   }
 ]

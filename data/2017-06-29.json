@@ -20,5 +20,25 @@
     "category": "지구단위계획",
     "zone_name": "건대입구역지구 지구단위계획구역",
     "area": 5946.3
+  },
+  {
+    "notice_code": "11000NTC201706298183",
+    "notice_no": "2017-223",
+    "notice_date": "2017-06-29",
+    "title": "한남재정비촉진지구 한남3구역 재정비촉진계획 변경결정 및 지형도면 고시",
+    "content": "종합적,체계적 도시정비를 위하여 재정비촉진지구로 지정",
+    "organ_code": "6110000",
+    "organ_name": "서울특별시",
+    "notice_type": "정비사업구역계",
+    "classify_g": "",
+    "classify_m": "",
+    "site_code": "11000",
+    "site_name": "",
+    "location": "용산구 한남동 686 일대",
+    "doc_url": "https://urban.seoul.go.kr/UpisArchive/DATA/PM/pdf/%EC%84%9C%EC%9A%B8%ED%8A%B9%EB%B3%84%EC%8B%9C2017-223.PDF",
+    "page_url": "https://urban.seoul.go.kr/view/html/PMNU4030600001?noticeCode=11000NTC201706298183",
+    "center_grade": "광역중심",
+    "center_name": "용산",
+    "category": "정비사업구역계"
   }
 ]

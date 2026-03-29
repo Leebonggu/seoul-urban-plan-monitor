@@ -42,5 +42,25 @@
     "category": "지구단위계획",
     "zone_name": "암사지구 지구단위계획구역",
     "area": 109051
+  },
+  {
+    "notice_code": "11000NTC202007080001",
+    "notice_no": "2019-362",
+    "notice_date": "2019-11-07",
+    "title": "한남재정비촉진지구 변경지정, 한남2구역 재정비촉진계획 변경결정 및 지형도면 고시",
+    "content": "노후 불량주택이 밀집되고, 도로？공원 등 기반시설이 열악한 보광동 일대의 주거환경개선 및 기반시설 확충 등을 통한 종합적？체계적 도시정비를 위하여 재정비촉진지구로 지정",
+    "organ_code": "6110000",
+    "organ_name": "서울특별시",
+    "notice_type": "용도지구",
+    "classify_g": "",
+    "classify_m": "",
+    "site_code": "11000",
+    "site_name": "",
+    "location": "이태원동 57-1, 124-13한남동 737-60일대",
+    "doc_url": "https://urban.seoul.go.kr/UpisArchive/DATA/PM/pdf/11000NTC202007080001/%EC%84%9C%EC%9A%B8%ED%8A%B9%EB%B3%84%EC%8B%9C%202019-362.hwp",
+    "page_url": "https://urban.seoul.go.kr/view/html/PMNU4030400001?noticeCode=11000NTC202007080001",
+    "center_grade": null,
+    "center_name": null,
+    "category": "용도지구"
   }
 ]

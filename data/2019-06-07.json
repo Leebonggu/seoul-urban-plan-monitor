@@ -20,5 +20,25 @@
     "category": "지구단위계획",
     "zone_name": "왕십리뉴타운지구단위계획",
     "area": 337200
+  },
+  {
+    "notice_code": "11110NTC201906270002",
+    "notice_no": "2019-185",
+    "notice_date": "2019-06-07",
+    "title": "세운재정비촉진지구 재정비촉진계획(경미한)변경 결정 및 지형도면 고시",
+    "content": "세운재정비촉진지구 중, 중구 입정동 189-1 일원, 중구 입정동 2-4번지 일원, 중구 을지로4가310-2번지 일원, 중구 인현동2가151-1번지 일원에 대하여 \"도시재정비촉진을 위한 특별법\" 제12조 및 동법 시행령 제15조 규정에 따라 세운재정비촉진지구 재정비촉진계획 변경 결정하고, \"토지이용규제기본법\" 제8조에 따라 지형 도면을 작성하여 이를 고시합니다.",
+    "organ_code": "6110000",
+    "organ_name": "서울특별시",
+    "notice_type": "정비사업구역계",
+    "classify_g": "",
+    "classify_m": "",
+    "site_code": "11000",
+    "site_name": "",
+    "location": "중구 인현동2가 151-1번지 일원 ",
+    "doc_url": "https://urban.seoul.go.kr/UpisArchive/DATA/PM/pdf/1906%20%EC%84%B8%EC%9A%B4%EC%9E%AC%EC%A0%95%EB%B9%84%EC%B4%89%EC%A7%84%EC%A7%80%EA%B5%AC%20%EC%9E%AC%EC%A0%95%EB%B9%84%EC%B4%89%EC%A7%84%EA%B3%84%ED%9A%8D%20%28%EA%B2%BD%EB%AF%B8%ED%95%9C%29%EB%B3%80%EA%B2%BD%20%EA%B2%B0%EC%A0%95%20%EB%B0%8F%20%EC%A7%80%ED%98%95%EB%8F%84%EB%A9%B4%20%EA%B3%A0%EC%8B%9C.pdf",
+    "page_url": "https://urban.seoul.go.kr/view/html/PMNU4030600001?noticeCode=11110NTC201906270002",
+    "center_grade": "도심",
+    "center_name": "한양도성(서울도심)",
+    "category": "정비사업구역계"
   }
 ]

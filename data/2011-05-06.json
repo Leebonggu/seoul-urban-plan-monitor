@@ -42,5 +42,25 @@
     "category": "지구단위계획",
     "zone_name": "양재지구중심 제1종지구단위계획구역",
     "area": 82550
+  },
+  {
+    "notice_code": "11000NTC201105066073",
+    "notice_no": "2011-23",
+    "notice_date": "2011-05-06",
+    "title": "사당1 주택재건축정비구역 (경미한 변경)지정 및 지형도면 고시",
+    "content": "사당1 주택재건축정비구역 (경미한 변경)지정 및 지형도면 고시",
+    "organ_code": "3190000",
+    "organ_name": "동작구",
+    "notice_type": "정비사업구역계",
+    "classify_g": "",
+    "classify_m": "",
+    "site_code": "11000",
+    "site_name": "",
+    "location": "동작구 사당동 167-19번지 일대",
+    "doc_url": "https://urban.seoul.go.kr/UpisArchive/DATA/PM/pdf/%EB%8F%99%EC%9E%91%EA%B5%AC2011-23.HWP",
+    "page_url": "https://urban.seoul.go.kr/view/html/PMNU4030600001?noticeCode=11000NTC201105066073",
+    "center_grade": "지역중심",
+    "center_name": "사당·이수",
+    "category": "정비사업구역계"
   }
 ]

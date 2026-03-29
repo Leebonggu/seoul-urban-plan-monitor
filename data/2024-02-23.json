@@ -1,0 +1,42 @@
+[
+  {
+    "notice_code": "11110NTC202401100004",
+    "notice_no": "2024-22",
+    "notice_date": "2024-02-23",
+    "title": "도시계획시설(유수지, 청소년수련시설)중복 결정 및 지형도면 고시",
+    "content": "서울특별시고시 제96호(2008.3.27.)로 결정된 종로구 신영동 62번지 일대 도시계획시설(유수지:저류시설)에 청소년수련시설 건립을 위하여 「국토의 계획 및 이용에 관한 법률」 제30조 및 같은 법 시행령 제25조에 따라 도시계획시설(유수지, 청소년수련시설) 중복결정을 하고, 「국토의 계획 및 이용에 관한 법률」 제32조, 「토지이용규제 기본법」 제8조 및 같은 법 시행령 제7조에 따라 지형도면을 고시합니다.\n",
+    "organ_code": "3000000",
+    "organ_name": "종로구",
+    "notice_type": "도시계획시설",
+    "classify_g": "",
+    "classify_m": "",
+    "site_code": "11110",
+    "site_name": "",
+    "location": "신영동 62번지 일대",
+    "doc_url": "https://urban.seoul.go.kr/UpisArchive/DATA/PM/pdf/11110NTC202401100004/%EC%A2%85%EB%A1%9C%EA%B5%AC_%EC%A0%9C2024-22%ED%98%B8_%EA%B3%A0%EC%8B%9C.pdf",
+    "page_url": "https://urban.seoul.go.kr/view/html/PMNU4030300001?noticeCode=11110NTC202401100004",
+    "center_grade": null,
+    "center_name": null,
+    "category": "도시계획시설"
+  },
+  {
+    "notice_code": "11170NTC202403070008",
+    "notice_no": "2024-17",
+    "notice_date": "2024-02-23",
+    "title": "정비창전면 2-1구역 도시정비형 재개발구역 변경(경미한 변경) 지정 및 지형도면 고시",
+    "content": "서울특별시고시 제2018-100호(2018.04.05.)로 정비구역 지정되고, 용산구고시 제2019-128호(2019.9.5.)로 정비구역 (경미한)변경 지정된 용산구 한강로3가 40-669번지 일대 정비창전면 2-1 도시정비형 재개발구역에 대하여 「도시 및 주거환경정비법」 제16조, 같은법 시행령 제13조 및 「서울특별시 도시 및 주거환경정비 조례」 제11조 규정에 따라 정비구역 변경(경미한 사항) 지정 및 고시하고, 「토지이용규제 기본법」 제8조 규정에 따라 지형도면을 고시합니다.",
+    "organ_code": "3020000",
+    "organ_name": "용산구",
+    "notice_type": "정비사업구역계",
+    "classify_g": "",
+    "classify_m": "",
+    "site_code": "11170",
+    "site_name": "",
+    "location": "용산구 한강로3가 40-669번지 일대",
+    "doc_url": "https://urban.seoul.go.kr/UpisArchive/DATA/PM/pdf/11170NTC202403070008/%EC%9A%A9%EC%82%B0%EA%B5%AC_%EC%A0%9C2024-17%ED%98%B8_%EA%B3%A0%EC%8B%9C.pdf",
+    "page_url": "https://urban.seoul.go.kr/view/html/PMNU4030600001?noticeCode=11170NTC202403070008",
+    "center_grade": "광역중심",
+    "center_name": "용산",
+    "category": "정비사업구역계"
+  }
+]

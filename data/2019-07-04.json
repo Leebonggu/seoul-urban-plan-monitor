@@ -20,5 +20,25 @@
     "category": "지구단위계획",
     "zone_name": "광진구 구의동 587-62 일원 역세권 청년주택",
     "area": 648
+  },
+  {
+    "notice_code": "11140NTC201907110001",
+    "notice_no": "2019-84",
+    "notice_date": "2019-07-04",
+    "title": "봉래 도시정비형 재개발구역 제1지구 정비계획 변경(경미한 사항) 결정 및 지형도면 고시",
+    "content": "서울특별시 고시 제2017-311호(2017. 8. 24.)로 봉래 도시환경정비구역 지정 및 정비계획 결정되었다가 서울특별시 중구고시 제2018-85호(2018. 8. 2.)로 정비구역 변경(경미한 사항) 지정된 봉래구역 제1지구 도시정비형 재개발사업에 대하여 「도시 및 주거환경정비법」 제16조에 따라 정비계획 변경(경미한 사항) 결정 고시하고, 「토지이용규제 기본법」제8조 규정에 따라 지형도면을 고시합니다.",
+    "organ_code": "3010000",
+    "organ_name": "중구",
+    "notice_type": "정비사업구역계",
+    "classify_g": "",
+    "classify_m": "",
+    "site_code": "11140",
+    "site_name": "",
+    "location": "중구 봉래동1가 48-3 일원",
+    "doc_url": "https://urban.seoul.go.kr/UpisArchive/DATA/PM/pdf/%EA%B3%A0%EC%8B%9C%EB%AC%B8%28%EC%A4%91%EA%B5%AC%20%EA%B3%A0%EC%8B%9C%20%EC%A0%9C2019-84%ED%98%B8%29.pdf",
+    "page_url": "https://urban.seoul.go.kr/view/html/PMNU4030600001?noticeCode=11140NTC201907110001",
+    "center_grade": "도심",
+    "center_name": "한양도성(서울도심)",
+    "category": "정비사업구역계"
   }
 ]

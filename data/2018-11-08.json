@@ -20,5 +20,25 @@
     "category": "지구단위계획",
     "zone_name": "본동 지구단위계획구역",
     "area": 29726
+  },
+  {
+    "notice_code": "11000NTC201811080004",
+    "notice_no": "2018-363",
+    "notice_date": "2018-11-08",
+    "title": "건영아파트 주택재건축정비사업 기본계획(경미한)변경, 정비구역 지정 및 지형도면 고시",
+    "content": "서울특별시 도시？주거환경정비기본계획(서울특별시고시 제2011-309호(2011.10.20)에 따라 건영아파트 주택재건축정비예정구역으로 지정된 서울특별시 관악구 미성동 746-43번지 일대에 대하여 「도시 및 주거환경정비법」제7조의 규정에 따라 주택재건축정비사업 기본계획(경미한)변경 결정 및 동법 제16조에 따라 주택재건축 정비구역 지정 및 정비계획 수립하고,「토지이용규제 기본법」제8조의 규정에 따라 지형도면을 고시합니다.",
+    "organ_code": "6110000",
+    "organ_name": "서울특별시",
+    "notice_type": "정비사업구역계",
+    "classify_g": "",
+    "classify_m": "",
+    "site_code": "11000",
+    "site_name": "",
+    "location": "서울특별시 관악구 미성동 746-43번지 일대",
+    "doc_url": "https://urban.seoul.go.kr/UpisArchive/DATA/PM/pdf/%EC%84%9C%EC%9A%B8%ED%8A%B9%EB%B3%84%EC%8B%9C2018-363.PDF",
+    "page_url": "https://urban.seoul.go.kr/view/html/PMNU4030600001?noticeCode=11000NTC201811080004",
+    "center_grade": null,
+    "center_name": null,
+    "category": "정비사업구역계"
   }
 ]

@@ -105,8 +105,6 @@ export default function Dashboard({ records }: Props) {
           <option value="결정고시">결정고시</option>
           <option value="지구단위계획">지구단위계획</option>
           <option value="도시계획시설">도시계획시설</option>
-          <option value="용도지구">용도지구</option>
-          <option value="용도구역">용도구역</option>
           <option value="정비사업구역계">정비사업구역계</option>
         </select>
         <select

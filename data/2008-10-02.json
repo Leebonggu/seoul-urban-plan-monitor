@@ -20,5 +20,25 @@
     "category": "지구단위계획",
     "zone_name": "서울동남권유통단지 제1종 지구단위계획구역",
     "area": 560694
+  },
+  {
+    "notice_code": "11000NTC200810022247",
+    "notice_no": "2008-37",
+    "notice_date": "2008-10-02",
+    "title": "쌍문제1주택재개발구역 정비계획 변경결정(경미한 변경)",
+    "content": "서울특별시고시 제2007-141(2007.5.17)호로 주택재개발구역 지정된 쌍문제1주택재개발구역에 대하여 도시 및 주거환경정비법제4조제1항 및 같은법 시행령 제12조 및 서울특별시도시및주거환경정비조례 제7조에 의거 정비계획의 경미한 변경 결정하고 같은법 제4조 제3항 규정에 의거 이를 고시 합니다. 2008년 10월  2일 도  봉  구  청  장",
+    "organ_code": "3090000",
+    "organ_name": "도봉구",
+    "notice_type": "정비사업구역계",
+    "classify_g": "",
+    "classify_m": "",
+    "site_code": "11000",
+    "site_name": "",
+    "location": "도봉구 쌍문동 414번지 일대",
+    "doc_url": "https://urban.seoul.go.kr/UpisArchive/DATA/PM/pdf/%EB%8F%84%EB%B4%89%EA%B5%AC2008-37.PDF",
+    "page_url": "https://urban.seoul.go.kr/view/html/PMNU4030600001?noticeCode=11000NTC200810022247",
+    "center_grade": null,
+    "center_name": null,
+    "category": "정비사업구역계"
   }
 ]

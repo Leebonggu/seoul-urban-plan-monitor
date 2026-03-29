@@ -20,5 +20,25 @@
     "category": "지구단위계획",
     "zone_name": "거여2지구지구단위계획구역",
     "area": 17272
+  },
+  {
+    "notice_code": "11000NTC201411067325",
+    "notice_no": "2014-165",
+    "notice_date": "2014-11-06",
+    "title": "돈암제5주택재개발 정비구역변경지정 및 지형도면 고시",
+    "content": "서울특별시고시 제2007-135(2007.5.17.)호로 주택재개발 정비구역 지정되고, 서울특별시 성북구고시 제2008-51(2008.05.14.)호로 주택재개발 정비구역 변경 지정된 성북구 돈암동 13-7일대 돈암제5구역 주택재개발정비사업에 대하여 도시 및 주거환경정비법 제4조 제1항 등 관련규정에 따라 정비구역변경 지정하고, 국토의 계획 및 이용에 관한 법률 제32조, 동법시행령 제27조, 토지이용규제 기본법 제8조 (지역？지구등의 지정) 및 동법시행령 제7조(지형도면등의 작성？고시방법) 규정에 의거 지형 도면을 작성하고 이를 고시합니다.",
+    "organ_code": "3070000",
+    "organ_name": "성북구",
+    "notice_type": "정비사업구역계",
+    "classify_g": "",
+    "classify_m": "",
+    "site_code": "11000",
+    "site_name": "",
+    "location": "성북구 돈암동 13-7 일대",
+    "doc_url": "https://urban.seoul.go.kr/UpisArchive/DATA/PM/pdf/%EC%84%B1%EB%B6%81%EA%B5%AC2014-165.PDF",
+    "page_url": "https://urban.seoul.go.kr/view/html/PMNU4030600001?noticeCode=11000NTC201411067325",
+    "center_grade": null,
+    "center_name": null,
+    "category": "정비사업구역계"
   }
 ]

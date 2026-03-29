@@ -20,5 +20,25 @@
     "category": "지구단위계획",
     "zone_name": "강서구 화곡동 401-1번지 역세권 청년주택",
     "area": 573.5
+  },
+  {
+    "notice_code": "11000NTC201901170082",
+    "notice_no": "2019-16",
+    "notice_date": "2019-01-17",
+    "title": "『반포아파트지구 개발기본계획(3주구)』(경미한)변경 결정 및 지형도면 고시",
+    "content": "『반포아파트지구 개발기본계획(3주구)』(경미한)변경 결정 및 지형도면 고시\n\n",
+    "organ_code": "3210000",
+    "organ_name": "서초구",
+    "notice_type": "정비사업구역계",
+    "classify_g": "",
+    "classify_m": "",
+    "site_code": "11000",
+    "site_name": "",
+    "location": "서초구 잠원동 60-3번지 일대",
+    "doc_url": "https://urban.seoul.go.kr/UpisArchive/DATA/PM/pdf/11000NTC201901170082/%EC%84%9C%EC%B4%88%EA%B5%AC%EA%B3%A0%EC%8B%9C%20%EC%A0%9C2019-16%ED%98%B8.hwp",
+    "page_url": "https://urban.seoul.go.kr/view/html/PMNU4030600001?noticeCode=11000NTC201901170082",
+    "center_grade": null,
+    "center_name": null,
+    "category": "정비사업구역계"
   }
 ]

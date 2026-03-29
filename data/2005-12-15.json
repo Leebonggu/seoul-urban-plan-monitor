@@ -64,5 +64,25 @@
     "category": "지구단위계획",
     "zone_name": "대흥지구 지구단위계획구역",
     "area": 29790
+  },
+  {
+    "notice_code": "11000NTC200512159267",
+    "notice_no": "2005-388",
+    "notice_date": "2005-12-15",
+    "title": "송파구 송파동 반도아파트 주택재건축 정비구역",
+    "content": "도시 및 주거환경정비법 제4조제2항의 규정에 의하여 서울특별시 송파구 송파동 167번지(송파동 반도아파트)에 대하여 주택재건축정비구역으로 지정하고 같은 법 제4조제3항의 규정에 따라 이를 고시합니다. 2005년 12월 15일 서 울 특 별 시 장",
+    "organ_code": "6110000",
+    "organ_name": "서울특별시",
+    "notice_type": "정비사업구역계",
+    "classify_g": "",
+    "classify_m": "",
+    "site_code": "11000",
+    "site_name": "",
+    "location": "송파구 송파동 167번지",
+    "doc_url": "",
+    "page_url": "https://urban.seoul.go.kr/view/html/PMNU4030600001?noticeCode=11000NTC200512159267",
+    "center_grade": null,
+    "center_name": null,
+    "category": "정비사업구역계"
   }
 ]

@@ -20,5 +20,25 @@
     "category": "지구단위계획",
     "zone_name": "수색·DMC 주변지역",
     "area": 30041
+  },
+  {
+    "notice_code": "11000NTC201812181440",
+    "notice_no": "2018-164",
+    "notice_date": "2018-12-07",
+    "title": "효창제4주택재개발 정비구역 변경지정(경미한 사항) 및 지형도면 고시",
+    "content": "- 확정측량 결과를 반영한 정비구역 및 계획 변경",
+    "organ_code": "3020000",
+    "organ_name": "용산구",
+    "notice_type": "정비사업구역계",
+    "classify_g": "",
+    "classify_m": "",
+    "site_code": "11000",
+    "site_name": "",
+    "location": "용산구 효창동 117-1번지 일대",
+    "doc_url": "https://urban.seoul.go.kr/UpisArchive/DATA/PM/pdf/%EC%9A%A9%EC%82%B0%EA%B5%AC2018-164.hwp",
+    "page_url": "https://urban.seoul.go.kr/view/html/PMNU4030600001?noticeCode=11000NTC201812181440",
+    "center_grade": "광역중심",
+    "center_name": "용산",
+    "category": "정비사업구역계"
   }
 ]

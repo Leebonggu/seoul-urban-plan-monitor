@@ -108,5 +108,25 @@
     "category": "지구단위계획",
     "zone_name": "송파나루 지구단위계획구역",
     "area": 86100
+  },
+  {
+    "notice_code": "11620NTC202001090001",
+    "notice_no": "2019-148",
+    "notice_date": "2019-12-26",
+    "title": "관악구 강남아파트 재건축 정비계획변경(경미한 변경) 결정고시",
+    "content": "관악구 강남아파트 재건축 정비계획변경(경미한 변경) 결정고시",
+    "organ_code": "3200000",
+    "organ_name": "관악구",
+    "notice_type": "정비사업구역계",
+    "classify_g": "",
+    "classify_m": "",
+    "site_code": "11620",
+    "site_name": "",
+    "location": "관악구 신림동 1644번지 일대",
+    "doc_url": "https://urban.seoul.go.kr/UpisArchive/DATA/PM/pdf/11620NTC202001090001/%EA%B4%80%EC%95%85%EA%B5%AC%EA%B3%A0%EC%8B%9C%20%EC%A0%9C2019-148%EA%B0%95%EB%82%A8%EC%95%84%ED%8C%8C%ED%8A%B8.pdf",
+    "page_url": "https://urban.seoul.go.kr/view/html/PMNU4030600001?noticeCode=11620NTC202001090001",
+    "center_grade": null,
+    "center_name": null,
+    "category": "정비사업구역계"
   }
 ]

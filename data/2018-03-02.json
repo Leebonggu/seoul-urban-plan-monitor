@@ -20,5 +20,25 @@
     "category": "지구단위계획",
     "zone_name": "수색1존치관리구역 지구단위계획구역",
     "area": 52343
+  },
+  {
+    "notice_code": "11000NTC201805282953",
+    "notice_no": "2018-10",
+    "notice_date": "2018-03-02",
+    "title": "면목5주택재건축정비사업 정비계획 및 정비구역 (경미한)변경 지정(결정) 고시",
+    "content": "면목5주택재건축정비사업 정비계획 및 정비구역 (경미한)변경 지정(결정) 고시",
+    "organ_code": "3060000",
+    "organ_name": "중랑구",
+    "notice_type": "정비사업구역계",
+    "classify_g": "",
+    "classify_m": "",
+    "site_code": "11000",
+    "site_name": "",
+    "location": "중랑구 면목동 171-7번지 일대",
+    "doc_url": "https://urban.seoul.go.kr/UpisArchive/DATA/PM/pdf/%EC%A4%91%EB%9E%91%EA%B5%AC2018-10.HWP",
+    "page_url": "https://urban.seoul.go.kr/view/html/PMNU4030600001?noticeCode=11000NTC201805282953",
+    "center_grade": "지역중심",
+    "center_name": "목동",
+    "category": "정비사업구역계"
   }
 ]

@@ -20,5 +20,25 @@
     "category": "지구단위계획",
     "zone_name": "개포 구룡마을 지구단위계획구역",
     "area": 266304
+  },
+  {
+    "notice_code": "11000NTC201612087956",
+    "notice_no": "2016-396",
+    "notice_date": "2016-12-08",
+    "title": "논현종합시장 정비사업 추진계획 승인 및 지형도면 고시",
+    "content": "「전통시장 및 상점가 육성을 위한 특별법」 제37조의 규정의 따라 시장정비사업 추진계획을 승인하고, 「토지이용규제 기본법」 제8조의 규정에 의하여 지형도면을 고시.",
+    "organ_code": "6110000",
+    "organ_name": "서울특별시",
+    "notice_type": "정비사업구역계",
+    "classify_g": "",
+    "classify_m": "",
+    "site_code": "11000",
+    "site_name": "",
+    "location": "강남구 논현동 227-4",
+    "doc_url": "https://urban.seoul.go.kr/UpisArchive/DATA/PM/pdf/%EC%84%9C%EC%9A%B8%ED%8A%B9%EB%B3%84%EC%8B%9C2016-396.PDF",
+    "page_url": "https://urban.seoul.go.kr/view/html/PMNU4030600001?noticeCode=11000NTC201612087956",
+    "center_grade": "도심",
+    "center_name": "강남",
+    "category": "정비사업구역계"
   }
 ]

@@ -20,5 +20,25 @@
     "category": "지구단위계획",
     "zone_name": "방배동 903-17번지 지구단위계획구역",
     "area": 5530.6
+  },
+  {
+    "notice_code": "11000NTC201801110002",
+    "notice_no": "2018-9",
+    "notice_date": "2018-01-11",
+    "title": "장안평 중고차매매센터 도시환경정비구역 지정,정비계획 결정 및 지형도면 고시",
+    "content": "서울특별시 성동구 용답동 234일대 장안평 중고차매매센터 도시환경정비 예정구역에 대하여 「도시 및 주거환경정비법」 제4조 규정에 의거 도시환경정비구역을 지정 및 정비계획 결정·고시하고, 「토지이용규제 기본법」제8조 및 같은 법 시행령 제7조 규정에 의거 지형도면을 함께 고시 합니다.",
+    "organ_code": "6110000",
+    "organ_name": "서울특별시",
+    "notice_type": "정비사업구역계",
+    "classify_g": "",
+    "classify_m": "",
+    "site_code": "11000",
+    "site_name": "",
+    "location": "성동구 용답동 234일대",
+    "doc_url": "https://urban.seoul.go.kr/UpisArchive/DATA/PM/pdf/%EC%84%9C%EC%9A%B8%ED%8A%B9%EB%B3%84%EC%8B%9C2018-9.HWP",
+    "page_url": "https://urban.seoul.go.kr/view/html/PMNU4030600001?noticeCode=11000NTC201801110002",
+    "center_grade": null,
+    "center_name": null,
+    "category": "정비사업구역계"
   }
 ]

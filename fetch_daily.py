@@ -38,21 +38,12 @@ API_SOURCES = {
         "parser": "ctymgrpln",
         "initial_bgn_months": 12,
     },
-    "용도지구": {
-        "url": "https://urban.seoul.go.kr/ctymgrpln/getSpcfcList.json",
-        "page_url_base": "https://urban.seoul.go.kr/view/html/PMNU4030400001",
-        "parser": "ctymgrpln",
-    },
-    "용도구역": {
-        "url": "https://urban.seoul.go.kr/ctymgrpln/getUsgarList.json",
-        "page_url_base": "https://urban.seoul.go.kr/view/html/PMNU4030500001",
-        "parser": "ctymgrpln",
-    },
     "정비사업구역계": {
         "url": "https://urban.seoul.go.kr/ctymgrpln/getCtyPlnDwkList.json",
         "page_url_base": "https://urban.seoul.go.kr/view/html/PMNU4030600001",
         "parser": "ctymgrpln",
         "extra_params": {"wtnnccode": "WPCD02", "classifyM": "UQ1200"},
+        "initial_bgn_months": 12,
     },
 }
 DATA_DIR = os.path.join(os.path.dirname(__file__), "data")
@@ -274,7 +265,8 @@ _DATE_RE = re.compile(r"^\d{4}-\d{2}-\d{2}$")
 def fetch_source(source_name: str, api_url: str, page_url_base: str,
                   existing_codes: set, bgn_date: str = "",
                   parser: str = "ntfc",
-                  extra_params: dict | None = None) -> dict[str, list]:
+                  extra_params: dict | None = None,
+                  dedup_threshold: int = 100) -> dict[str, list]:
     """단일 API 소스에서 신규 레코드 수집."""
     new_records = defaultdict(list)
     page_no = 1
@@ -307,7 +299,7 @@ def fetch_source(source_name: str, api_url: str, page_url_base: str,
                 new_records[record["notice_date"]].append(record)
                 existing_codes.add(record["notice_code"])
 
-        if consecutive_existing >= 100:
+        if consecutive_existing >= dedup_threshold:
             logger.info(f"[{source_name}] 신규 데이터 없음, 중단.")
             break
 
@@ -346,6 +338,11 @@ def main():
             month = (today.month - initial_months - 1) % 12 + 1
             bgn_date = f"{year}-{month:02d}-{today.day:02d}"
 
+        # 다른 카테고리와 notice_code가 겹치는 소스는 중복 허용치를 높임
+        dedup = 100
+        if source_cfg.get("parser") == "ctymgrpln":
+            dedup = 5000
+
         new_records = fetch_source(
             source_name,
             source_cfg["url"],
@@ -354,6 +351,7 @@ def main():
             bgn_date=bgn_date,
             parser=source_cfg.get("parser", "ntfc"),
             extra_params=source_cfg.get("extra_params"),
+            dedup_threshold=dedup,
         )
         for date_key, records in new_records.items():
             all_new_records[date_key].extend(records)

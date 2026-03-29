@@ -64,5 +64,25 @@
     "category": "지구단위계획",
     "zone_name": "상봉7재정비촉진구역 지구단위계획구역",
     "area": 14996.3
+  },
+  {
+    "notice_code": "11140NTC202009230003",
+    "notice_no": "2020-91",
+    "notice_date": "2020-07-16",
+    "title": "저동 도시정비형 재개발구역 제2지구 정비구역(정비계획) 변경 결정(경미한 변경) 및 지형도면 고시",
+    "content": "붙임 고시문 참조",
+    "organ_code": "3010000",
+    "organ_name": "중구",
+    "notice_type": "정비사업구역계",
+    "classify_g": "",
+    "classify_m": "",
+    "site_code": "11140",
+    "site_name": "",
+    "location": "중구 저동2가 82-2번지 일대",
+    "doc_url": "https://urban.seoul.go.kr/UpisArchive/DATA/PM/pdf/11140TTC202009230003/%EC%A4%91%EA%B5%AC_2020-91%ED%98%B8_%EA%B3%A0%EC%8B%9C.pdf",
+    "page_url": "https://urban.seoul.go.kr/view/html/PMNU4030600001?noticeCode=11140NTC202009230003",
+    "center_grade": "도심",
+    "center_name": "한양도성(서울도심)",
+    "category": "정비사업구역계"
   }
 ]

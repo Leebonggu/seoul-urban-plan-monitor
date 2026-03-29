@@ -64,5 +64,25 @@
     "category": "지구단위계획",
     "zone_name": "서초로 지구단위계획구역",
     "area": 540698.1
+  },
+  {
+    "notice_code": "11000NTC201705258132",
+    "notice_no": "2017-64",
+    "notice_date": "2017-05-25",
+    "title": "문정동 136번지 일원 주택재건축 정비계획변경(경미한 변경) 결정 및 지형도면 고시",
+    "content": "서울특별시 송파구 문정동 136번지 일대 주택재건축정비사업을 위하여 정비계획변경(경미한변경)을 결정하고 고시합니다.",
+    "organ_code": "3230000",
+    "organ_name": "송파구",
+    "notice_type": "정비사업구역계",
+    "classify_g": "",
+    "classify_m": "",
+    "site_code": "11000",
+    "site_name": "",
+    "location": "송파구 문정동 136 일원",
+    "doc_url": "https://urban.seoul.go.kr/UpisArchive/DATA/PM/pdf/%EC%86%A1%ED%8C%8C%EA%B5%AC2017-64.PDF",
+    "page_url": "https://urban.seoul.go.kr/view/html/PMNU4030600001?noticeCode=11000NTC201705258132",
+    "center_grade": "지역중심",
+    "center_name": "수서·문정",
+    "category": "정비사업구역계"
   }
 ]

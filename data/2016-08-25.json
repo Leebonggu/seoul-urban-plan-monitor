@@ -20,5 +20,25 @@
     "category": "지구단위계획",
     "zone_name": "개포택지개발지구 지구단위계획",
     "area": 5268557
+  },
+  {
+    "notice_code": "11000NTC201608257855",
+    "notice_no": "2016-59",
+    "notice_date": "2016-08-25",
+    "title": "신월4 주택재건축 정비계획의 경미한 변경 및 지형도면 고시",
+    "content": "서울특별시 고시 제2011-81호(2011.03.24.)로 주택재건축정비구역 지정 및 정비계획 수립된 서울특별시 양천구 신월2동 489-3번지 일대 신월4주택재건축정비구역에 대하여 「도시 및 주거환경정비법」제4조, 같은 법 시행령 제12조 및 서울특별시 도시 및 주거환경정비조례 제7조 규정에 의거 다음과 같이 정비계획의 경미한 변경 지정하고, 같은 법 제4조제5항,「토지이용규제기본법」제8조 규정에 따라 그 변경 내용과 지형도면을 고시합니다.  2016년 8월25일 양천구청장",
+    "organ_code": "6110000",
+    "organ_name": "서울특별시",
+    "notice_type": "정비사업구역계",
+    "classify_g": "",
+    "classify_m": "",
+    "site_code": "11000",
+    "site_name": "",
+    "location": "양천구 신월동 489-3번지 일대",
+    "doc_url": "https://urban.seoul.go.kr/UpisArchive/DATA/PM/pdf/%EC%84%9C%EC%9A%B8%ED%8A%B9%EB%B3%84%EC%8B%9C2016-59.PDF",
+    "page_url": "https://urban.seoul.go.kr/view/html/PMNU4030600001?noticeCode=11000NTC201608257855",
+    "center_grade": null,
+    "center_name": null,
+    "category": "정비사업구역계"
   }
 ]

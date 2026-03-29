@@ -108,5 +108,25 @@
     "category": "지구단위계획",
     "zone_name": "신정 도시개발 지구단위계획구역",
     "area": 33788.6
+  },
+  {
+    "notice_code": "11260NTC202009020005",
+    "notice_no": "2020-65",
+    "notice_date": "2020-06-25",
+    "title": "면목3주택재건축 정비계획 및 정비구역 변경 지정 및 지형도면 고시",
+    "content": "지적측량성과에 따른 정비구역 면적 및 구역 내 선형 변경\n관리처분계획변경인가 반영 세대수 변경(3세대 감소)\n공동이용시설 설치계획 변경에 따른 공동이용시설 면적 변경",
+    "organ_code": "3060000",
+    "organ_name": "중랑구",
+    "notice_type": "정비사업구역계",
+    "classify_g": "",
+    "classify_m": "",
+    "site_code": "11260",
+    "site_name": "",
+    "location": "중랑구 면목동 164-10번지 일대",
+    "doc_url": "https://urban.seoul.go.kr/UpisArchive/DATA/PM/pdf/11260TTC202009020005/%EC%A4%91%EB%9E%91%EA%B5%AC_2020-65%ED%98%B8_%EA%B3%A0%EC%8B%9C.pdf",
+    "page_url": "https://urban.seoul.go.kr/view/html/PMNU4030600001?noticeCode=11260NTC202009020005",
+    "center_grade": "지역중심",
+    "center_name": "목동",
+    "category": "정비사업구역계"
   }
 ]

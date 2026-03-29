@@ -20,5 +20,25 @@
     "category": "지구단위계획",
     "zone_name": "마천2구역",
     "area": 84728
+  },
+  {
+    "notice_code": "11000NTC201702238023",
+    "notice_no": "2017-52",
+    "notice_date": "2017-02-23",
+    "title": "「서초아파트지구 개발기본계획(정비계획)」 변경 및 지형도면 고시",
+    "content": "서초아파트지구에 대하여 개발기본계획(정비계획) 변경 지정(결정) 및 지형도면 고시",
+    "organ_code": "6110000",
+    "organ_name": "서울특별시",
+    "notice_type": "정비사업구역계",
+    "classify_g": "",
+    "classify_m": "",
+    "site_code": "11000",
+    "site_name": "",
+    "location": "서초구 반포동 30-16 일대",
+    "doc_url": "https://urban.seoul.go.kr/UpisArchive/DATA/PM/pdf/%EC%84%9C%EC%9A%B8%ED%8A%B9%EB%B3%84%EC%8B%9C2017-52.PDF",
+    "page_url": "https://urban.seoul.go.kr/view/html/PMNU4030600001?noticeCode=11000NTC201702238023",
+    "center_grade": null,
+    "center_name": null,
+    "category": "정비사업구역계"
   }
 ]

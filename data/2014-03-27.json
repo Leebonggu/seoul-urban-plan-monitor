@@ -20,5 +20,25 @@
     "category": "지구단위계획",
     "zone_name": "시흥생활권중심지구단위계획 구역",
     "area": 8687
+  },
+  {
+    "notice_code": "11000NTC201403277141",
+    "notice_no": "2014-110",
+    "notice_date": "2014-03-27",
+    "title": "도시관리계획(최고고도지구)변경결정 및 지형도면 고시",
+    "content": "서울시내 도시관리계획(최고고도지구)변경결정에 대하여 2014년 제5차 도시계획위원회(2014.3.19.) 심의를 거쳐「국토의 계획 및 이용에 관한 법률」제30조,같은 법 시행령 제25조 및 「토지이용규제 기본법」 제8조 규정에 따라 도시관리계획(최고고도지구) 변경결정 및 지형도면을 고시하고자 합니다.",
+    "organ_code": "6110000",
+    "organ_name": "서울특별시",
+    "notice_type": "용도지구",
+    "classify_g": "",
+    "classify_m": "",
+    "site_code": "11000",
+    "site_name": "",
+    "location": "종로구 청운, 궁정, 통의, 적선, 가회, 재동 일대",
+    "doc_url": "https://urban.seoul.go.kr/UpisArchive/DATA/PM/pdf/%EC%84%9C%EC%9A%B8%ED%8A%B9%EB%B3%84%EC%8B%9C2014-110.HWP",
+    "page_url": "https://urban.seoul.go.kr/view/html/PMNU4030400001?noticeCode=11000NTC201403277141",
+    "center_grade": "도심",
+    "center_name": "한양도성(서울도심)",
+    "category": "용도지구"
   }
 ]

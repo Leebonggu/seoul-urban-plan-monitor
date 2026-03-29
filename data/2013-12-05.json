@@ -42,5 +42,25 @@
     "category": "지구단위계획",
     "zone_name": "산새마을 주거환경관리사업(지구단위계획)구역",
     "area": 45756.2
+  },
+  {
+    "notice_code": "11000NTC201312057027",
+    "notice_no": "2013-407",
+    "notice_date": "2013-12-05",
+    "title": "흑석재정비촉진지구 재정비촉진계획(변경)결정고시",
+    "content": "흑석3구역 기준용적률 상향 및 흑석6구역 확정측량에 의한 지구(구역)면적변경",
+    "organ_code": "6110000",
+    "organ_name": "서울특별시",
+    "notice_type": "정비사업구역계",
+    "classify_g": "",
+    "classify_m": "",
+    "site_code": "11000",
+    "site_name": "",
+    "location": "동작구 흑석동 253-89번지 일대",
+    "doc_url": "https://urban.seoul.go.kr/UpisArchive/DATA/PM/pdf/%EC%84%9C%EC%9A%B8%ED%8A%B9%EB%B3%84%EC%8B%9C2013-407.HWP",
+    "page_url": "https://urban.seoul.go.kr/view/html/PMNU4030600001?noticeCode=11000NTC201312057027",
+    "center_grade": null,
+    "center_name": null,
+    "category": "정비사업구역계"
   }
 ]

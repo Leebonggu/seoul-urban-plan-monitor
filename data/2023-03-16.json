@@ -20,5 +20,25 @@
     "category": "지구단위계획",
     "zone_name": "사당3동 지구단위계획구역",
     "area": 34353.4
+  },
+  {
+    "notice_code": "11260NTC202301040001",
+    "notice_no": "2023-86",
+    "notice_date": "2023-03-16",
+    "title": "중화동 우성타운 재건축 정비계획 결정 및 정비구역 지정  지구단위계획 결정 및 지형도면 고시",
+    "content": "서울특별시 중랑구 중화동 195-2번지 일대 재건축사업 시행을 위하여 「도시 및 주거환경정 비법(이하 ‘도시정비법’)」 제16조에 따라 2022년 제11차 도시계획위원회(2022.10.19.) 심 의를 거쳐 정비계획 결정 및 정비구역으로 지정하고, 도시정비법 제17조 및 「국토의 계획 및 이 용에 관한 법률(이하 ‘국토계획법’)」 제50조에 따라 지구단위계획구역 및 지구단위계획으로 결정·고시하며, 「토지이용규제 기본법」 제8조에 따라 지형도면을 고시합니다.",
+    "organ_code": "6110000",
+    "organ_name": "서울특별시",
+    "notice_type": "정비사업구역계",
+    "classify_g": "",
+    "classify_m": "",
+    "site_code": "11260",
+    "site_name": "",
+    "location": "중랑구 중화동 195-2번지 일대 ",
+    "doc_url": "https://urban.seoul.go.kr/UpisArchive/DATA/PM/pdf/11260TTC202301040001/%EC%84%9C%EC%9A%B8%ED%8A%B9%EB%B3%84%EC%8B%9C_2023-86%ED%98%B8_%EA%B3%A0%EC%8B%9C.pdf",
+    "page_url": "https://urban.seoul.go.kr/view/html/PMNU4030600001?noticeCode=11260NTC202301040001",
+    "center_grade": null,
+    "center_name": null,
+    "category": "정비사업구역계"
   }
 ]

@@ -108,5 +108,25 @@
     "category": "지구단위계획",
     "zone_name": "신정네거리 지구단위계획구역",
     "area": 7558
+  },
+  {
+    "notice_code": "11590NTC202004280001",
+    "notice_no": "2020-113",
+    "notice_date": "2020-03-26",
+    "title": "흑석재정비촉진지구 재정비촉진계획 변경(흑석7) 결정 및 지형도면 고시",
+    "content": "「도시재정비 촉진을 위한 특별법」 제5조제1항 및 같은 법 제12조제1항 규정\n에 의거 재정비촉진지구 변경지정 및 재정비촉진계획 변경결정하고, 같은 법 제5조제4항, \n같은 법 시행령 제5조 및 같은 법 제12조제3항, 같은 법 시행령 제15조의 규정에 따라 이\n를 고시하며, 같은 법 제13조 및 「국토의 계획 및 이용에 관한 법률」 제50조에 따라 지\n구단위계획구역 및 지구단위계획으로 결정ㆍ고시합니다.\n2. 흑석 재정비촉진지구 변경지정 및 재정비촉진계획 변경결정에 대하여 「토지이용규제기본\n법」 제8조에 따라 지형도면을 고시 합니다.",
+    "organ_code": "6110000",
+    "organ_name": "서울특별시",
+    "notice_type": "정비사업구역계",
+    "classify_g": "",
+    "classify_m": "",
+    "site_code": "11590",
+    "site_name": "",
+    "location": "",
+    "doc_url": "https://urban.seoul.go.kr/UpisArchive/DATA/PM/pdf/11590NTC202004280001/%EC%84%9C%EC%9A%B8%ED%8A%B9%EB%B3%84%EC%8B%9C%282020-113%29%ED%9D%91%EC%84%9D7.pdf",
+    "page_url": "https://urban.seoul.go.kr/view/html/PMNU4030600001?noticeCode=11590NTC202004280001",
+    "center_grade": null,
+    "center_name": null,
+    "category": "정비사업구역계"
   }
 ]

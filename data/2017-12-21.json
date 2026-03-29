@@ -20,5 +20,25 @@
     "category": "지구단위계획",
     "zone_name": "공덕동(460호일대 공동주택) 지구단위계획구역",
     "area": 10715.8
+  },
+  {
+    "notice_code": "11000NTC201801053007",
+    "notice_no": "2017-184",
+    "notice_date": "2017-12-21",
+    "title": "보문5구역주택재개발정비구역 지정 (경미한) 변경 및 지형도면 고시",
+    "content": "서울특별시고시 제2010-212호(2010.06.10)로 정비구역지정 및 지형도면 고시되고, 서울특별시성북구고시 제2016-191호(2016.12.29)로 정비구역변경지정된 성북구 보문동1가 196-11번지 일대 보문5구역주택재개발정비구역에 대하여「도시 및 주거환경정비법」제4조, 같은 법 시행령 제12조 및「서울특별시 도시 및 주거환경정비조례」제7조에 따라 (경미한)변경하고, 같은 법 제4조제6항의 규정에 의거 이를 고시",
+    "organ_code": "3070000",
+    "organ_name": "성북구",
+    "notice_type": "정비사업구역계",
+    "classify_g": "",
+    "classify_m": "",
+    "site_code": "11000",
+    "site_name": "",
+    "location": "성북구 보문동1가 196-11 일대",
+    "doc_url": "https://urban.seoul.go.kr/UpisArchive/DATA/PM/pdf/%EC%84%B1%EB%B6%81%EA%B5%AC2017-184.PDF",
+    "page_url": "https://urban.seoul.go.kr/view/html/PMNU4030600001?noticeCode=11000NTC201801053007",
+    "center_grade": null,
+    "center_name": null,
+    "category": "정비사업구역계"
   }
 ]

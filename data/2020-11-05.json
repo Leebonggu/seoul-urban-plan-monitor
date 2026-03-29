@@ -42,5 +42,25 @@
     "category": "지구단위계획",
     "zone_name": "문래동6가 36번지 일대 지구단위계획구역",
     "area": 7324.3
+  },
+  {
+    "notice_code": "11560NTC202011190001",
+    "notice_no": "2020-446",
+    "notice_date": "2020-11-05",
+    "title": "영등포재정비촉진지구 및 재정비촉진계획 변경 결정 및 지형도면 고시",
+    "content": "영등포1-3구역 지적확정측량 결과에 따른 선형변경 없이 면적 변경 및  영등포1-13구역 등 사업진행을 고려하여 사업 목표연도 변경, 측량면적 집계오류에 따른 면적 변경 등",
+    "organ_code": "6110000",
+    "organ_name": "서울특별시",
+    "notice_type": "정비사업구역계",
+    "classify_g": "",
+    "classify_m": "",
+    "site_code": "11560",
+    "site_name": "",
+    "location": "영등포동7가 29-1일대",
+    "doc_url": "https://urban.seoul.go.kr/UpisArchive/DATA/PM/pdf/11560TTC202011190001/%EC%84%9C%EC%9A%B8%ED%8A%B9%EB%B3%84%EC%8B%9C_2020-446%ED%98%B8_%EA%B3%A0%EC%8B%9C.pdf",
+    "page_url": "https://urban.seoul.go.kr/view/html/PMNU4030600001?noticeCode=11560NTC202011190001",
+    "center_grade": "도심",
+    "center_name": "여의도·영등포",
+    "category": "정비사업구역계"
   }
 ]

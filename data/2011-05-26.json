@@ -64,5 +64,25 @@
     "category": "지구단위계획",
     "zone_name": "온수역일대 제1종지구단위계획구역",
     "area": 550338
+  },
+  {
+    "notice_code": "11000NTC201105266108",
+    "notice_no": "2011-38",
+    "notice_date": "2011-05-26",
+    "title": "대림1 주택재건축 정비구역의 정비계획 경미한 사항 변경",
+    "content": "서울시고시 제2007-168호(‘07.05.31), 영등포구고시 제2008-44호 및 서울시고시 제2010-257호(‘10.07.08)에 의해 정비구역 지정 및 변경된 대림1 주택재건축정비구역에 대하여 도시및주거환경정비법 제4조 제4항의 규정에 따라 정비구역 변경(경미한 변경)사항을 변경하고, 같은 법 제4조 제5항의 규정에 따라 이를 고시합니다.",
+    "organ_code": "3180000",
+    "organ_name": "영등포구",
+    "notice_type": "정비사업구역계",
+    "classify_g": "",
+    "classify_m": "",
+    "site_code": "11000",
+    "site_name": "",
+    "location": "",
+    "doc_url": "https://urban.seoul.go.kr/UpisArchive/DATA/PM/pdf/%EC%98%81%EB%93%B1%ED%8F%AC%EA%B5%AC2011-38.HWP",
+    "page_url": "https://urban.seoul.go.kr/view/html/PMNU4030600001?noticeCode=11000NTC201105266108",
+    "center_grade": "도심",
+    "center_name": "여의도·영등포",
+    "category": "정비사업구역계"
   }
 ]

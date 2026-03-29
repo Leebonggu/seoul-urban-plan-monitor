@@ -42,5 +42,25 @@
     "category": "지구단위계획",
     "zone_name": "신이문 생활권중심 지구단위계획구역",
     "area": 31252.7
+  },
+  {
+    "notice_code": "11260NTC202012220002",
+    "notice_no": "2020-148",
+    "notice_date": "2020-12-03",
+    "title": "면목6주택재건축정비계획 경미한 변경결정 고시",
+    "content": "면목6주택재건축정비계획 경미한 변경결정 고시",
+    "organ_code": "3060000",
+    "organ_name": "중랑구",
+    "notice_type": "정비사업구역계",
+    "classify_g": "",
+    "classify_m": "",
+    "site_code": "11260",
+    "site_name": "",
+    "location": "서울시 중랑구 면목동 1405번지 일대 ",
+    "doc_url": "https://urban.seoul.go.kr/UpisArchive/DATA/PM/pdf/11260TTC202012220002/%EC%A4%91%EB%9E%91%EA%B5%AC_2020-148%ED%98%B8_%EA%B3%A0%EC%8B%9C.pdf",
+    "page_url": "https://urban.seoul.go.kr/view/html/PMNU4030600001?noticeCode=11260NTC202012220002",
+    "center_grade": "지역중심",
+    "center_name": "목동",
+    "category": "정비사업구역계"
   }
 ]

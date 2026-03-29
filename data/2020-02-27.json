@@ -86,5 +86,25 @@
     "category": "지구단위계획",
     "zone_name": "쌍문동 380-19 지구단위계획구역",
     "area": 5456
+  },
+  {
+    "notice_code": "11000NTC202101080003",
+    "notice_no": "2020-78",
+    "notice_date": "2020-02-27",
+    "title": "가재울재정비촉진지구 재정비촉진계획 변경결정 및 지형도면 고시",
+    "content": "커뮤니티형성을위한기반시설의확충과자족적도시기능의도입\n자연과더불어사는환경친화뉴타운",
+    "organ_code": "6110000",
+    "organ_name": "서울특별시",
+    "notice_type": "정비사업구역계",
+    "classify_g": "",
+    "classify_m": "",
+    "site_code": "11000",
+    "site_name": "",
+    "location": "서대문구 남가좌동 175번지 일대 ",
+    "doc_url": "https://urban.seoul.go.kr/UpisArchive/DATA/PM/pdf/11000TTC202101080003/%EC%84%9C%EC%9A%B8%ED%8A%B9%EB%B3%84%EC%8B%9C_2020-78%ED%98%B8_%EA%B3%A0%EC%8B%9C.pdf",
+    "page_url": "https://urban.seoul.go.kr/view/html/PMNU4030600001?noticeCode=11000NTC202101080003",
+    "center_grade": null,
+    "center_name": null,
+    "category": "정비사업구역계"
   }
 ]

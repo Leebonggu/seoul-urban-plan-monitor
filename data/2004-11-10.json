@@ -1,0 +1,42 @@
+[
+  {
+    "notice_code": "11000NTC200411107161",
+    "notice_no": "2004-353",
+    "notice_date": "2004-11-10",
+    "title": "남서울한양아파트주택재건축정비구역지정",
+    "content": "서울특별시 금천구 시흥동 789번지 일대를 도시및주거환경정비법 제4조 제2항의 규정에 의하여 남서울한양아파트 주택재건축 정비 구역으로 지정하고 같은 법 제4조 제3항의 규정에 따라 이를 고시합니다. 2004년 11월 10일 서 울 특 별 시 장",
+    "organ_code": "6110000",
+    "organ_name": "서울특별시",
+    "notice_type": "정비사업구역계",
+    "classify_g": "",
+    "classify_m": "",
+    "site_code": "11000",
+    "site_name": "",
+    "location": "금천구 시흥동 789번지 외 8필지",
+    "doc_url": "",
+    "page_url": "https://urban.seoul.go.kr/view/html/PMNU4030600001?noticeCode=11000NTC200411107161",
+    "center_grade": null,
+    "center_name": null,
+    "category": "정비사업구역계"
+  },
+  {
+    "notice_code": "11000NTC200411107137",
+    "notice_no": "2004-349",
+    "notice_date": "2004-11-10",
+    "title": "유원성산아파트주택재건축정비구역지정",
+    "content": "서울특별시 마포구 성산동 125-3번지 일대 유원성산아파트에 대하여 도시및주거환경정비법 제4조제2항의 규정에 의하여 주택재건축정비구역으로 지정하고 같은법 제4조제3항의 규정에 따라 이를 고시합니다. 2004년 11월 10일 서울특별시장",
+    "organ_code": "6110000",
+    "organ_name": "서울특별시",
+    "notice_type": "정비사업구역계",
+    "classify_g": "",
+    "classify_m": "",
+    "site_code": "11000",
+    "site_name": "",
+    "location": "서울시 마포구 성산동 125-3일대",
+    "doc_url": "",
+    "page_url": "https://urban.seoul.go.kr/view/html/PMNU4030600001?noticeCode=11000NTC200411107137",
+    "center_grade": "지역중심",
+    "center_name": "마포",
+    "category": "정비사업구역계"
+  }
+]

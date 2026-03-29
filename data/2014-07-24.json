@@ -20,5 +20,25 @@
     "category": "지구단위계획",
     "zone_name": "난곡사거리지구중심 지구단위계획",
     "area": 5480.3
+  },
+  {
+    "notice_code": "11000NTC201407247268",
+    "notice_no": "2014-81",
+    "notice_date": "2014-07-24",
+    "title": "동대문구 답십리제17구역주택재개발정비구역 변경지정(경미한 사항) 및 지형도면 고시",
+    "content": "정비구역 면적 변경: 13,8710.0 ⇒ 13,850.9㎡) 건축계획(용적률) 변경 : 253%이하 ⇒ 248% 이하 등",
+    "organ_code": "3050000",
+    "organ_name": "동대문구",
+    "notice_type": "정비사업구역계",
+    "classify_g": "",
+    "classify_m": "",
+    "site_code": "11000",
+    "site_name": "",
+    "location": "동대문구 답십리동12일대",
+    "doc_url": "https://urban.seoul.go.kr/UpisArchive/DATA/PM/pdf/%EB%8F%99%EB%8C%80%EB%AC%B8%EA%B5%AC2014-81.HWP",
+    "page_url": "https://urban.seoul.go.kr/view/html/PMNU4030600001?noticeCode=11000NTC201407247268",
+    "center_grade": "지역중심",
+    "center_name": "동대문",
+    "category": "정비사업구역계"
   }
 ]

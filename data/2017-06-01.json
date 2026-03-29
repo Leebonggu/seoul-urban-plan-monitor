@@ -1,0 +1,42 @@
+[
+  {
+    "notice_code": "11000NTC201706018147",
+    "notice_no": "2017-192",
+    "notice_date": "2017-06-01",
+    "title": "「반포아파트지구 개발기본계획(정비계획)」 변경 및 지형도면 정정고시",
+    "content": "\"「반포아파트지구 개발기본계획(정비계획)」 변경 및 지형도면 고시 \" 기재사항을 정정고시",
+    "organ_code": "6110000",
+    "organ_name": "서울특별시",
+    "notice_type": "정비사업구역계",
+    "classify_g": "",
+    "classify_m": "",
+    "site_code": "11000",
+    "site_name": "",
+    "location": "서초구 반포동 1-1 일대",
+    "doc_url": "https://urban.seoul.go.kr/UpisArchive/DATA/PM/pdf/%EC%84%9C%EC%9A%B8%ED%8A%B9%EB%B3%84%EC%8B%9C2017-192.PDF",
+    "page_url": "https://urban.seoul.go.kr/view/html/PMNU4030600001?noticeCode=11000NTC201706018147",
+    "center_grade": null,
+    "center_name": null,
+    "category": "정비사업구역계"
+  },
+  {
+    "notice_code": "11000NTC201706018142",
+    "notice_no": "2017-184",
+    "notice_date": "2017-06-01",
+    "title": "아현재정비촉진지구 재정비촉진계획 변경결정(염리3) 및 지형도면 고시",
+    "content": "아현재정비촉진지구 재정비촉진계획 변경결정(염리3) 및 지형도면 고시",
+    "organ_code": "6110000",
+    "organ_name": "서울특별시",
+    "notice_type": "정비사업구역계",
+    "classify_g": "",
+    "classify_m": "",
+    "site_code": "11000",
+    "site_name": "",
+    "location": "마포구 염리동 507 일원",
+    "doc_url": "https://urban.seoul.go.kr/UpisArchive/DATA/PM/pdf/%EC%84%9C%EC%9A%B8%ED%8A%B9%EB%B3%84%EC%8B%9C2017-184.PDF",
+    "page_url": "https://urban.seoul.go.kr/view/html/PMNU4030600001?noticeCode=11000NTC201706018142",
+    "center_grade": "지역중심",
+    "center_name": "마포",
+    "category": "정비사업구역계"
+  }
+]

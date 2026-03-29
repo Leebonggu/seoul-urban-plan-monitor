@@ -20,5 +20,25 @@
     "category": "지구단위계획",
     "zone_name": "성수전략정비구역 지구단위계획구역",
     "area": 40465
+  },
+  {
+    "notice_code": "11000NTC201305236837",
+    "notice_no": "2013-155",
+    "notice_date": "2013-05-23",
+    "title": "흑석재정비촉진지구 재정비촉진계획 변경결정 및 지형도면 고시",
+    "content": "(기구축내용없음)",
+    "organ_code": "6110000",
+    "organ_name": "서울특별시",
+    "notice_type": "정비사업구역계",
+    "classify_g": "",
+    "classify_m": "",
+    "site_code": "11000",
+    "site_name": "",
+    "location": "동작구 흑석동 232번지 일대",
+    "doc_url": "https://urban.seoul.go.kr/UpisArchive/DATA/PM/pdf/%EC%84%9C%EC%9A%B8%ED%8A%B9%EB%B3%84%EC%8B%9C2013-155.PDF",
+    "page_url": "https://urban.seoul.go.kr/view/html/PMNU4030600001?noticeCode=11000NTC201305236837",
+    "center_grade": null,
+    "center_name": null,
+    "category": "정비사업구역계"
   }
 ]

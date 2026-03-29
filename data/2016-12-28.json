@@ -20,5 +20,25 @@
     "category": "지구단위계획",
     "zone_name": "서울양원 공공주택지구 지구단위계획구역",
     "area": 345291
+  },
+  {
+    "notice_code": "11000NTC201612287981",
+    "notice_no": "2016-194",
+    "notice_date": "2016-12-28",
+    "title": "고덕시영아파트 주택재건축정비구역 변경지정 및 지형도면 고시",
+    "content": "(기구축내용없음)",
+    "organ_code": "3240000",
+    "organ_name": "강동구",
+    "notice_type": "정비사업구역계",
+    "classify_g": "",
+    "classify_m": "",
+    "site_code": "11000",
+    "site_name": "",
+    "location": "강동구 고덕동 670번지 일대",
+    "doc_url": "https://urban.seoul.go.kr/UpisArchive/DATA/PM/pdf/%EA%B0%95%EB%8F%99%EA%B5%AC2016-194.HWP",
+    "page_url": "https://urban.seoul.go.kr/view/html/PMNU4030600001?noticeCode=11000NTC201612287981",
+    "center_grade": null,
+    "center_name": null,
+    "category": "정비사업구역계"
   }
 ]
