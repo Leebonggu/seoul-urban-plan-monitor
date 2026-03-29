@@ -28,57 +28,6 @@ export default function Dashboard({ records }: Props) {
 
   useEffect(() => setMounted(true), []);
 
-  if (!mounted) {
-    return (
-      <div className="max-w-7xl mx-auto px-4 py-6 min-h-[80vh] flex flex-col items-center justify-center">
-        {/* 빌딩 애니메이션 */}
-        <div className="flex items-end gap-1.5 mb-6 h-16">
-          {[
-            { h: "h-8", delay: "0s" },
-            { h: "h-12", delay: "0.15s" },
-            { h: "h-16", delay: "0.3s" },
-            { h: "h-10", delay: "0.45s" },
-            { h: "h-14", delay: "0.6s" },
-          ].map((bar, i) => (
-            <div
-              key={i}
-              className={`w-3 ${bar.h} rounded-t bg-blue-500`}
-              style={{
-                animation: "loadingPulse 1.2s ease-in-out infinite",
-                animationDelay: bar.delay,
-              }}
-            />
-          ))}
-        </div>
-        <p className="text-sm font-medium text-gray-500 animate-pulse">
-          서울 도시계획 데이터를 불러오는 중
-        </p>
-        <div className="flex gap-1 mt-2">
-          {[0, 1, 2].map((i) => (
-            <div
-              key={i}
-              className="w-1.5 h-1.5 rounded-full bg-blue-400"
-              style={{
-                animation: "dotBounce 1.4s ease-in-out infinite",
-                animationDelay: `${i * 0.2}s`,
-              }}
-            />
-          ))}
-        </div>
-        <style jsx>{`
-          @keyframes loadingPulse {
-            0%, 100% { opacity: 0.3; transform: scaleY(0.6); }
-            50% { opacity: 1; transform: scaleY(1); }
-          }
-          @keyframes dotBounce {
-            0%, 80%, 100% { transform: translateY(0); }
-            40% { transform: translateY(-6px); }
-          }
-        `}</style>
-      </div>
-    );
-  }
-
   // 선택된 등급에 해당하는 중심지 목록
   const centerOptions = useMemo(() => {
     if (!grade || grade === "미매칭") return [];
@@ -138,6 +87,56 @@ export default function Dashboard({ records }: Props) {
     { key: "chart", label: "추이/분석" },
     { key: "center", label: "중심지 상세" },
   ];
+
+  if (!mounted) {
+    return (
+      <div className="max-w-7xl mx-auto px-4 py-6 min-h-[80vh] flex flex-col items-center justify-center">
+        <div className="flex items-end gap-1.5 mb-6 h-16">
+          {[
+            { h: "h-8", delay: "0s" },
+            { h: "h-12", delay: "0.15s" },
+            { h: "h-16", delay: "0.3s" },
+            { h: "h-10", delay: "0.45s" },
+            { h: "h-14", delay: "0.6s" },
+          ].map((bar, i) => (
+            <div
+              key={i}
+              className={`w-3 ${bar.h} rounded-t bg-blue-500`}
+              style={{
+                animation: "loadingPulse 1.2s ease-in-out infinite",
+                animationDelay: bar.delay,
+              }}
+            />
+          ))}
+        </div>
+        <p className="text-sm font-medium text-gray-500 animate-pulse">
+          서울 도시계획 데이터를 불러오는 중
+        </p>
+        <div className="flex gap-1 mt-2">
+          {[0, 1, 2].map((i) => (
+            <div
+              key={i}
+              className="w-1.5 h-1.5 rounded-full bg-blue-400"
+              style={{
+                animation: "dotBounce 1.4s ease-in-out infinite",
+                animationDelay: `${i * 0.2}s`,
+              }}
+            />
+          ))}
+        </div>
+        <style jsx>{`
+          @keyframes loadingPulse {
+            0%, 100% { opacity: 0.3; transform: scaleY(0.6); }
+            50% { opacity: 1; transform: scaleY(1); }
+          }
+          @keyframes dotBounce {
+            0%, 80%, 100% { transform: translateY(0); }
+            40% { transform: translateY(-6px); }
+          }
+        `}</style>
+      </div>
+    );
+  }
 
   return (
     <div className="max-w-7xl mx-auto px-4 py-6 space-y-6">
