@@ -44,7 +44,7 @@ ${record.doc_url ? `- 원문 다운로드: ${record.doc_url}` : ""}
 
 ---
 더 많은 서울시 결정고시를 한눈에 보려면:
-서울 결정고시 모니터: https://seoul-gosi-monitor.vercel.app
+서울 결정고시 모니터: https://seoul-urban-plan-monitor.2lee.kr
 `;
 
   return { title, body };

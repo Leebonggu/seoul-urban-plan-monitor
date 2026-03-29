@@ -4,7 +4,7 @@ import "./globals.css";
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
 
-const SITE_URL = "https://seoul-gosi-monitor.vercel.app";
+const SITE_URL = "https://seoul-urban-plan-monitor.2lee.kr";
 const SITE_NAME = "서울 결정고시 모니터";
 const SITE_DESC =
   "서울시 도시계획 결정고시를 매일 수집·분석합니다. 2040 서울도시기본계획 중심지체계(3도심·7광역·12지역) 기반 투자 인사이트를 제공합니다.";

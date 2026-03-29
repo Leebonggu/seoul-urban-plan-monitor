@@ -9,6 +9,6 @@ export default function robots(): MetadataRoute.Robots {
         disallow: "/admin",
       },
     ],
-    sitemap: "https://seoul-gosi-monitor.vercel.app/sitemap.xml",
+    sitemap: "https://seoul-urban-plan-monitor.2lee.kr/sitemap.xml",
   };
 }
