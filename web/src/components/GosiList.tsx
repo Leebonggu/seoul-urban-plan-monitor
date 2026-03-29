@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { GosiRecord } from "@/lib/types";
 import { GRADE_COLORS } from "@/lib/centers";
 
@@ -47,9 +48,12 @@ export default function GosiList({ records, maxItems = 20 }: Props) {
             )}
             <span className="text-xs text-gray-400">{r.organ_name}</span>
           </div>
-          <p className="text-sm font-medium leading-snug">
+          <Link
+            href={`/gosi/${r.notice_code}`}
+            className="text-sm font-medium leading-snug hover:text-blue-600 transition-colors block"
+          >
             {r.title.length > 65 ? r.title.slice(0, 65) + "..." : r.title}
-          </p>
+          </Link>
           <div className="flex items-center gap-2 mt-1">
             {r.location && (
               <span className="text-xs text-gray-400">📍 {r.location}</span>
