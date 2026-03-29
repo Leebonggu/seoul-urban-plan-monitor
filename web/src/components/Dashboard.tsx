@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useMemo } from "react";
+import { useState, useMemo, useEffect } from "react";
 import dynamic from "next/dynamic";
 import { GosiRecord, Center } from "@/lib/types";
 import { CENTERS, GRADE_COLORS } from "@/lib/centers";
@@ -19,11 +19,23 @@ interface Props {
 type Tab = "list" | "chart" | "center";
 
 export default function Dashboard({ records }: Props) {
+  const [mounted, setMounted] = useState(false);
   const [grade, setGrade] = useState("");
   const [centerName, setCenterName] = useState("");
   const [keyword, setKeyword] = useState("");
   const [category, setCategory] = useState("");
   const [tab, setTab] = useState<Tab>("list");
+
+  useEffect(() => setMounted(true), []);
+
+  if (!mounted) {
+    return (
+      <div className="max-w-7xl mx-auto px-4 py-6 flex flex-col items-center justify-center min-h-[60vh] gap-4">
+        <div className="w-10 h-10 border-4 border-gray-200 border-t-blue-500 rounded-full animate-spin" />
+        <p className="text-sm text-gray-400">데이터를 불러오는 중...</p>
+      </div>
+    );
+  }
 
   // 선택된 등급에 해당하는 중심지 목록
   const centerOptions = useMemo(() => {
@@ -76,6 +88,7 @@ export default function Dashboard({ records }: Props) {
 
   const centerMatched = filtered.filter((r) => r.center_grade).length;
   const latestDate = filtered.length > 0 ? filtered[0].notice_date : "-";
+  const oldestDate = filtered.length > 0 ? filtered[filtered.length - 1].notice_date : "-";
   const dailyAvg = filtered.length / 90;
 
   const tabs: { key: Tab; label: string }[] = [
@@ -162,6 +175,7 @@ export default function Dashboard({ records }: Props) {
         total={filtered.length}
         centerMatched={centerMatched}
         latestDate={latestDate}
+        oldestDate={oldestDate}
         dailyAvg={dailyAvg}
       />
 

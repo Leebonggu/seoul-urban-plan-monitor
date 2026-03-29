@@ -4,6 +4,7 @@ interface Props {
   total: number;
   centerMatched: number;
   latestDate: string;
+  oldestDate: string;
   dailyAvg: number;
 }
 
@@ -11,13 +12,14 @@ export default function MetricCards({
   total,
   centerMatched,
   latestDate,
+  oldestDate,
   dailyAvg,
 }: Props) {
   const cards = [
     { label: "총 고시문", value: `${total.toLocaleString()}건` },
     { label: "중심지 매칭", value: `${centerMatched.toLocaleString()}건` },
     { label: "최신 고시일", value: latestDate },
-    { label: "일 평균", value: `${dailyAvg.toFixed(1)}건` },
+    { label: "데이터 시작", value: oldestDate },
   ];
 
   return (
