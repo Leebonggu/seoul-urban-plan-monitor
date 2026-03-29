@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Link from "next/link";
 import { GosiRecord } from "@/lib/types";
 import { GRADE_COLORS } from "@/lib/centers";
 
@@ -60,7 +61,12 @@ export default function GosiTable({ records }: Props) {
                   )}
                 </td>
                 <td className="py-2 px-2 max-w-[300px] truncate">
-                  {r.title}
+                  <Link
+                    href={`/gosi/${r.notice_code}`}
+                    className="hover:text-blue-600 transition-colors"
+                  >
+                    {r.title}
+                  </Link>
                 </td>
                 <td className="py-2 px-2 whitespace-nowrap">
                   {r.page_url && (
