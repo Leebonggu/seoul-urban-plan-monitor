@@ -26,3 +26,11 @@ export function loadAllData(): GosiRecord[] {
 
   return records;
 }
+
+export function loadAllNoticeCodes(): string[] {
+  return loadAllData().map((r) => r.notice_code);
+}
+
+export function loadRecordByCode(code: string): GosiRecord | undefined {
+  return loadAllData().find((r) => r.notice_code === code);
+}
