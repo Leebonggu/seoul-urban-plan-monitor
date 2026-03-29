@@ -63,6 +63,18 @@ export default function RootLayout({
   return (
     <html lang="ko">
       <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "WebSite",
+              name: SITE_NAME,
+              url: SITE_URL,
+              description: SITE_DESC,
+            }),
+          }}
+        />
         {process.env.NEXT_PUBLIC_ADSENSE_ID && (
           <Script
             async
