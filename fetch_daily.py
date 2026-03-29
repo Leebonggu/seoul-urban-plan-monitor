@@ -25,10 +25,34 @@ API_SOURCES = {
     "결정고시": {
         "url": "https://urban.seoul.go.kr/ntfc/getNtfcList.json",
         "page_url_base": "https://urban.seoul.go.kr/view/html/PMNU4030100001",
+        "parser": "ntfc",
     },
     "지구단위계획": {
         "url": "https://urban.seoul.go.kr/dstplan/getDstplanList.json",
         "page_url_base": "https://urban.seoul.go.kr/view/html/PMNU4030200001",
+        "parser": "dstplan",
+    },
+    "도시계획시설": {
+        "url": "https://urban.seoul.go.kr/ctymgrpln/getUbplfcList.json",
+        "page_url_base": "https://urban.seoul.go.kr/view/html/PMNU4030300001",
+        "parser": "ctymgrpln",
+        "initial_bgn_months": 12,
+    },
+    "용도지구": {
+        "url": "https://urban.seoul.go.kr/ctymgrpln/getSpcfcList.json",
+        "page_url_base": "https://urban.seoul.go.kr/view/html/PMNU4030400001",
+        "parser": "ctymgrpln",
+    },
+    "용도구역": {
+        "url": "https://urban.seoul.go.kr/ctymgrpln/getUsgarList.json",
+        "page_url_base": "https://urban.seoul.go.kr/view/html/PMNU4030500001",
+        "parser": "ctymgrpln",
+    },
+    "정비사업구역계": {
+        "url": "https://urban.seoul.go.kr/ctymgrpln/getCtyPlnDwkList.json",
+        "page_url_base": "https://urban.seoul.go.kr/view/html/PMNU4030600001",
+        "parser": "ctymgrpln",
+        "extra_params": {"wtnnccode": "WPCD02", "classifyM": "UQ1200"},
     },
 }
 DATA_DIR = os.path.join(os.path.dirname(__file__), "data")
@@ -62,21 +86,25 @@ MAX_RETRIES = 3
 
 
 def fetch_page(api_url: str, page_no: int, page_size: int = 100,
-               bgn_date: str = "") -> dict:
+               bgn_date: str = "",
+               extra_params: dict | None = None) -> dict:
     for attempt in range(1, MAX_RETRIES + 1):
+        payload = {
+            "pageNo": page_no,
+            "pageSize": page_size,
+            "keywordList": [],
+            "pubSiteCode": "",
+            "organCode": "",
+            "bgnDate": bgn_date,
+            "endDate": "",
+            "srchType": "title",
+            "noticeCode": "",
+        }
+        if extra_params:
+            payload.update(extra_params)
         resp = requests.post(
             api_url,
-            json={
-                "pageNo": page_no,
-                "pageSize": page_size,
-                "keywordList": [],
-                "pubSiteCode": "",
-                "organCode": "",
-                "bgnDate": bgn_date,
-                "endDate": "",
-                "srchType": "title",
-                "noticeCode": "",
-            },
+            json=payload,
             headers={"Content-Type": "application/json; charset=UTF-8"},
             timeout=60,
         )
@@ -192,28 +220,80 @@ def parse_dstplan_item(item: dict, page_url_base: str) -> dict:
     }
 
 
+def parse_ctymgrpln_item(item: dict, category: str, page_url_base: str) -> dict:
+    """도시계획시설/용도지구/용도구역/정비사업구역계 API 응답 파싱."""
+    ntfc = item.get("tnNtfc") or {}
+    organ = ntfc.get("organ") or {}
+    ntfc_img = ntfc.get("tnNtfcImage") or {}
+
+    title = ntfc.get("title") or item.get("zoneName") or ""
+    content = ntfc.get("content") or ""
+    location = item.get("locationName") or ""
+
+    match_text = location if location else f"{title} {content}"
+    center_grade, center_name = match_center(match_text)
+
+    notice_date_raw = ntfc.get("noticeDate") or ""
+    notice_date = notice_date_raw[:10] if notice_date_raw else ""
+
+    notice_code = ntfc.get("noticeCode") or item.get("dNoticeCode") or item.get("recordCode", "")
+
+    # 원문 URL
+    doc_url = ""
+    img_path = ntfc_img.get("aImagePath", "")
+    img_name = ntfc_img.get("aImageName", "")
+    if img_path and img_name:
+        encoded_name = quote(img_name, safe="")
+        doc_url = f"https://urban.seoul.go.kr/{img_path}/{encoded_name}"
+
+    return {
+        "notice_code": notice_code,
+        "notice_no": ntfc.get("noticeNo", ""),
+        "notice_date": notice_date,
+        "title": title,
+        "content": content,
+        "organ_code": organ.get("insttCode", ""),
+        "organ_name": organ.get("insttName", ""),
+        "notice_type": category,
+        "classify_g": "",
+        "classify_m": "",
+        "site_code": item.get("siteCode", ""),
+        "site_name": "",
+        "location": location,
+        "doc_url": doc_url,
+        "page_url": f"{page_url_base}?noticeCode={notice_code}",
+        "center_grade": center_grade,
+        "center_name": center_name,
+        "category": category,
+    }
+
+
 _DATE_RE = re.compile(r"^\d{4}-\d{2}-\d{2}$")
 
 
 def fetch_source(source_name: str, api_url: str, page_url_base: str,
-                  existing_codes: set, bgn_date: str = "") -> dict[str, list]:
+                  existing_codes: set, bgn_date: str = "",
+                  parser: str = "ntfc",
+                  extra_params: dict | None = None) -> dict[str, list]:
     """단일 API 소스에서 신규 레코드 수집."""
     new_records = defaultdict(list)
     page_no = 1
     consecutive_existing = 0
-    is_dstplan = "dstplan" in api_url
 
     while True:
         logger.info(f"[{source_name}] Fetching page {page_no}...")
-        data = fetch_page(api_url, page_no, bgn_date=bgn_date)
+        data = fetch_page(api_url, page_no, bgn_date=bgn_date,
+                          extra_params=extra_params)
         items = data.get("content", [])
 
         if not items:
             break
 
         for item in items:
-            if is_dstplan:
+            if parser == "dstplan":
                 record = parse_dstplan_item(item, page_url_base)
+            elif parser == "ctymgrpln":
+                record = parse_ctymgrpln_item(item, source_name, page_url_base)
             else:
                 record = parse_ntfc_item(item, source_name, page_url_base)
 
@@ -257,11 +337,23 @@ def main():
     all_new_records = defaultdict(list)
 
     for source_name, source_cfg in API_SOURCES.items():
+        # 첫 수집 시 initial_bgn_months가 설정된 소스는 기간 제한
+        bgn_date = ""
+        initial_months = source_cfg.get("initial_bgn_months")
+        if initial_months and not full_mode:
+            today = datetime.now()
+            year = today.year + (today.month - initial_months - 1) // 12
+            month = (today.month - initial_months - 1) % 12 + 1
+            bgn_date = f"{year}-{month:02d}-{today.day:02d}"
+
         new_records = fetch_source(
             source_name,
             source_cfg["url"],
             source_cfg["page_url_base"],
             existing_codes,
+            bgn_date=bgn_date,
+            parser=source_cfg.get("parser", "ntfc"),
+            extra_params=source_cfg.get("extra_params"),
         )
         for date_key, records in new_records.items():
             all_new_records[date_key].extend(records)
