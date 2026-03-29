@@ -48,7 +48,7 @@ export const metadata: Metadata = {
     canonical: SITE_URL,
   },
   verification: {
-    google: "gWEwE3BPmMjsrgf0m1970PbgaEp3hChRic1-udiC8ZI",
+    google: "FXncF_H5GbKmmq5_GngTbwnNCljEHwJirfkI5F104ag",
     other: {
       "naver-site-verification": "c59be0669f84e9039132d0112b50f484d3fa5f44",
     },
