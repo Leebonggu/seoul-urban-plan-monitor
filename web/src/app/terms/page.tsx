@@ -1,3 +1,11 @@
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "이용약관",
+  description:
+    "서울 결정고시 모니터 이용약관. 서비스 개요, 데이터 정확성, 분석 콘텐츠, 저작권 안내.",
+};
+
 export const dynamic = "force-static";
 
 export default function TermsPage() {
