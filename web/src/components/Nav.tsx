@@ -7,9 +7,9 @@ import { useState } from "react";
 
 const LINKS = [
   { href: "/", label: "고시 모니터" },
-  { href: "/plan", label: "2040 서울플랜" },
-  { href: "/gangbuk", label: "강북전성시대" },
-  { href: "/southwest", label: "서남권 대개조" },
+  { href: "/plan", label: "2040 서울도시기본계획" },
+  { href: "/gangbuk", label: "강북전성시대 2.0" },
+  { href: "/southwest", label: "서남권 대개조 2.0" },
 ];
 
 export default function Nav() {
