@@ -50,6 +50,7 @@ jobs:
           else
             COUNT=$(git diff --staged --stat | grep -c '.json')
             git commit -m "data: 고시문 업데이트 (${COUNT}개 파일 변경)"
+            git pull --rebase origin main || true
             git push
           fi
 
