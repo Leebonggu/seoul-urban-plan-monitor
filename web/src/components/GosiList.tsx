@@ -64,6 +64,7 @@ export default function GosiList({ records, maxItems = 20 }: Props) {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-xs text-blue-600 hover:underline"
+                aria-label={`${r.title} 상세 페이지`}
               >
                 상세
               </a>
@@ -74,6 +75,7 @@ export default function GosiList({ records, maxItems = 20 }: Props) {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-xs text-blue-600 hover:underline"
+                aria-label={`${r.title} 원문 PDF`}
               >
                 원문
               </a>
