@@ -11,28 +11,18 @@ import {
   Pie,
   Cell,
 } from "recharts";
-import { GosiRecord } from "@/lib/types";
-import { CENTERS, GRADE_COLORS } from "@/lib/centers";
+import { GRADE_COLORS } from "@/lib/centers";
 
-interface Props {
-  records: GosiRecord[];
+interface MonthlyProps {
+  aggregatedData: { month: string; count: number }[];
 }
 
-export function MonthlyChart({ records }: Props) {
-  const byMonth: Record<string, number> = {};
-  for (const r of records) {
-    const month = r.notice_date.slice(0, 7);
-    byMonth[month] = (byMonth[month] || 0) + 1;
-  }
-  const data = Object.entries(byMonth)
-    .sort(([a], [b]) => a.localeCompare(b))
-    .map(([month, count]) => ({ month, count }));
-
+export function MonthlyChart({ aggregatedData }: MonthlyProps) {
   return (
     <div>
       <h3 className="text-sm font-medium text-gray-500 mb-2">월별 추이</h3>
       <ResponsiveContainer width="100%" height={280}>
-        <BarChart data={data}>
+        <BarChart data={aggregatedData}>
           <XAxis dataKey="month" tick={{ fontSize: 11 }} angle={-45} textAnchor="end" height={60} />
           <YAxis tick={{ fontSize: 11 }} />
           <Tooltip />
@@ -43,14 +33,11 @@ export function MonthlyChart({ records }: Props) {
   );
 }
 
-export function GradeChart({ records }: Props) {
-  const counts: Record<string, number> = {};
-  for (const r of records) {
-    const grade = r.center_grade || "미매칭";
-    counts[grade] = (counts[grade] || 0) + 1;
-  }
-  const data = Object.entries(counts).map(([name, value]) => ({ name, value }));
+interface GradeProps {
+  aggregatedData: { name: string; value: number }[];
+}
 
+export function GradeChart({ aggregatedData }: GradeProps) {
   return (
     <div>
       <h3 className="text-sm font-medium text-gray-500 mb-2">
@@ -59,7 +46,7 @@ export function GradeChart({ records }: Props) {
       <ResponsiveContainer width="100%" height={280}>
         <PieChart>
           <Pie
-            data={data}
+            data={aggregatedData}
             dataKey="value"
             nameKey="name"
             cx="50%"
@@ -67,12 +54,10 @@ export function GradeChart({ records }: Props) {
             outerRadius={100}
             label={({ name, value }) => `${name} ${value}`}
           >
-            {data.map((entry) => (
+            {aggregatedData.map((entry) => (
               <Cell
                 key={entry.name}
-                fill={
-                  GRADE_COLORS[entry.name] || "#d1d5db"
-                }
+                fill={GRADE_COLORS[entry.name] || "#d1d5db"}
               />
             ))}
           </Pie>
@@ -83,28 +68,11 @@ export function GradeChart({ records }: Props) {
   );
 }
 
-export function CenterRanking({ records }: Props) {
-  // 중심지명 → 등급 매핑
-  const centerToGrade: Record<string, string> = {};
-  for (const c of CENTERS) {
-    centerToGrade[c.name] = c.grade;
-  }
+interface CenterRankingProps {
+  aggregatedData: { name: string; count: number; grade: string }[];
+}
 
-  const counts: Record<string, number> = {};
-  for (const r of records) {
-    if (r.center_name) {
-      counts[r.center_name] = (counts[r.center_name] || 0) + 1;
-    }
-  }
-  const data = Object.entries(counts)
-    .sort(([, a], [, b]) => b - a)
-    .slice(0, 15)
-    .map(([name, count]) => ({
-      name,
-      count,
-      grade: centerToGrade[name] || "",
-    }));
-
+export function CenterRanking({ aggregatedData }: CenterRankingProps) {
   return (
     <div>
       <div className="flex items-center justify-between mb-2">
@@ -118,12 +86,12 @@ export function CenterRanking({ records }: Props) {
         </div>
       </div>
       <ResponsiveContainer width="100%" height={400}>
-        <BarChart data={data} layout="vertical">
+        <BarChart data={aggregatedData} layout="vertical">
           <XAxis type="number" tick={{ fontSize: 11 }} />
           <YAxis dataKey="name" type="category" tick={{ fontSize: 11 }} width={120} />
           <Tooltip />
           <Bar dataKey="count" name="건수" radius={[0, 4, 4, 0]}>
-            {data.map((entry) => (
+            {aggregatedData.map((entry) => (
               <Cell
                 key={entry.name}
                 fill={GRADE_COLORS[entry.grade] || "#d1d5db"}

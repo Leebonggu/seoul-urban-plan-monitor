@@ -1,8 +1,10 @@
 import type { Metadata } from "next";
-import { loadAllData } from "@/lib/data";
+import { loadAllData, computeAggregatedData } from "@/lib/data";
 import Dashboard from "@/components/Dashboard";
 
 export const dynamic = "force-static";
+
+const INITIAL_PAGE_SIZE = 30;
 
 export const metadata: Metadata = {
   title: "서울 결정고시 모니터 — 도시계획 결정고시 매일 분석",
@@ -17,9 +19,18 @@ export const metadata: Metadata = {
 
 export default function Home() {
   const records = loadAllData();
+  const aggregated = computeAggregatedData(records);
 
-  // 서버→클라이언트 직렬화를 위해 plain object로 변환
-  const plainRecords = JSON.parse(JSON.stringify(records));
+  // 초기에는 최근 N건만 + content 제외
+  const initialRecords = records.slice(0, INITIAL_PAGE_SIZE).map(
+    ({ content, ...rest }) => rest
+  );
 
-  return <Dashboard records={plainRecords} />;
+  return (
+    <Dashboard
+      initialRecords={initialRecords}
+      initialTotal={records.length}
+      aggregated={aggregated}
+    />
+  );
 }

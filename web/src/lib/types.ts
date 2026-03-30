@@ -26,3 +26,14 @@ export interface Center {
   lng: number;
   count: number;
 }
+
+export interface AggregatedData {
+  totalCount: number;
+  centerMatchedCount: number;
+  latestDate: string;
+  oldestDate: string;
+  centerCounts: Record<string, number>;
+  monthlyData: { month: string; count: number }[];
+  gradeData: { name: string; value: number }[];
+  centerRanking: { name: string; count: number; grade: string }[];
+}

@@ -1,24 +1,33 @@
 "use client";
 
-import { useState, useMemo, useEffect } from "react";
+import { useState, useMemo, useEffect, useCallback } from "react";
 import dynamic from "next/dynamic";
-import { GosiRecord, Center } from "@/lib/types";
+import { GosiRecord, Center, AggregatedData } from "@/lib/types";
 import { CENTERS, GRADE_COLORS } from "@/lib/centers";
 import MetricCards from "./MetricCards";
 import GosiList from "./GosiList";
-import GosiTable from "./GosiTable";
 import { MonthlyChart, GradeChart, CenterRanking } from "./Charts";
 import AdBanner from "./AdBanner";
 
 const CenterMap = dynamic(() => import("./CenterMap"), { ssr: false });
 
+type LightRecord = Omit<GosiRecord, "content">;
+
 interface Props {
-  records: GosiRecord[];
+  initialRecords: LightRecord[];
+  initialTotal: number;
+  aggregated: AggregatedData;
 }
 
 type Tab = "list" | "chart" | "center";
 
-export default function Dashboard({ records }: Props) {
+const PAGE_SIZE = 30;
+
+export default function Dashboard({
+  initialRecords,
+  initialTotal,
+  aggregated: initialAggregated,
+}: Props) {
   const [mounted, setMounted] = useState(false);
   const [grade, setGrade] = useState("");
   const [centerName, setCenterName] = useState("");
@@ -26,7 +35,62 @@ export default function Dashboard({ records }: Props) {
   const [category, setCategory] = useState("");
   const [tab, setTab] = useState<Tab>("list");
 
+  // 필터/페이지네이션이 적용된 목록 데이터
+  const [records, setRecords] = useState<LightRecord[]>(initialRecords);
+  const [totalCount, setTotalCount] = useState(initialTotal);
+  const [aggregated, setAggregated] = useState(initialAggregated);
+  const [page, setPage] = useState(0);
+  const [loading, setLoading] = useState(false);
+
+  const isFiltered = !!(grade || centerName || keyword || category);
+
   useEffect(() => setMounted(true), []);
+
+  const fetchData = useCallback(
+    async (p: number, resetAgg = false) => {
+      setLoading(true);
+      try {
+        const params = new URLSearchParams();
+        if (category) params.set("category", category);
+        if (grade) params.set("grade", grade);
+        if (centerName) params.set("centerName", centerName);
+        if (keyword) params.set("keyword", keyword);
+        params.set("page", String(p));
+        params.set("pageSize", String(PAGE_SIZE));
+
+        const res = await fetch(`/api/gosi?${params}`);
+        const data = await res.json();
+
+        setRecords(data.records);
+        setTotalCount(data.total);
+        if (resetAgg) {
+          setAggregated(data.aggregated);
+        }
+        setPage(p);
+      } finally {
+        setLoading(false);
+      }
+    },
+    [category, grade, centerName, keyword]
+  );
+
+  // 필터 변경 시 첫 페이지부터 다시 fetch
+  useEffect(() => {
+    if (!mounted) return;
+    fetchData(0, true);
+  }, [category, grade, centerName, mounted]); // eslint-disable-line react-hooks/exhaustive-deps
+
+  // 키워드 검색은 디바운스
+  const [debouncedKeyword, setDebouncedKeyword] = useState(keyword);
+  useEffect(() => {
+    const t = setTimeout(() => setDebouncedKeyword(keyword), 300);
+    return () => clearTimeout(t);
+  }, [keyword]);
+
+  useEffect(() => {
+    if (!mounted) return;
+    fetchData(0, true);
+  }, [debouncedKeyword]); // eslint-disable-line react-hooks/exhaustive-deps
 
   // 선택된 등급에 해당하는 중심지 목록
   const centerOptions = useMemo(() => {
@@ -34,53 +98,18 @@ export default function Dashboard({ records }: Props) {
     return CENTERS.filter((c) => c.grade === grade);
   }, [grade]);
 
-  const filtered = useMemo(() => {
-    let result = records;
-    if (category) {
-      result = result.filter((r) => (r.category || "결정고시") === category);
-    }
-    if (grade) {
-      if (grade === "미매칭") {
-        result = result.filter((r) => !r.center_grade);
-      } else {
-        result = result.filter((r) => r.center_grade === grade);
-      }
-    }
-    if (centerName) {
-      result = result.filter((r) => r.center_name === centerName);
-    }
-    if (keyword) {
-      const kw = keyword.toLowerCase();
-      result = result.filter(
-        (r) =>
-          r.title.toLowerCase().includes(kw) ||
-          r.content.toLowerCase().includes(kw) ||
-          (r.location && r.location.toLowerCase().includes(kw))
-      );
-    }
-    return result;
-  }, [records, grade, centerName, keyword, category]);
-
+  // 지도용 중심지 데이터 (집계 기반)
   const centers: Center[] = useMemo(() => {
-    const counts: Record<string, number> = {};
-    for (const r of filtered) {
-      if (r.center_name) {
-        counts[r.center_name] = (counts[r.center_name] || 0) + 1;
-      }
-    }
     return CENTERS.map((c) => ({
       name: c.name,
       grade: c.grade,
       lat: c.lat,
       lng: c.lng,
-      count: counts[c.name] || 0,
+      count: aggregated.centerCounts[c.name] || 0,
     }));
-  }, [filtered]);
+  }, [aggregated]);
 
-  const centerMatched = filtered.filter((r) => r.center_grade).length;
-  const latestDate = filtered.length > 0 ? filtered[0].notice_date : "-";
-  const oldestDate = filtered.length > 0 ? filtered[filtered.length - 1].notice_date : "-";
-  const dailyAvg = filtered.length / 90;
+  const totalPages = Math.ceil(totalCount / PAGE_SIZE);
 
   const tabs: { key: Tab; label: string }[] = [
     { key: "list", label: "전체 목록" },
@@ -91,24 +120,20 @@ export default function Dashboard({ records }: Props) {
   if (!mounted) {
     return (
       <div className="max-w-7xl mx-auto px-4 py-6 space-y-6">
-        {/* 헤더 skeleton */}
         <div>
           <div className="h-8 w-56 bg-gray-200 rounded animate-pulse" />
           <div className="h-4 w-80 bg-gray-100 rounded animate-pulse mt-1.5" />
         </div>
-        {/* 필터 skeleton */}
         <div className="flex flex-wrap gap-3">
           <div className="h-9 w-28 bg-gray-100 rounded-lg animate-pulse" />
           <div className="h-9 w-24 bg-gray-100 rounded-lg animate-pulse" />
           <div className="h-9 w-64 bg-gray-100 rounded-lg animate-pulse" />
         </div>
-        {/* 지표 카드 skeleton */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
           {[0, 1, 2, 3].map((i) => (
             <div key={i} className="bg-white rounded-xl border border-gray-200 p-4 h-24 animate-pulse" />
           ))}
         </div>
-        {/* 메인 2컬럼 skeleton */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
           <div className="bg-white rounded-xl border border-gray-200 p-4 h-[480px] animate-pulse" />
           <div className="bg-white rounded-xl border border-gray-200 p-4 h-[480px] animate-pulse" />
@@ -185,7 +210,7 @@ export default function Dashboard({ records }: Props) {
           placeholder="키워드 검색 (재개발, 용적률...)"
           className="text-sm border border-gray-200 rounded-lg px-3 py-2 bg-white min-w-[250px]"
         />
-        {(grade || centerName || keyword || category) && (
+        {isFiltered && (
           <button
             onClick={() => {
               setGrade("");
@@ -202,11 +227,11 @@ export default function Dashboard({ records }: Props) {
 
       {/* 지표 카드 */}
       <MetricCards
-        total={filtered.length}
-        centerMatched={centerMatched}
-        latestDate={latestDate}
-        oldestDate={oldestDate}
-        dailyAvg={dailyAvg}
+        total={aggregated.totalCount}
+        centerMatched={aggregated.centerMatchedCount}
+        latestDate={aggregated.latestDate}
+        oldestDate={aggregated.oldestDate}
+        dailyAvg={aggregated.totalCount / 90}
       />
 
       {/* 메인: 지도 + 최신 목록 */}
@@ -236,7 +261,7 @@ export default function Dashboard({ records }: Props) {
         <div className="bg-white rounded-xl border border-gray-200 p-4">
           <h2 className="font-semibold mb-3">최신 고시문</h2>
           <div className="overflow-y-auto max-h-[440px]">
-            <GosiList records={filtered} maxItems={15} />
+            <GosiList records={records as GosiRecord[]} maxItems={15} />
           </div>
         </div>
       </div>
@@ -260,14 +285,121 @@ export default function Dashboard({ records }: Props) {
         </div>
 
         <div className="p-4">
-          {tab === "list" && <GosiTable records={filtered} />}
-          {tab === "chart" && (
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <MonthlyChart records={filtered} />
-              <GradeChart records={filtered} />
+          {tab === "list" && (
+            <div>
+              <div className="overflow-x-auto">
+                <table className="w-full text-sm">
+                  <thead>
+                    <tr className="border-b border-gray-200 text-left text-gray-500">
+                      <th className="py-2 px-2 font-medium">고시일</th>
+                      <th className="py-2 px-2 font-medium">기관</th>
+                      <th className="py-2 px-2 font-medium">위치</th>
+                      <th className="py-2 px-2 font-medium">등급</th>
+                      <th className="py-2 px-2 font-medium">제목</th>
+                      <th className="py-2 px-2 font-medium">링크</th>
+                    </tr>
+                  </thead>
+                  <tbody className={loading ? "opacity-50" : ""}>
+                    {records.map((r) => (
+                      <tr
+                        key={r.notice_code}
+                        className="border-b border-gray-50 hover:bg-gray-50"
+                      >
+                        <td className="py-2 px-2 font-mono text-xs whitespace-nowrap">
+                          {r.notice_date}
+                        </td>
+                        <td className="py-2 px-2 text-xs whitespace-nowrap">
+                          {r.organ_name}
+                        </td>
+                        <td className="py-2 px-2 text-xs max-w-[150px] truncate">
+                          {r.location || "-"}
+                        </td>
+                        <td className="py-2 px-2">
+                          {r.center_grade ? (
+                            <span
+                              className="text-xs px-1.5 py-0.5 rounded text-white whitespace-nowrap"
+                              style={{
+                                backgroundColor:
+                                  GRADE_COLORS[r.center_grade] || "#999",
+                              }}
+                            >
+                              {r.center_name}
+                            </span>
+                          ) : (
+                            <span className="text-xs text-gray-300">-</span>
+                          )}
+                        </td>
+                        <td className="py-2 px-2 max-w-[300px] truncate">
+                          <a
+                            href={`/gosi/${r.notice_code}`}
+                            className="hover:text-blue-600 transition-colors"
+                          >
+                            {r.title}
+                          </a>
+                        </td>
+                        <td className="py-2 px-2 whitespace-nowrap">
+                          {r.page_url && (
+                            <a
+                              href={r.page_url}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="text-xs text-blue-600 hover:underline mr-2"
+                            >
+                              상세
+                            </a>
+                          )}
+                          {r.doc_url && (
+                            <a
+                              href={r.doc_url}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="text-xs text-blue-600 hover:underline"
+                            >
+                              원문
+                            </a>
+                          )}
+                        </td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+              <div className="flex items-center justify-between mt-4 text-sm text-gray-500">
+                <span>
+                  총 {totalCount.toLocaleString()}건 중{" "}
+                  {page * PAGE_SIZE + 1}-
+                  {Math.min((page + 1) * PAGE_SIZE, totalCount)}
+                </span>
+                <div className="flex gap-2">
+                  <button
+                    onClick={() => fetchData(Math.max(0, page - 1))}
+                    disabled={page === 0 || loading}
+                    className="px-3 py-1 rounded border border-gray-200 disabled:opacity-30 hover:bg-gray-100"
+                  >
+                    이전
+                  </button>
+                  <button
+                    onClick={() =>
+                      fetchData(Math.min(totalPages - 1, page + 1))
+                    }
+                    disabled={page >= totalPages - 1 || loading}
+                    className="px-3 py-1 rounded border border-gray-200 disabled:opacity-30 hover:bg-gray-100"
+                  >
+                    다음
+                  </button>
+                </div>
+              </div>
             </div>
           )}
-          {tab === "center" && <CenterRanking records={filtered} />}
+          {tab === "chart" && (
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <MonthlyChart aggregatedData={aggregated.monthlyData} />
+              <GradeChart aggregatedData={aggregated.gradeData} />
+            </div>
+          )}
+          {tab === "center" && (
+            <CenterRanking aggregatedData={aggregated.centerRanking} />
+          )}
         </div>
       </div>
 
