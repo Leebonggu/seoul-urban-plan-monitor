@@ -44,6 +44,37 @@ def get_today_records() -> list[dict]:
         return json.load(f)
 
 
+def get_recently_changed_records() -> list[dict]:
+    """Git에서 최근 변경된 데이터 파일의 레코드를 모두 로드 (소급 추가분 포함)."""
+    import subprocess
+    try:
+        result = subprocess.run(
+            ["git", "diff", "--name-only", "HEAD~1", "HEAD", "--", "data/"],
+            capture_output=True, text=True, cwd=os.path.dirname(DATA_DIR) or ".",
+        )
+        changed_files = [
+            f for f in result.stdout.strip().split("\n")
+            if f.endswith(".json") and os.path.basename(f) not in ("latest.json", "posted.json", "wp_published.json")
+        ]
+    except Exception:
+        changed_files = []
+
+    if not changed_files:
+        return get_today_records()
+
+    records = []
+    for rel_path in changed_files:
+        filepath = rel_path if os.path.isabs(rel_path) else rel_path
+        if not os.path.exists(filepath):
+            continue
+        with open(filepath, "r", encoding="utf-8") as f:
+            items = json.load(f)
+            records.extend(items)
+
+    records.sort(key=lambda r: r["notice_date"], reverse=True)
+    return records
+
+
 def get_all_records() -> list[dict]:
     """모든 고시문 레코드 로드 (최신순)."""
     records = []
@@ -165,9 +196,9 @@ def main():
         print(f"[백필 모드] 미발행 고시문 최대 {count}건 발행")
         records = get_all_records()
     else:
-        # 자동: 오늘 수집분만 발행
-        print("[일일 모드] 오늘 수집된 고시문만 발행")
-        records = get_today_records()
+        # 자동: 이번 실행에서 변경된 파일의 레코드 발행 (소급 추가분 포함)
+        records = get_recently_changed_records()
+        print(f"[일일 모드] 변경된 파일에서 {len(records)}건 로드")
 
     publish_batch(records, published, limit=count)
 
