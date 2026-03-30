@@ -5,7 +5,9 @@ import { loadAllNoticeCodes, loadRecordByCode } from "@/lib/data";
 import { GRADE_COLORS } from "@/lib/centers";
 import AdBanner from "@/components/AdBanner";
 
-export const dynamic = "force-static";
+export const dynamicParams = true;
+
+const PRERENDER_COUNT = 100;
 
 interface Props {
   params: Promise<{ notice_code: string }>;
@@ -13,7 +15,7 @@ interface Props {
 
 export async function generateStaticParams() {
   const codes = loadAllNoticeCodes();
-  return codes.map((code) => ({ notice_code: code }));
+  return codes.slice(0, PRERENDER_COUNT).map((code) => ({ notice_code: code }));
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
