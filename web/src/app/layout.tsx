@@ -78,6 +78,9 @@ export default function RootLayout({
   return (
     <html lang="ko">
       <head>
+        <link rel="preconnect" href="https://a.basemaps.cartocdn.com" />
+        <link rel="preconnect" href="https://b.basemaps.cartocdn.com" />
+        <link rel="preconnect" href="https://c.basemaps.cartocdn.com" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -101,7 +104,7 @@ export default function RootLayout({
       </head>
       <body className="bg-gray-50 text-gray-900 antialiased">
         <Nav />
-        {children}
+        <main>{children}</main>
         <Footer />
       </body>
     </html>

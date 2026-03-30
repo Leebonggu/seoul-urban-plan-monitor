@@ -143,14 +143,16 @@ export default function Dashboard({ records }: Props) {
       {/* 헤더 */}
       <div>
         <h1 className="text-2xl font-bold">서울 결정고시 모니터</h1>
-        <p className="text-sm text-gray-400 mt-0.5">
+        <p className="text-sm text-gray-500 mt-0.5">
           2040 서울플랜 중심지체계 기반 분석 · urban.seoul.go.kr
         </p>
       </div>
 
       {/* 필터 */}
       <div className="flex flex-wrap gap-3">
+        <label className="sr-only" htmlFor="filter-category">범주 필터</label>
         <select
+          id="filter-category"
           value={category}
           onChange={(e) => setCategory(e.target.value)}
           className="text-sm border border-gray-200 rounded-lg px-3 py-2 bg-white"
@@ -161,7 +163,9 @@ export default function Dashboard({ records }: Props) {
           <option value="도시계획시설">도시계획시설</option>
           <option value="정비사업구역계">정비사업구역계</option>
         </select>
+        <label className="sr-only" htmlFor="filter-grade">등급 필터</label>
         <select
+          id="filter-grade"
           value={grade}
           onChange={(e) => {
             setGrade(e.target.value);
@@ -176,20 +180,26 @@ export default function Dashboard({ records }: Props) {
           <option value="미매칭">미매칭</option>
         </select>
         {centerOptions.length > 0 && (
-          <select
-            value={centerName}
-            onChange={(e) => setCenterName(e.target.value)}
-            className="text-sm border border-gray-200 rounded-lg px-3 py-2 bg-white"
-          >
-            <option value="">전체 중심지</option>
-            {centerOptions.map((c) => (
-              <option key={c.name} value={c.name}>
-                {c.name}
-              </option>
-            ))}
-          </select>
+          <>
+            <label className="sr-only" htmlFor="filter-center">중심지 필터</label>
+            <select
+              id="filter-center"
+              value={centerName}
+              onChange={(e) => setCenterName(e.target.value)}
+              className="text-sm border border-gray-200 rounded-lg px-3 py-2 bg-white"
+            >
+              <option value="">전체 중심지</option>
+              {centerOptions.map((c) => (
+                <option key={c.name} value={c.name}>
+                  {c.name}
+                </option>
+              ))}
+            </select>
+          </>
         )}
+        <label className="sr-only" htmlFor="filter-keyword">키워드 검색</label>
         <input
+          id="filter-keyword"
           type="text"
           value={keyword}
           onChange={(e) => setKeyword(e.target.value)}
@@ -262,7 +272,7 @@ export default function Dashboard({ records }: Props) {
               className={`px-5 py-3 text-sm font-medium transition-colors ${
                 tab === t.key
                   ? "text-blue-600 border-b-2 border-blue-600"
-                  : "text-gray-400 hover:text-gray-600"
+                  : "text-gray-500 hover:text-gray-700"
               }`}
             >
               {t.label}

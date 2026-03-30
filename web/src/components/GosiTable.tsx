@@ -74,7 +74,7 @@ export default function GosiTable({ records }: Props) {
                       href={r.page_url}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-xs text-blue-500 hover:underline mr-2"
+                      className="text-xs text-blue-600 hover:underline mr-2"
                     >
                       상세
                     </a>
@@ -84,7 +84,7 @@ export default function GosiTable({ records }: Props) {
                       href={r.doc_url}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-xs text-blue-500 hover:underline"
+                      className="text-xs text-blue-600 hover:underline"
                     >
                       원문
                     </a>

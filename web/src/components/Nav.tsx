@@ -22,10 +22,11 @@ export default function Nav() {
         <Link href="/" className="flex items-center gap-2 shrink-0">
           <Image
             src="/logo.jpg"
-            alt="서울 결정고시 모니터"
+            alt=""
             width={28}
             height={28}
             className="rounded"
+            priority
           />
           <span className="text-sm font-bold text-gray-900 hidden sm:inline">
             서울 결정고시 모니터
@@ -43,7 +44,7 @@ export default function Nav() {
                 className={`text-sm px-3 py-1.5 rounded-lg transition-colors ${
                   active
                     ? "bg-gray-100 text-gray-900 font-medium"
-                    : "text-gray-400 hover:text-gray-600 hover:bg-gray-50"
+                    : "text-gray-500 hover:text-gray-700 hover:bg-gray-50"
                 }`}
               >
                 {link.label}
@@ -96,7 +97,7 @@ export default function Nav() {
                 className={`block px-4 py-3 text-sm border-b border-gray-50 ${
                   active
                     ? "bg-gray-50 text-gray-900 font-medium"
-                    : "text-gray-500 hover:bg-gray-50"
+                    : "text-gray-600 hover:bg-gray-50"
                 }`}
               >
                 {link.label}

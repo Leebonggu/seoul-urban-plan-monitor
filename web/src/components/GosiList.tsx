@@ -28,7 +28,7 @@ export default function GosiList({ records, maxItems = 20 }: Props) {
           className="border-b border-gray-100 py-3 last:border-0"
         >
           <div className="flex flex-wrap items-center gap-1.5 mb-1">
-            <span className="text-xs text-gray-400 font-mono">
+            <span className="text-xs text-gray-500 font-mono">
               {r.notice_date}
             </span>
             {r.center_grade && (
@@ -46,7 +46,7 @@ export default function GosiList({ records, maxItems = 20 }: Props) {
                 {r.category}
               </span>
             )}
-            <span className="text-xs text-gray-400">{r.organ_name}</span>
+            <span className="text-xs text-gray-500">{r.organ_name}</span>
           </div>
           <Link
             href={`/gosi/${r.notice_code}`}
@@ -56,14 +56,14 @@ export default function GosiList({ records, maxItems = 20 }: Props) {
           </Link>
           <div className="flex items-center gap-2 mt-1">
             {r.location && (
-              <span className="text-xs text-gray-400">📍 {r.location}</span>
+              <span className="text-xs text-gray-500">📍 {r.location}</span>
             )}
             {r.page_url && (
               <a
                 href={r.page_url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-xs text-blue-500 hover:underline"
+                className="text-xs text-blue-600 hover:underline"
               >
                 상세
               </a>
@@ -73,7 +73,7 @@ export default function GosiList({ records, maxItems = 20 }: Props) {
                 href={r.doc_url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-xs text-blue-500 hover:underline"
+                className="text-xs text-blue-600 hover:underline"
               >
                 원문
               </a>
