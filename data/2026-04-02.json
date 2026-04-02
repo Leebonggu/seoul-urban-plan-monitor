@@ -18,5 +18,25 @@
     "center_grade": null,
     "center_name": null,
     "category": "결정고시"
+  },
+  {
+    "notice_code": "11000NTC202604020002",
+    "notice_no": "2026-176",
+    "notice_date": "2026-04-02",
+    "title": "도시계획시설(공원) 결정 실효 및 지형도면 정정 고시",
+    "content": " 서울특별시 제2026-107호(2026.3.5.)로 고시된 도시계획시설(공원) 결정 실효 및 지형도면 고시에 대하여 착오에 의한 오기 사항이 있어 아래와 같이 정정하고, 「국토의 계획 및 이용에 관한 법률」 제48조, 제88조 및 같은 법 시행령 제42조, 「토지이용규제 기본법」제8조 및 같은 법 시행령 제7조에 따라 고시합니다. ",
+    "organ_code": "6110000",
+    "organ_name": "서울특별시",
+    "notice_type": "결정",
+    "classify_g": "",
+    "classify_m": "",
+    "site_code": "11000",
+    "site_name": "서울특별시",
+    "location": "봉산근린공원(은평구 구산동 산136-5일대)",
+    "doc_url": "https://urban.seoul.go.kr/UpisArchive/DATA/PM/pdf/11000TTC202604020002/%EB%8F%84%EC%8B%9C%EA%B3%84%ED%9A%8D%EC%8B%9C%EC%84%A4%28%EA%B3%B5%EC%9B%90%29%20%EA%B2%B0%EC%A0%95%20%EC%8B%A4%ED%9A%A8%20%EB%B0%8F%20%EC%A7%80%ED%98%95%EB%8F%84%EB%A9%B4%20%EC%A0%95%EC%A0%95%20%EA%B3%A0%EC%8B%9C%28%EC%84%9C%EA%B3%A02026-176%ED%98%B8%2C%2026.4.2.%29.pdf",
+    "page_url": "https://urban.seoul.go.kr/view/html/PMNU4030100001?noticeCode=11000NTC202604020002",
+    "center_grade": null,
+    "center_name": null,
+    "category": "결정고시"
   }
 ]

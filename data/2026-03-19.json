@@ -94,5 +94,25 @@
     "center_grade": null,
     "center_name": null,
     "category": "결정고시"
+  },
+  {
+    "notice_code": "11440NTC202604020003",
+    "notice_no": "2026-44",
+    "notice_date": "2026-03-19",
+    "title": " 도시시관리계획(도시계획시설: 수도공급설비) 결정(경미한 변경) 및 지형도면 고시",
+    "content": "  서울특별시 고시 제1997-55호(1997. 3. 5.)호로 결정 및 마포구 고시 제1997-77호, 제2014-42호로 변경 결정된, 도시계획시설(수도공급설비)에 대하여 「국토의 계획 및 이용에 관한 법률」 제30조와 같은법 시행령 제25조 및 「서울특별시 도시계획 조례」제67조 규정에 따라 도시관리계획 변경 결정(경미한 변경)하고, 「국토의 계획 및 이용에 관한 법률」 제32조, 「토지이용규제 기본법」 제8조 및 같은 법 시행령 제7조 규정에 따라 다음과 같이 지형도면을 작성하고 이를 고시합니다.\n",
+    "organ_code": "3130000",
+    "organ_name": "마포구",
+    "notice_type": "결정",
+    "classify_g": "",
+    "classify_m": "",
+    "site_code": "11440",
+    "site_name": "마포구",
+    "location": "마포구 창전동 3-181일대",
+    "doc_url": "https://urban.seoul.go.kr/UpisArchive/DATA/PM/pdf/11440TTC202604020003/%EB%8F%84%EC%8B%9C%EA%B4%80%EB%A6%AC%EA%B3%84%ED%9A%8D%20%EC%88%98%EB%8F%84%EA%B3%B5%EA%B8%89%EC%84%A4%EB%B9%84%20%EA%B2%B0%EC%A0%95%20%EB%B0%8F%20%EC%A7%80%ED%98%95%EB%8F%84%EB%A9%B4%20%EA%B3%A0%EC%8B%9C.hwp",
+    "page_url": "https://urban.seoul.go.kr/view/html/PMNU4030100001?noticeCode=11440NTC202604020003",
+    "center_grade": "지역중심",
+    "center_name": "마포",
+    "category": "결정고시"
   }
 ]
