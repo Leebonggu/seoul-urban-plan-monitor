@@ -38,5 +38,25 @@
     "center_grade": null,
     "center_name": null,
     "category": "결정고시"
+  },
+  {
+    "notice_code": "11740NTC202604090001",
+    "notice_no": "2026-51",
+    "notice_date": "2026-04-02",
+    "title": "도시관리계획(고덕택지 지구단위계획) 결정(변경) 및 지형도면 고시",
+    "content": "고덕택지(고덕1동) 지구단위계획구역 내 지정된 제한적 차량출입불허구간을 일부 해제하고, 공동주차 출입구를 지정(경미한 사항)하는 사항임",
+    "organ_code": "3240000",
+    "organ_name": "강동구",
+    "notice_type": "결정+지적",
+    "classify_g": "",
+    "classify_m": "",
+    "site_code": "11740",
+    "site_name": "강동구",
+    "location": "고덕1동 일대 ",
+    "doc_url": "https://urban.seoul.go.kr/UpisArchive/DATA/PM/pdf/11740TTC202604090001/%EA%B3%A0%EC%8B%9C%EB%AC%B8.hwp",
+    "page_url": "https://urban.seoul.go.kr/view/html/PMNU4030100001?noticeCode=11740NTC202604090001",
+    "center_grade": null,
+    "center_name": null,
+    "category": "결정고시"
   }
 ]
