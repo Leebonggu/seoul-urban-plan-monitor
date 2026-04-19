@@ -26,6 +26,15 @@ jobs:
       WP_USER: ${{ secrets.WP_USER }}
       WP_APP_PASSWORD: ${{ secrets.WP_APP_PASSWORD }}
       ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+      COUPANG_MOVING_BOX: ${{ secrets.COUPANG_MOVING_BOX }}
+      COUPANG_PACKING: ${{ secrets.COUPANG_PACKING }}
+      COUPANG_CLEANING: ${{ secrets.COUPANG_CLEANING }}
+      COUPANG_BOOK: ${{ secrets.COUPANG_BOOK }}
+      NAVER_CLIENT_ID: ${{ secrets.NAVER_CLIENT_ID }}
+      NAVER_CLIENT_SECRET: ${{ secrets.NAVER_CLIENT_SECRET }}
+      NAVER_ACCESS_TOKEN: ${{ secrets.NAVER_ACCESS_TOKEN }}
+      NAVER_REFRESH_TOKEN: ${{ secrets.NAVER_REFRESH_TOKEN }}
+      NAVER_BLOG_ID: ${{ secrets.NAVER_BLOG_ID }}
 
     steps:
       - uses: actions/checkout@v4
