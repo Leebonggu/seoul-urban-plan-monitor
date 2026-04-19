@@ -26,7 +26,6 @@ jobs:
       WP_USER: ${{ secrets.WP_USER }}
       WP_APP_PASSWORD: ${{ secrets.WP_APP_PASSWORD }}
       ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
-      COUPANG_DYNAMIC_BANNER: ${{ secrets.COUPANG_DYNAMIC_BANNER }}
       COUPANG_MOVING_BOX: ${{ secrets.COUPANG_MOVING_BOX }}
       COUPANG_PACKING: ${{ secrets.COUPANG_PACKING }}
       COUPANG_CLEANING: ${{ secrets.COUPANG_CLEANING }}

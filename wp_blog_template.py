@@ -254,9 +254,13 @@ def generate_wp_content(record: dict, insight: dict | None = None) -> dict:
         '이 포스팅은 쿠팡 파트너스 활동의 일환으로, 이에 따른 일정액의 수수료를 제공받습니다.'
         '</p>'
     )
-    _dynamic_banner = _os.environ.get("COUPANG_DYNAMIC_BANNER", "")
+    # 쿠팡파트너스 동적 배너 (carousel)
+    _dynamic_banner = (
+        '<script src="https://ads-partners.coupang.com/g.js"></script>'
+        '<script>new PartnersCoupang.G({"id":982014,"template":"carousel",'
+        '"trackingCode":"AF1900878","width":"100%","height":"140","tsource":""});</script>'
+    )
     if _dynamic_banner:
-        # 동적 배너 (Partners > 광고관리 > 동적배너 script 코드)
         p.append(f'<div style="margin-bottom:20px;">{_dynamic_banner}</div>')
     # 개별 상품 링크는 동적 배너와 함께 또는 단독으로 항상 표시
     coupang_items = _get_coupang_items(notice_type)
