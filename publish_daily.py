@@ -138,7 +138,18 @@ def publish_record(record: dict, tmp_dir: str) -> str | None:
             categories=categories,
             featured_image_id=featured_image_id,
         )
-        return result.get("link", "")
+        url = result.get("link", "")
+
+        # 네이버 블로그 크로스포스팅
+        if url:
+            try:
+                from naver_publisher import post_to_naver_blog
+                tags = insight.get("keywords", []) if insight else []
+                post_to_naver_blog(post["title"], html, tags)
+            except Exception as e:
+                print(f"    [네이버] 오류: {e}")
+
+        return url
     except Exception as e:
         print(f"  포스트 생성 실패: {e}")
         return None
