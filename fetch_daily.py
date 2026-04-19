@@ -329,14 +329,22 @@ def main():
     all_new_records = defaultdict(list)
 
     for source_name, source_cfg in API_SOURCES.items():
-        # 첫 수집 시 initial_bgn_months가 설정된 소스는 기간 제한
+        # 기간 필터 결정
+        # - 최초 수집: initial_bgn_months 만큼 과거부터
+        # - 증분 수집: last_fetched - 14일 (14일 여유 버퍼로 소급 추가분 커버)
         bgn_date = ""
         initial_months = source_cfg.get("initial_bgn_months")
+        last_fetched_str = latest.get("last_fetched", "")
+        is_initial = not last_fetched_str or last_fetched_str <= "2020-01-01"
+
         if initial_months and not full_mode:
-            today = datetime.now()
-            year = today.year + (today.month - initial_months - 1) // 12
-            month = (today.month - initial_months - 1) % 12 + 1
-            bgn_date = f"{year}-{month:02d}-{today.day:02d}"
+            if is_initial:
+                from datetime import timedelta
+                bgn_date = (datetime.now() - timedelta(days=30 * initial_months)).strftime("%Y-%m-%d")
+            else:
+                from datetime import timedelta
+                last_dt = datetime.strptime(last_fetched_str, "%Y-%m-%d")
+                bgn_date = (last_dt - timedelta(days=14)).strftime("%Y-%m-%d")
 
         # 다른 카테고리와 notice_code가 겹치는 소스는 중복 허용치를 높임
         dedup = 100
