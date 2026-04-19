@@ -1,9 +1,14 @@
 import os as _os
 import re as _re
 
-_COUPANG_BANNER = (
+_COUPANG_BANNER_1 = (
     '<script src="https://ads-partners.coupang.com/g.js"></script>'
     '<script>new PartnersCoupang.G({"id":982014,"template":"carousel",'
+    '"trackingCode":"AF1900878","width":"100%","height":"140","tsource":""});</script>'
+)
+_COUPANG_BANNER_2 = (
+    '<script src="https://ads-partners.coupang.com/g.js"></script>'
+    '<script>new PartnersCoupang.G({"id":982015,"template":"carousel",'
     '"trackingCode":"AF1900878","width":"100%","height":"140","tsource":""});</script>'
 )
 
@@ -154,13 +159,13 @@ def generate_wp_content(record: dict, insight: dict | None = None) -> dict:
                 f'<p style="font-size:15px;line-height:1.95;color:#374151;margin-bottom:40px;">'
                 f'{_bold_numbers(items)}</p>'
             )
-        # 부동산 영향 직후 — 쿠팡 동적 배너 (관심도 최고점)
+        # 부동산 영향 직후 — 쿠팡 동적 배너 #1 키워드기반 (관심도 최고점)
         p.append(
             '<div style="margin-bottom:16px;">'
             '<p style="font-size:12px;color:#9ca3af;margin:0 0 8px;">'
             '이 포스팅은 쿠팡 파트너스 활동의 일환으로, 이에 따른 일정액의 수수료를 제공받습니다.'
             '</p>'
-            f'{_COUPANG_BANNER}'
+            f'{_COUPANG_BANNER_1}'
             '</div>'
         )
         p.append(_divider())
@@ -224,7 +229,9 @@ def generate_wp_content(record: dict, insight: dict | None = None) -> dict:
                 '</div>'
                 '</div>'
             )
-        p.append('<div style="margin-bottom:40px;"></div>')
+        p.append('<div style="margin-bottom:20px;"></div>')
+        # FAQ 직후 — 쿠팡 동적 배너 #2 고객관심기반
+        p.append(f'<div style="margin-bottom:40px;">{_COUPANG_BANNER_2}</div>')
 
 
     # ── 키워드 태그 ───────────────────────────────────────────────────────────
