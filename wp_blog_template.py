@@ -256,36 +256,35 @@ def generate_wp_content(record: dict, insight: dict | None = None) -> dict:
     )
     _dynamic_banner = _os.environ.get("COUPANG_DYNAMIC_BANNER", "")
     if _dynamic_banner:
-        # 쿠팡파트너스 동적 배너 (Partners > 광고관리 > 동적배너에서 발급한 script 코드)
-        p.append(f'<div style="margin-bottom:40px;">{_dynamic_banner}</div>')
-    else:
-        # 폴백: 개별 상품 텍스트/이미지 버튼
-        coupang_items = _get_coupang_items(notice_type)
-        p.append('<div style="display:flex;flex-direction:column;gap:8px;margin-bottom:40px;">')
-        for name, url, img_url in coupang_items:
-            if img_url:
-                p.append(
-                    f'<a href="{url}" target="_blank" rel="noopener sponsored" '
-                    f'referrerpolicy="unsafe-url" '
-                    f'style="display:flex;align-items:center;gap:14px;padding:12px 16px;'
-                    f'background:#fff9f0;border:1px solid #fed7aa;border-radius:8px;text-decoration:none;">'
-                    f'<img src="{img_url}" alt="{name}" '
-                    f'style="width:60px;height:60px;object-fit:cover;border-radius:6px;flex-shrink:0;">'
-                    f'<span style="color:#92400e;font-size:14px;font-weight:600;">{name}</span>'
-                    f'<span style="margin-left:auto;font-size:12px;color:#d97706;flex-shrink:0;">쿠팡 →</span>'
-                    f'</a>'
-                )
-            else:
-                p.append(
-                    f'<a href="{url}" target="_blank" rel="noopener sponsored" '
-                    f'style="display:flex;align-items:center;padding:14px 16px;'
-                    f'background:#fff9f0;border:1px solid #fed7aa;border-radius:8px;'
-                    f'text-decoration:none;color:#92400e;font-size:14px;font-weight:600;">'
-                    f'{name}'
-                    f'<span style="margin-left:auto;font-size:12px;color:#d97706;flex-shrink:0;">쿠팡 →</span>'
-                    f'</a>'
-                )
-        p.append('</div>')
+        # 동적 배너 (Partners > 광고관리 > 동적배너 script 코드)
+        p.append(f'<div style="margin-bottom:20px;">{_dynamic_banner}</div>')
+    # 개별 상품 링크는 동적 배너와 함께 또는 단독으로 항상 표시
+    coupang_items = _get_coupang_items(notice_type)
+    p.append('<div style="display:flex;flex-direction:column;gap:8px;margin-bottom:40px;">')
+    for name, url, img_url in coupang_items:
+        if img_url:
+            p.append(
+                f'<a href="{url}" target="_blank" rel="noopener sponsored" '
+                f'referrerpolicy="unsafe-url" '
+                f'style="display:flex;align-items:center;gap:14px;padding:12px 16px;'
+                f'background:#fff9f0;border:1px solid #fed7aa;border-radius:8px;text-decoration:none;">'
+                f'<img src="{img_url}" alt="{name}" '
+                f'style="width:60px;height:60px;object-fit:cover;border-radius:6px;flex-shrink:0;">'
+                f'<span style="color:#92400e;font-size:14px;font-weight:600;">{name}</span>'
+                f'<span style="margin-left:auto;font-size:12px;color:#d97706;flex-shrink:0;">쿠팡 →</span>'
+                f'</a>'
+            )
+        else:
+            p.append(
+                f'<a href="{url}" target="_blank" rel="noopener sponsored" '
+                f'style="display:flex;align-items:center;padding:14px 16px;'
+                f'background:#fff9f0;border:1px solid #fed7aa;border-radius:8px;'
+                f'text-decoration:none;color:#92400e;font-size:14px;font-weight:600;">'
+                f'{name}'
+                f'<span style="margin-left:auto;font-size:12px;color:#d97706;flex-shrink:0;">쿠팡 →</span>'
+                f'</a>'
+            )
+    p.append('</div>')
     p.append(_divider())
 
     # ── 키워드 태그 ───────────────────────────────────────────────────────────
