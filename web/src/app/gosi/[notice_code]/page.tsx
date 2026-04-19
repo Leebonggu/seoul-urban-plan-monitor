@@ -4,6 +4,7 @@ import { notFound } from "next/navigation";
 import { loadAllNoticeCodes, loadRecordByCode } from "@/lib/data";
 import { GRADE_COLORS } from "@/lib/centers";
 import AdBanner from "@/components/AdBanner";
+import CoupangBanner from "@/components/CoupangBanner";
 
 export const dynamicParams = true;
 
@@ -137,6 +138,9 @@ export default async function GosiDetailPage({ params }: Props) {
         </div>
       </div>
 
+      {/* 쿠팡 배너 #1 — 고시 원문 직후 (키워드기반) */}
+      <CoupangBanner id={982014} className="mb-6" />
+
       {/* Links */}
       <div className="flex flex-wrap gap-3 mb-8">
         {record.doc_url && (
@@ -170,6 +174,9 @@ export default async function GosiDetailPage({ params }: Props) {
           &larr; 전체 고시문 목록
         </Link>
       </div>
+
+      {/* 쿠팡 배너 #2 — 페이지 하단 (고객관심기반) */}
+      <CoupangBanner id={982015} className="mb-4" />
 
       <AdBanner slot="SLOT_GOSI_DETAIL" className="mt-4" />
     </div>
