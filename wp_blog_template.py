@@ -1,41 +1,11 @@
 import os as _os
 import re as _re
 
-# ── 쿠팡파트너스 링크 ─────────────────────────────────────────────────────────
-# 각 상품은 (이름, 링크URL, 이미지URL) 형태입니다.
-# 이미지URL은 쿠팡파트너스에서 발급한 배너 이미지 URL을 사용합니다.
-# 파트너스 링크 발급 후 GitHub Secrets에 아래 env var를 추가하면 추적 링크로 전환됩니다.
-#   COUPANG_MOVING_BOX     — href URL (예: https://link.coupang.com/a/er5rzK)
-#   COUPANG_MOVING_BOX_IMG — img src URL (예: https://image10.coupangcdn.com/...)
-_COUPANG_ITEMS_RAW = [
-    (
-        "📦 이사박스 세트",
-        _os.environ.get("COUPANG_MOVING_BOX", "https://www.coupang.com/np/search?q=이사박스"),
-        _os.environ.get("COUPANG_MOVING_BOX_IMG", ""),
-    ),
-    (
-        "🛡️ 이사 포장재 세트",
-        _os.environ.get("COUPANG_PACKING", "https://www.coupang.com/np/search?q=이사+포장재"),
-        _os.environ.get("COUPANG_PACKING_IMG", ""),
-    ),
-    (
-        "🧹 입주청소 서비스",
-        _os.environ.get("COUPANG_CLEANING", "https://www.coupang.com/np/search?q=입주청소"),
-        _os.environ.get("COUPANG_CLEANING_IMG", ""),
-    ),
-    (
-        "📚 부동산 투자 도서",
-        _os.environ.get("COUPANG_BOOK", "https://www.coupang.com/np/search?q=부동산+투자+책"),
-        _os.environ.get("COUPANG_BOOK_IMG", ""),
-    ),
-]
-
-
-def _get_coupang_items(notice_type: str) -> list:
-    """고시 유형에 따라 상품 목록 반환. (이름, url, img_url) 튜플 리스트."""
-    if notice_type and any(kw in notice_type for kw in ("지구단위", "주거", "재개발", "재건축")):
-        return _COUPANG_ITEMS_RAW[:3]  # 이사 관련
-    return _COUPANG_ITEMS_RAW[:3]      # 기본: 이사 관련
+_COUPANG_BANNER = (
+    '<script src="https://ads-partners.coupang.com/g.js"></script>'
+    '<script>new PartnersCoupang.G({"id":982014,"template":"carousel",'
+    '"trackingCode":"AF1900878","width":"100%","height":"140","tsource":""});</script>'
+)
 
 
 def _bold_numbers(text: str) -> str:
@@ -184,6 +154,15 @@ def generate_wp_content(record: dict, insight: dict | None = None) -> dict:
                 f'<p style="font-size:15px;line-height:1.95;color:#374151;margin-bottom:40px;">'
                 f'{_bold_numbers(items)}</p>'
             )
+        # 부동산 영향 직후 — 쿠팡 동적 배너 (관심도 최고점)
+        p.append(
+            '<div style="margin-bottom:16px;">'
+            '<p style="font-size:12px;color:#9ca3af;margin:0 0 8px;">'
+            '이 포스팅은 쿠팡 파트너스 활동의 일환으로, 이에 따른 일정액의 수수료를 제공받습니다.'
+            '</p>'
+            f'{_COUPANG_BANNER}'
+            '</div>'
+        )
         p.append(_divider())
 
     # ── 전문가 인용구 ─────────────────────────────────────────────────────────
@@ -247,49 +226,6 @@ def generate_wp_content(record: dict, insight: dict | None = None) -> dict:
             )
         p.append('<div style="margin-bottom:40px;"></div>')
 
-    # ── 쿠팡파트너스 추천 상품 ────────────────────────────────────────────────
-    p.append(_h2("🛒 관련 상품 추천"))
-    p.append(
-        '<p style="font-size:12px;color:#9ca3af;margin:-8px 0 14px;">'
-        '이 포스팅은 쿠팡 파트너스 활동의 일환으로, 이에 따른 일정액의 수수료를 제공받습니다.'
-        '</p>'
-    )
-    # 쿠팡파트너스 동적 배너 (carousel)
-    _dynamic_banner = (
-        '<script src="https://ads-partners.coupang.com/g.js"></script>'
-        '<script>new PartnersCoupang.G({"id":982014,"template":"carousel",'
-        '"trackingCode":"AF1900878","width":"100%","height":"140","tsource":""});</script>'
-    )
-    if _dynamic_banner:
-        p.append(f'<div style="margin-bottom:20px;">{_dynamic_banner}</div>')
-    # 개별 상품 링크는 동적 배너와 함께 또는 단독으로 항상 표시
-    coupang_items = _get_coupang_items(notice_type)
-    p.append('<div style="display:flex;flex-direction:column;gap:8px;margin-bottom:40px;">')
-    for name, url, img_url in coupang_items:
-        if img_url:
-            p.append(
-                f'<a href="{url}" target="_blank" rel="noopener sponsored" '
-                f'referrerpolicy="unsafe-url" '
-                f'style="display:flex;align-items:center;gap:14px;padding:12px 16px;'
-                f'background:#fff9f0;border:1px solid #fed7aa;border-radius:8px;text-decoration:none;">'
-                f'<img src="{img_url}" alt="{name}" '
-                f'style="width:60px;height:60px;object-fit:cover;border-radius:6px;flex-shrink:0;">'
-                f'<span style="color:#92400e;font-size:14px;font-weight:600;">{name}</span>'
-                f'<span style="margin-left:auto;font-size:12px;color:#d97706;flex-shrink:0;">쿠팡 →</span>'
-                f'</a>'
-            )
-        else:
-            p.append(
-                f'<a href="{url}" target="_blank" rel="noopener sponsored" '
-                f'style="display:flex;align-items:center;padding:14px 16px;'
-                f'background:#fff9f0;border:1px solid #fed7aa;border-radius:8px;'
-                f'text-decoration:none;color:#92400e;font-size:14px;font-weight:600;">'
-                f'{name}'
-                f'<span style="margin-left:auto;font-size:12px;color:#d97706;flex-shrink:0;">쿠팡 →</span>'
-                f'</a>'
-            )
-    p.append('</div>')
-    p.append(_divider())
 
     # ── 키워드 태그 ───────────────────────────────────────────────────────────
     if insight and insight.get("keywords"):
