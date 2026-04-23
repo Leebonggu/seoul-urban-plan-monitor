@@ -98,5 +98,25 @@
     "center_grade": null,
     "center_name": null,
     "category": "결정고시"
+  },
+  {
+    "notice_code": "11740NTC202604230007",
+    "notice_no": "2026-166",
+    "notice_date": "2026-03-26",
+    "title": "도시계획시설(자동차정류장) 결정(폐지) 및 지형도면 고시",
+    "content": "서울특별시 고시 제1980-281호(1980.8.4.)로 최초 결정되고 서울특별시 고시 제1981-1호 (1981.5.20.)로 지적 승인된 강동구 둔촌동 77번지 일대 도시계획시설(자동차정류장)에 대하여 「국토의 계획 및 이용에 관한 법률」 제30조, 같은 법 시행령 제25조에 따라 도시관리계획(도시 계획시설:자동차정류장)을 결정(폐지)하고, 「국토의 계획 및 이용에 관한 법률」 제32조, 「토지 이용규제 기본법」제8조 및 같은 법 시행령 제7조 규정에 따라 지형도면을 작성하여 이를 고시합 니다.",
+    "organ_code": "6110000",
+    "organ_name": "서울특별시",
+    "notice_type": "결정+지적",
+    "classify_g": "",
+    "classify_m": "",
+    "site_code": "11740",
+    "site_name": "강동구",
+    "location": "서울특별시 강동구 둔촌동 77번지 일대",
+    "doc_url": "https://urban.seoul.go.kr/UpisArchive/DATA/PM/pdf/11740TTC202604230007/%EC%84%9C%EC%9A%B8%ED%8A%B9%EB%B3%84%EC%8B%9C_%EC%A0%9C2026-166%ED%98%B8_%EA%B3%A0%EC%8B%9C.pdf",
+    "page_url": "https://urban.seoul.go.kr/view/html/PMNU4030100001?noticeCode=11740NTC202604230007",
+    "center_grade": null,
+    "center_name": null,
+    "category": "결정고시"
   }
 ]
