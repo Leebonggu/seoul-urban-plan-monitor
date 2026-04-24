@@ -112,5 +112,25 @@
     "page_url": "https://urban.seoul.go.kr/view/html/PMNU4030100001?noticeCode=11590NTC202603050001",
     "center_grade": "지역중심",
     "center_name": "사당·이수"
+  },
+  {
+    "notice_code": "11560NTC202604240003",
+    "notice_no": "2026-33",
+    "notice_date": "2026-03-05",
+    "title": "개발행위허가의 제한지역 지형도면 고시",
+    "content": "  우리 구 여의대방2역세권 장기전세주택 도시정비형 재개발사업 정비계획 수립 예정 지역 내 비경제적인 건축행위 및 투기 우려를 최소화하기 위하여 「국토의 이용 및 계획에 관한 법률」제63조에 따라 개발행위허가 제한지역 지정 및 고시하고, 「토지이용규제 기본법」제8조에 따라 지형도면을 고시합니다.",
+    "organ_code": "3180000",
+    "organ_name": "영등포구",
+    "notice_type": "결정+지적",
+    "classify_g": "",
+    "classify_m": "",
+    "site_code": "11560",
+    "site_name": "영등포구",
+    "location": "신길동 4-5번지 일대",
+    "doc_url": "https://urban.seoul.go.kr/UpisArchive/DATA/PM/pdf/11560TTC202604240003/%EA%B0%9C%EB%B0%9C%ED%96%89%EC%9C%84%ED%97%88%EA%B0%80%EC%9D%98%20%EC%A0%9C%ED%95%9C%EC%A7%80%EC%97%AD%20%EC%A7%80%ED%98%95%EB%8F%84%EB%A9%B4%20%EA%B3%A0%EC%8B%9C%28%EC%97%AC%EC%9D%98%EB%8C%80%EB%B0%A92%EC%97%AD%EC%84%B8%EA%B6%8C%29.pdf",
+    "page_url": "https://urban.seoul.go.kr/view/html/PMNU4030100001?noticeCode=11560NTC202604240003",
+    "center_grade": "지역중심",
+    "center_name": "천호·길동",
+    "category": "결정고시"
   }
 ]
