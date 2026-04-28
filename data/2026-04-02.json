@@ -118,5 +118,25 @@
     "center_grade": null,
     "center_name": null,
     "category": "결정고시"
+  },
+  {
+    "notice_code": "11000NTC202604280001",
+    "notice_no": "2026-160",
+    "notice_date": "2026-04-02",
+    "title": "도시계획시설(수도공급설비) 실효 및 지형도면 고시",
+    "content": "「국토의 계획 및 이용에 관한 법률」 제48조에 따라 수도공급설비의 도시계획시설 결정에 대하여 아래와 같이 실효 고시 하고 「국토의 계획 및 이용에 관한 법률」 시행령 제42조 및 「토지이용규제 기본법」 제8조 및 같은 법 시행령 제7조에 따라 지형도면을 고시합니다.",
+    "organ_code": "6110000",
+    "organ_name": "서울특별시",
+    "notice_type": "결정+지적",
+    "classify_g": "",
+    "classify_m": "",
+    "site_code": "11000",
+    "site_name": "서울특별시",
+    "location": "중구 신당동 837-4",
+    "doc_url": "https://urban.seoul.go.kr/UpisArchive/DATA/PM/pdf/11000NTC202604280001/%EC%84%9C%EC%9A%B8%ED%8A%B9%EB%B3%84%EC%8B%9C_%EC%A0%9C2026-160%ED%98%B8_%EA%B3%A0%EC%8B%9C.pdf",
+    "page_url": "https://urban.seoul.go.kr/view/html/PMNU4030100001?noticeCode=11000NTC202604280001",
+    "center_grade": "도심",
+    "center_name": "한양도성(서울도심)",
+    "category": "결정고시"
   }
 ]
