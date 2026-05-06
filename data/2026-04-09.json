@@ -98,5 +98,25 @@
     "center_grade": "지역중심",
     "center_name": "봉천",
     "category": "결정고시"
+  },
+  {
+    "notice_code": "11200NTC202605060002",
+    "notice_no": "2026-60",
+    "notice_date": "2026-04-09",
+    "title": "왕십리역 소규모재개발사업 조합설립(변경)인가 및 지형도면 고시",
+    "content": "서울특별시 성동구 마장동 816-25번지 일대 소규모재개발사업과 관련하여 「빈집 및 소규모주택\n정비에 관한 특례법」 제23조에 따라 조합설립(변경)인가 처리하고, 같은 법 시행령 제21조의2 및 \n「토지이용규제 기본법」 제8조에 따라 지형도면을 고시합니다.",
+    "organ_code": "3030000",
+    "organ_name": "성동구",
+    "notice_type": "결정+지적",
+    "classify_g": "",
+    "classify_m": "",
+    "site_code": "11200",
+    "site_name": "성동구",
+    "location": "성동구 마장동 816-25번",
+    "doc_url": "https://urban.seoul.go.kr/UpisArchive/DATA/PM/pdf/11200TTC202605060002/%EA%B3%A0%EC%8B%9C%EB%AC%B8.pdf",
+    "page_url": "https://urban.seoul.go.kr/view/html/PMNU4030100001?noticeCode=11200NTC202605060002",
+    "center_grade": null,
+    "center_name": null,
+    "category": "결정고시"
   }
 ]
