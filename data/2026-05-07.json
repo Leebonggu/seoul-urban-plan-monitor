@@ -38,5 +38,25 @@
     "center_grade": null,
     "center_name": null,
     "category": "결정고시"
+  },
+  {
+    "notice_code": "11320NTC202605080001",
+    "notice_no": "2026-52",
+    "notice_date": "2026-05-07",
+    "title": "도시계획시설(문화시설) 결정 실효 및 지형도면 고시",
+    "content": "서울특별시고시 제2006-160호(2006. 5. 4.)로 최초 결정된 도시계획시설(문화시설)에 대하여 「국토의 계획 및 이용에 관한 법률」제48조의 규정에 의해 도시계획시설 결정이 실효되었기에 같은법 시행령 제42조에 따라 이를 고시하고 「토지이용규제 기본법」제8조의 규정에 따라 지형도면을 고시합니다.",
+    "organ_code": "3090000",
+    "organ_name": "도봉구",
+    "notice_type": "결정+지적",
+    "classify_g": "",
+    "classify_m": "",
+    "site_code": "11320",
+    "site_name": "도봉구",
+    "location": "쌍문동 103-66, 창동 643-5 일대",
+    "doc_url": "https://urban.seoul.go.kr/UpisArchive/DATA/PM/pdf/11320TTC202605080001/%EA%B3%A0%EC%8B%9C%EB%AC%B8.pdf",
+    "page_url": "https://urban.seoul.go.kr/view/html/PMNU4030100001?noticeCode=11320NTC202605080001",
+    "center_grade": "광역중심",
+    "center_name": "창동·상계",
+    "category": "결정고시"
   }
 ]

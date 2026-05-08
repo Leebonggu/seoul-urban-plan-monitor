@@ -18,5 +18,25 @@
     "center_grade": "도심",
     "center_name": "한양도성(서울도심)",
     "category": "결정고시"
+  },
+  {
+    "notice_code": "11560NTC202605080002",
+    "notice_no": "2026-229",
+    "notice_date": "2026-04-23",
+    "title": "신길역세권(신길동 96-24번지 일대) 장기전세주택 도시정비형 재개발사업 정비구역 지정 및 정비계획 결정 고시",
+    "content": "신길역세권(신길동 96-24번지 일대) 장기전세주택 도시정비형 재개발사업 정비구역 지정 및 정비계획 결정 고시",
+    "organ_code": "6110000",
+    "organ_name": "서울특별시",
+    "notice_type": "결정",
+    "classify_g": "",
+    "classify_m": "",
+    "site_code": "11560",
+    "site_name": "영등포구",
+    "location": "신길동 96-24번지",
+    "doc_url": "https://urban.seoul.go.kr/UpisArchive/DATA/PM/pdf/11560TTC202605080002/%EC%8B%A0%EA%B8%B8%EC%97%AD%EC%84%B8%EA%B6%8C%28%EC%8B%A0%EA%B8%B8%EB%8F%99%2096-24%EB%B2%88%EC%A7%80%20%EC%9D%BC%EB%8C%80%29%20%EC%9E%A5%EA%B8%B0%EC%A0%84%EC%84%B8%EC%A3%BC%ED%83%9D%20%EB%8F%84%EC%8B%9C%EC%A0%95%EB%B9%84%ED%98%95%20%EC%9E%AC%EA%B0%9C%EB%B0%9C%EC%82%AC%EC%97%85%20%EC%A0%95%EB%B9%84%EA%B5%AC%EC%97%AD%20%EC%A7%80%EC%A0%95%20%EB%B0%8F%20%EC%A0%95%EB%B9%84%EA%B3%84%ED%9A%8D%20%EA%B2%B0%EC%A0%95%20%EB%B0%8F%20%EC%A7%80%ED%98%95%EB%8F%84%EB%A9%B4%20%EA%B3%A0%EC%8B%9C%28%EC%98%88%EC%A0%95%29%20%EC%95%8C%EB%A6%BC.pdf",
+    "page_url": "https://urban.seoul.go.kr/view/html/PMNU4030100001?noticeCode=11560NTC202605080002",
+    "center_grade": "지역중심",
+    "center_name": "천호·길동",
+    "category": "결정고시"
   }
 ]
