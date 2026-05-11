@@ -38,5 +38,25 @@
     "center_grade": "지역중심",
     "center_name": "천호·길동",
     "category": "결정고시"
+  },
+  {
+    "notice_code": "11470NTC202605110002",
+    "notice_no": "2026-40",
+    "notice_date": "2026-04-23",
+    "title": "도시계획시설(주차장) 결정 실효 및 지형도면 고시",
+    "content": " 서울특별시 고시 제2006-133호(2006.4.20.)로 최초 결정된 도시계획시설(주차장)에 대하여 「국토의 계획 및 이용에 관한 법률」 제48조 및 「국토의 계획 및 이용에 관한 법률 시행령」 제42조에 따라 다음과 같이 실효하고, 「토지이용규제 기본법」제8조 및 같은 법 시행령 제7조에 따라 지형도면을 고시합니다.",
+    "organ_code": "3140000",
+    "organ_name": "양천구",
+    "notice_type": "결정+지적",
+    "classify_g": "",
+    "classify_m": "",
+    "site_code": "11470",
+    "site_name": "양천구",
+    "location": "신정동 319-21,22",
+    "doc_url": "https://urban.seoul.go.kr/UpisArchive/DATA/PM/pdf/11470TTC202605110002/%EB%8F%84%EC%8B%9C%EA%B3%84%ED%9A%8D%EC%8B%9C%EC%84%A4%28%EC%A3%BC%EC%B0%A8%EC%9E%A5%29%20%EA%B2%B0%EC%A0%95%20%EC%8B%A4%ED%9A%A8%20%EB%B0%8F%20%EC%A7%80%ED%98%95%EB%8F%84%EB%A9%B4%20%EA%B3%A0%EC%8B%9C.pdf",
+    "page_url": "https://urban.seoul.go.kr/view/html/PMNU4030100001?noticeCode=11470NTC202605110002",
+    "center_grade": null,
+    "center_name": null,
+    "category": "결정고시"
   }
 ]
