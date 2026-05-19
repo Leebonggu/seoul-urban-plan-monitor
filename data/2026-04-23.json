@@ -58,5 +58,25 @@
     "center_grade": null,
     "center_name": null,
     "category": "결정고시"
+  },
+  {
+    "notice_code": "11740NTC202605190002",
+    "notice_no": "2026-216",
+    "notice_date": "2026-04-23",
+    "title": "천호？성내 재정비촉진지구 재정비촉진계획(천호8구역) (경미한)변경 결정 및 지형도면 고시",
+    "content": "천호성내 재정비촉진계획 (경미한)변경 결정",
+    "organ_code": "6110000",
+    "organ_name": "서울특별시",
+    "notice_type": "결정+지적",
+    "classify_g": "",
+    "classify_m": "",
+    "site_code": "11740",
+    "site_name": "강동구",
+    "location": "천호동 166-4",
+    "doc_url": "https://urban.seoul.go.kr/UpisArchive/DATA/PM/pdf/11740TTC202605190002/20260423_%EC%B2%9C%ED%98%B8%C2%B7%EC%84%B1%EB%82%B4%20%EC%9E%AC%EC%A0%95%EB%B9%84%EC%B4%89%EC%A7%84%EC%A7%80%EA%B5%AC%20%EC%9E%AC%EC%A0%95%EB%B9%84%EC%B4%89%EC%A7%84%EA%B3%84%ED%9A%8D%28%EC%B2%9C%ED%98%B88%EA%B5%AC%EC%97%AD%29%20%28%EA%B2%BD%EB%AF%B8%ED%95%9C%29%EB%B3%80%EA%B2%BD%20%EA%B2%B0%EC%A0%95%20%EB%B0%8F%20%EC%A7%80%ED%98%95%EB%8F%84%EB%A9%B4%20%EA%B3%A0%EC%8B%9C%28%EC%84%9C%EC%9A%B8%EC%8B%9C%EA%B3%A0%EC%8B%9C%20%EC%A0%9C2026-216%ED%98%B8%29.pdf",
+    "page_url": "https://urban.seoul.go.kr/view/html/PMNU4030100001?noticeCode=11740NTC202605190002",
+    "center_grade": "지역중심",
+    "center_name": "천호·길동",
+    "category": "결정고시"
   }
 ]
