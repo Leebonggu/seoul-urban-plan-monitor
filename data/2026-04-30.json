@@ -118,5 +118,25 @@
     "center_grade": null,
     "center_name": null,
     "category": "결정고시"
+  },
+  {
+    "notice_code": "11230NTC202605210003",
+    "notice_no": "2026-72",
+    "notice_date": "2026-04-30",
+    "title": "답십리자동차부품상가 도시정비형 재개발정비사업 소공원 조성계획(최초)결정 및 지형도면 고시",
+    "content": "1. 서울특별시 제2020-369호(2020. 9. 3.)로 도시계획시설(공원) 최초 결정된고, 서울특별시고시 제2024-80호(2024.06.13.)로 공원결정(변경)된 소공원의 조성계획 결정을 위해\n2. 「국토의 계획 및 이용에 관한 법률」제30조？제32조, 같은 법 시행령 제25조 및「도시공원 및 녹지 등에 관한 법률」제16조의2 규정에 따라 다음과 같이 공원조성계획을 결정(최초)하고 지형도면을 고시합니다.",
+    "organ_code": "3050000",
+    "organ_name": "동대문구",
+    "notice_type": "결정",
+    "classify_g": "",
+    "classify_m": "",
+    "site_code": "11230",
+    "site_name": "동대문구",
+    "location": "서울특별시 동대문구 답십리동 952-5",
+    "doc_url": "https://urban.seoul.go.kr/UpisArchive/DATA/PM/pdf/11230TTC202605210003/%EB%8F%99%EA%B3%A0%EC%8B%9C%202026-72%ED%98%B8.pdf",
+    "page_url": "https://urban.seoul.go.kr/view/html/PMNU4030100001?noticeCode=11230NTC202605210003",
+    "center_grade": "지역중심",
+    "center_name": "동대문",
+    "category": "결정고시"
   }
 ]
