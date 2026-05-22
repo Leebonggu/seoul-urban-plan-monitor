@@ -18,5 +18,25 @@
     "center_grade": null,
     "center_name": null,
     "category": "결정고시"
+  },
+  {
+    "notice_code": "11500NTC202605220006",
+    "notice_no": "2026-63",
+    "notice_date": "2026-04-29",
+    "title": "신안빌라 재건축정비사업 사업시행계획인가 고시",
+    "content": "가. 정비사업의 종류 : 재건축정비사업\n\n 나. 정비사업의 명칭 : 신안빌라 재건축정비사업\n\n 다. 정비구역의 위치 : 서울특별시 강서구 마곡동 327-53번지 일대\n\n 라. 정비구역의 면적 : 17,451.0㎡\n\n 마. 사업시행자의 성명 : 주식회사 한국토지신탁 (대표자 김성진)\n\n 바. 사업시행자의 주소 : 서울특별시 강남구 테헤란로 137\n\n 사. 정비사업의 시행기간 : 사업시행계획인가일로부터 84개월\n\n 아. 사업시행계획인가일 : 2026. 4. 29.\n\n 자. 건축물의 대지면적·건폐율·용적률·높이·용도 등 건축계획에 관한 사항\n  ① 대지면적 : 15,973.00㎡                  ② 건폐율 : 29.21%\n  ③ 용 적 률 : 254.82%                     ④ 높  이 : 42.95m\n  ⑤ 용    도 : 공동주택 8개동(365세대, 임대주택 7세대 포함) 및 부대복리시설",
+    "organ_code": "3150000",
+    "organ_name": "강서구",
+    "notice_type": "결정",
+    "classify_g": "",
+    "classify_m": "",
+    "site_code": "11500",
+    "site_name": "강서구",
+    "location": "강서구 마곡동 327-53번지 일대",
+    "doc_url": "https://urban.seoul.go.kr/UpisArchive/DATA/PM/pdf/11500TTC202605220006/%EA%B3%A0%EC%8B%9C%EB%AC%B8%20%285%29.hwp",
+    "page_url": "https://urban.seoul.go.kr/view/html/PMNU4030100001?noticeCode=11500NTC202605220006",
+    "center_grade": "광역중심",
+    "center_name": "마곡",
+    "category": "결정고시"
   }
 ]
