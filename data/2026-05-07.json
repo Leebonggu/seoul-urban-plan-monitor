@@ -138,5 +138,25 @@
     "center_grade": null,
     "center_name": null,
     "category": "결정고시"
+  },
+  {
+    "notice_code": "11000NTC202605270001",
+    "notice_no": "2026-250",
+    "notice_date": "2026-05-07",
+    "title": "거여마천재정비촉진지구 재정비촉진계획(마천4구역) 변경(경미한 변경) 결정 및 지형도면 고시",
+    "content": "통합심의위원회 의견에 따른 건축계획 및 임대주택 세대수 변경사항 반영, 관련부서 협의결과에 대한 조치계획서 제출 등 마천4 재정비촉진구역 재정비촉진계획 경미한 변경 결정",
+    "organ_code": "6110000",
+    "organ_name": "서울특별시",
+    "notice_type": "결정+지적",
+    "classify_g": "",
+    "classify_m": "",
+    "site_code": "11000",
+    "site_name": "서울특별시",
+    "location": "송파구 마천동 323 일대",
+    "doc_url": "https://urban.seoul.go.kr/UpisArchive/DATA/PM/pdf/11000TTC202605270001/%EA%B3%A0%EC%8B%9C%EB%AC%B8.pdf",
+    "page_url": "https://urban.seoul.go.kr/view/html/PMNU4030100001?noticeCode=11000NTC202605270001",
+    "center_grade": null,
+    "center_name": null,
+    "category": "결정고시"
   }
 ]
