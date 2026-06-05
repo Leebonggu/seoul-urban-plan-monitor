@@ -194,5 +194,25 @@
     "center_grade": "광역중심",
     "center_name": "창동·상계",
     "category": "결정고시"
+  },
+  {
+    "notice_code": "11000NTC202606050001",
+    "notice_no": "2026-142",
+    "notice_date": "2026-03-19",
+    "title": "구산역세권(역촌동 13-1번지 일원) 장기전세주택 도시정비형 재개발사업 정비계획 결정 및 정비구역 지정, 지구단위계획 결정 및 지형도면 고시",
+    "content": "구산역세권(역촌동 13-1번지 일원) 장기전세주택 도시정비형 재개발사업 정비계획 결정 및 정비구역 지정, 지구단위계획 결정 및 지형도면 고시\n",
+    "organ_code": "6110000",
+    "organ_name": "서울특별시",
+    "notice_type": "결정+지적",
+    "classify_g": "",
+    "classify_m": "",
+    "site_code": "11000",
+    "site_name": "서울특별시",
+    "location": "서울특별시 은평구 역촌동 13-1번지 일원",
+    "doc_url": "https://urban.seoul.go.kr/UpisArchive/DATA/PM/pdf/11000TTC202606050001/%EA%B3%A0%EC%8B%9C%EB%AC%B8%28%EC%84%9C%EC%9A%B8%ED%8A%B9%EB%B3%84%EC%8B%9C%EA%B3%A0%EC%8B%9C%20%EC%A0%9C2026-142%ED%98%B8%29.pdf",
+    "page_url": "https://urban.seoul.go.kr/view/html/PMNU4030100001?noticeCode=11000NTC202606050001",
+    "center_grade": null,
+    "center_name": null,
+    "category": "결정고시"
   }
 ]
