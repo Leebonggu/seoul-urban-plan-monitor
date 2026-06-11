@@ -1,0 +1,42 @@
+[
+  {
+    "notice_code": "11680NTC202512110001",
+    "notice_no": "2026-109",
+    "notice_date": "2026-06-11",
+    "title": "도시관리계획(강남구 논현동 55-16 일원 역세권 활성화사업 지구단위계획) 결정(경미한 변경) 및 지형도면 고시",
+    "content": "공공기여시설 위치 변경 및 감정평가 결과(‘26. 5. 28.)를 반영한 공공기여 총량 및 공공기여 세부내역의 변경에 따라 도시관리계획(강남구 논현동 55-16 일원 역세권 활성화사업 지구단위계획) 경미한 변경을 결정",
+    "organ_code": "3220000",
+    "organ_name": "강남구",
+    "notice_type": "결정",
+    "classify_g": "",
+    "classify_m": "",
+    "site_code": "11680",
+    "site_name": "강남구",
+    "location": "논현동 55-16 일원",
+    "doc_url": "https://urban.seoul.go.kr/UpisArchive/DATA/PM/pdf/11680TTC202512110001/%EB%B6%99%EC%9E%841_%EA%B3%A0%EC%8B%9C%EB%AC%B8%28%EA%B0%95%EB%82%A8%EA%B5%AC%EA%B3%A0%EC%8B%9C%20%EC%A0%9C2026%20109%ED%98%B8%29.hwp",
+    "page_url": "https://urban.seoul.go.kr/view/html/PMNU4030100001?noticeCode=11680NTC202512110001",
+    "center_grade": null,
+    "center_name": null,
+    "category": "결정고시"
+  },
+  {
+    "notice_code": "11000NTC202602090004",
+    "notice_no": "2026-314",
+    "notice_date": "2026-06-11",
+    "title": "도시관리계획[인사동 지구단위계획 변경(재정비)] 결정 및 지형도면 고시",
+    "content": "서울특별시고시 제2002-27호(2002.01.29.)로 최초 결정된 『인사동 지구단위계획』에 대하여 2025년 제21차 서울특별시 도시ㆍ건축공동위원회(2025.12.24) 심의를 거쳐 「국토의 계획 및 이용에 관한 법률」 제30조 및 같은 법 시행령 제25조 규정에 따라 도시관리계획(『인사동 지구단위계획』 변경(재정비) 결정)을 결정 고시하고, 「국토의 계획 및 이용에 관한 법률」 제32조 및 같은 법 시행령 제27조, 「토지이용규제기본법」 제8조 및 같은 법 시행령 제7조의 규정에 의하여 지형도면을 고시합니다.",
+    "organ_code": "6110000",
+    "organ_name": "서울특별시",
+    "notice_type": "결정",
+    "classify_g": "",
+    "classify_m": "",
+    "site_code": "11000",
+    "site_name": "서울특별시",
+    "location": "종로구 경운동 90-18번지 일대",
+    "doc_url": "https://urban.seoul.go.kr/UpisArchive/DATA/PM/pdf/11000TTC202602090004/%EA%B3%A0%EC%8B%9C%EB%AC%B8%28%EC%84%9C%EA%B3%A0%EC%8B%9C%20%EC%A0%9C2026-314%ED%98%B8%29_opt.pdf",
+    "page_url": "https://urban.seoul.go.kr/view/html/PMNU4030100001?noticeCode=11000NTC202602090004",
+    "center_grade": "도심",
+    "center_name": "한양도성(서울도심)",
+    "category": "결정고시"
+  }
+]
