@@ -198,5 +198,25 @@
     "center_grade": "광역중심",
     "center_name": "용산",
     "category": "결정고시"
+  },
+  {
+    "notice_code": "11650NTC202606190006",
+    "notice_no": "2026-126",
+    "notice_date": "2026-05-28",
+    "title": "도시관리계획(도시계획시설 : 철도 및 광장) 결정(경미한 변경) 및 지형도면 고시",
+    "content": "서울특별시고시 제1981-287호(1981.07.30.)로 도시계획시설(철도) 결정되고, 서울특별시고시 제1985-399호(1985.06.22.), 서울특별시서초구고시 제2008-58호(2008.11.13.), 서울특별시 동작구고시 제2009-18호(2009.05.21.)로 변경 결정된 동작구 동작동 327-1번지 일대 지하철 4호선 동작역에 대하여 국토의 계획 및 이용에 관한법률』 제30조 및 같은법 시행령 제 25조의 규정에 따라 다음과 같이 결정(경미한 변경)하고, 『국토의 계획 및 이용에 관한 법률』제32조 및 『토지이용규제 기본법』제8조에 따라 지형도면을 고시합니다. ",
+    "organ_code": "3210000",
+    "organ_name": "서초구",
+    "notice_type": "결정+지적",
+    "classify_g": "",
+    "classify_m": "",
+    "site_code": "11650",
+    "site_name": "서초구",
+    "location": "동작구 동작동 327-1 번지 일대",
+    "doc_url": "https://urban.seoul.go.kr/UpisArchive/DATA/PM/pdf/11650TTC202606190006/20.%20%EB%8F%84%EC%8B%9C%EA%B4%80%EB%A6%AC%EA%B3%84%ED%9A%8D%28%EB%8F%84%EC%8B%9C%EA%B3%84%ED%9A%8D%EC%8B%9C%EC%84%A4%20%EC%B2%A0%EB%8F%84%20%EB%B0%8F%20%EA%B4%91%EC%9E%A5%29%20%EA%B2%B0%EC%A0%95%28%EA%B2%BD%EB%AF%B8%ED%95%9C%20%EB%B3%80%EA%B2%BD%29%20%EB%B0%8F%20%EC%A7%80%ED%98%95%EB%8F%84%EB%A9%B4%20%EA%B3%A0%EC%8B%9C.pdf",
+    "page_url": "https://urban.seoul.go.kr/view/html/PMNU4030100001?noticeCode=11650NTC202606190006",
+    "center_grade": null,
+    "center_name": null,
+    "category": "결정고시"
   }
 ]
