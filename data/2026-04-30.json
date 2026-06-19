@@ -218,5 +218,25 @@
     "center_grade": "지역중심",
     "center_name": "망우",
     "category": "결정고시"
+  },
+  {
+    "notice_code": "11320NTC202606080007",
+    "notice_no": "2026-49",
+    "notice_date": "2026-04-30",
+    "title": "도봉동 625-80번지 일대 가로주택정비사업 사업시행계획인가 고시",
+    "content": "서울특별시 도봉구 도봉동 625-80번지 일대 가로주택정비사업에 대하여 「빈집 및 소규모주택 정비에 관한 특례법」 제29조 제1항의 규정에 의거 사업시행계획을 인가하고, 같은 법 제29조 제5항 및 같은 법 시행규칙 제10조 규정에 의거 아래와 같이 고시합니다.\n\n2026년 4월 30일\n도 봉 구 청 장",
+    "organ_code": "3090000",
+    "organ_name": "도봉구",
+    "notice_type": "결정",
+    "classify_g": "",
+    "classify_m": "",
+    "site_code": "11320",
+    "site_name": "도봉구",
+    "location": "도봉동 625-80",
+    "doc_url": "https://urban.seoul.go.kr/UpisArchive/DATA/PM/pdf/11320TTC202606080007/%EB%8F%84%EB%B4%89%EA%B5%AC%20%EA%B5%AC%EB%B3%B4%20%EC%A0%9C2655%ED%98%B8%28%EB%8F%84%EB%B4%89%EA%B5%AC%EA%B3%A0%EC%8B%9C%20%EC%A0%9C2026-49%ED%98%B8%29_%EB%8F%84%EB%B4%89%EB%8F%99%20625-80%20%EC%82%AC%EC%97%85%EC%8B%9C%ED%96%89%EA%B3%84%ED%9A%8D%EC%9D%B8%EA%B0%80_%EC%B6%94%EC%B6%9C.pdf",
+    "page_url": "https://urban.seoul.go.kr/view/html/PMNU4030100001?noticeCode=11320NTC202606080007",
+    "center_grade": null,
+    "center_name": null,
+    "category": "결정고시"
   }
 ]

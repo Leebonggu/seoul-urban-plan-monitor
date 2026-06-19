@@ -228,5 +228,25 @@
     "center_grade": "도심",
     "center_name": "한양도성(서울도심)",
     "category": "결정고시"
+  },
+  {
+    "notice_code": "11650NTC202606180001",
+    "notice_no": "2026-35",
+    "notice_date": "2026-02-12",
+    "title": "도시관리계획(도시계획시설 : 도로) 결정(경미한 변경) 고시",
+    "content": "서울특별시 서초동 1747-9번지 일원 도시계획시설(도로)에 대하여 「국토의 계획 및 이용에 관한 법률」 제30조, 같은 법 시행령 제25조 및 「서울특별시 도시계획 조례」 제67조에 따라 도시관리계획 변경 결정하고 「국토의 계획 및 이용에 관한 법률」 제32조 및 「토지이용규제 기본법」 제8조에 따라 지형도면을 작성하여 고시합니다.",
+    "organ_code": "3210000",
+    "organ_name": "서초구",
+    "notice_type": "결정+지적",
+    "classify_g": "",
+    "classify_m": "",
+    "site_code": "11650",
+    "site_name": "서초구",
+    "location": "서초동 1472-18~서초동1485-1",
+    "doc_url": "https://urban.seoul.go.kr/UpisArchive/DATA/PM/pdf/11650TTC202606180001/10.%20%EB%8F%84%EC%8B%9C%EA%B4%80%EB%A6%AC%EA%B3%84%ED%9A%8D%28%EB%8F%84%EC%8B%9C%EA%B3%84%ED%9A%8D%EC%8B%9C%EC%84%A4%20%20%EB%8F%84%EB%A1%9C%29%20%EA%B2%B0%EC%A0%95%28%EA%B2%BD%EB%AF%B8%ED%95%9C%20%EB%B3%80%EA%B2%BD%29%20%EA%B3%A0%EC%8B%9C.pdf",
+    "page_url": "https://urban.seoul.go.kr/view/html/PMNU4030100001?noticeCode=11650NTC202606180001",
+    "center_grade": null,
+    "center_name": null,
+    "category": "결정고시"
   }
 ]
