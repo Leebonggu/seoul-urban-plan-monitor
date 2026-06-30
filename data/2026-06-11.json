@@ -58,5 +58,25 @@
     "center_grade": null,
     "center_name": null,
     "category": "결정고시"
+  },
+  {
+    "notice_code": "11230NTC202606300004",
+    "notice_no": "2026-94",
+    "notice_date": "2026-06-11",
+    "title": "개발행위허가 제한지역 지정 및 지형도면 고시",
+    "content": "동대문구 이문동 256-136번지 일대에 대하여 역세권 장기전세주택 도시정비형 재개발사업 사전검토 신청 접수되어 「역세권 장기전세주택 건립사업 투기방지대책(2023. 10. 26.)」에 따라 「국토의 계획 및 이용에 관한 법률」 제63조 및 같은 법 시행령 제60조에 의거 개발행위허가 제한지역으로 지정하고, 「토지이용규제 기본법」 제8조 및 같은 법 시행령 제7조에 따라 지형도면을 고시합니다.",
+    "organ_code": "3050000",
+    "organ_name": "동대문구",
+    "notice_type": "결정+지적",
+    "classify_g": "",
+    "classify_m": "",
+    "site_code": "11230",
+    "site_name": "동대문구",
+    "location": "이문동 256-136",
+    "doc_url": "https://urban.seoul.go.kr/UpisArchive/DATA/PM/pdf/11230TTC202606300004/%EA%B0%9C%EB%B0%9C%ED%96%89%EC%9C%84%ED%97%88%EA%B0%80%20%EC%A0%9C%ED%95%9C%EC%A7%80%EC%97%AD%20%EC%A7%80%EC%A0%95%20%EA%B3%A0%EC%8B%9C%EB%AC%B8.pdf",
+    "page_url": "https://urban.seoul.go.kr/view/html/PMNU4030100001?noticeCode=11230NTC202606300004",
+    "center_grade": null,
+    "center_name": null,
+    "category": "결정고시"
   }
 ]
