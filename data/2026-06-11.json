@@ -178,5 +178,25 @@
     "center_grade": "지역중심",
     "center_name": "마포",
     "category": "결정고시"
+  },
+  {
+    "notice_code": "11290NTC202607060013",
+    "notice_no": "2026-89",
+    "notice_date": "2026-06-11",
+    "title": "장위재정비촉진지구 재정비촉진계획(경미한 사항) 변경(정정) 결정 고시",
+    "content": "장위10구역 일부 도시계획시설(도로) 규모 오기에 따른 정정",
+    "organ_code": "3070000",
+    "organ_name": "성북구",
+    "notice_type": "결정",
+    "classify_g": "",
+    "classify_m": "",
+    "site_code": "11290",
+    "site_name": "성북구",
+    "location": "장위동 68-37 일대",
+    "doc_url": "https://urban.seoul.go.kr/UpisArchive/DATA/PM/pdf/11290TTC202607060013/%EC%9E%A5%EC%9C%84%EC%9E%AC%EC%A0%95%EB%B9%84%EC%B4%89%EC%A7%84%EC%A7%80%EA%B5%AC%20%EC%9E%AC%EC%A0%95%EB%B9%84%EC%B4%89%EC%A7%84%EA%B3%84%ED%9A%8D%28%EA%B2%BD%EB%AF%B8%ED%95%9C%20%EC%82%AC%ED%95%AD%29%20%EB%B3%80%EA%B2%BD%28%EC%A0%95%EC%A0%95%29%20%EA%B2%B0%EC%A0%95%20%EA%B3%A0%EC%8B%9C%28%EC%84%B1%EB%B6%81%EA%B5%AC%EA%B3%A0%EC%8B%9C%20%EC%A0%9C2026-89%ED%98%B8%29.pdf",
+    "page_url": "https://urban.seoul.go.kr/view/html/PMNU4030100001?noticeCode=11290NTC202607060013",
+    "center_grade": null,
+    "center_name": null,
+    "category": "결정고시"
   }
 ]
