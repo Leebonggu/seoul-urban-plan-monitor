@@ -238,5 +238,25 @@
     "center_grade": null,
     "center_name": null,
     "category": "결정고시"
+  },
+  {
+    "notice_code": "11000NTC202607070010",
+    "notice_no": "2026-292",
+    "notice_date": "2026-05-28",
+    "title": "도시계획시설(학교) 세부시설조성계획 결정(변경) 및 지형도면 고시",
+    "content": "   서울특별시고시 제60호(1975.5.1.)로 도시계획시설(학교)로 최초 결정 및 서울특별시고시 제2002-86호(2002.3.25.)로 세부시설조성계획 결정되어 서울특별시 고시 제2025-664호(2025.12.4.)로 도시계획시설(학교) 세부시설조성계획 결정(변경)된 성동구 행당동 17번지 일대 한양대학교에 대하여,  「국토의 계획 및 이용에 관한 법률」 제30조, 같은법 시행령 제25조, 「도시？군계획시설의 결정？구조 및 설치 기준에 관한 규칙」 제2조에 따라 다음과 같이 도시계획시설(학교) 세부시설조성계획을 결정(변경)？고시하고, 「국토의 계획 및 이용에 관한법률」 제32조, 「토지이용규제 기본법」 제8조 및 같은법 시행령 제7조에 따라 지형도면을 고시합니다.",
+    "organ_code": "6110000",
+    "organ_name": "서울특별시",
+    "notice_type": "결정+지적",
+    "classify_g": "",
+    "classify_m": "",
+    "site_code": "11000",
+    "site_name": "서울특별시",
+    "location": "성동구 행당동 17번지 일대",
+    "doc_url": "https://urban.seoul.go.kr/UpisArchive/DATA/PM/pdf/11000TTC202607070010/%EA%B3%A0%EC%8B%9C%EB%AC%B8%28%EC%A0%9C2026-292%ED%98%B8%29.hwp",
+    "page_url": "https://urban.seoul.go.kr/view/html/PMNU4030100001?noticeCode=11000NTC202607070010",
+    "center_grade": null,
+    "center_name": null,
+    "category": "결정고시"
   }
 ]
