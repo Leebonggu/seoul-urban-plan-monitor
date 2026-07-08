@@ -238,5 +238,25 @@
     "center_grade": "지역중심",
     "center_name": "사당·이수",
     "category": "결정고시"
+  },
+  {
+    "notice_code": "11530NTC202509150003",
+    "notice_no": "2026-332",
+    "notice_date": "2026-06-11",
+    "title": "도시관리계획(궁동 108-1 일대 지구단위계획 및 궁동 108-1 일대 특별계획구역 세부개발계획) 결정(변경) 및 지형도면 고시",
+    "content": "서울특별시고시 제2020-251호(2020. 6. 25.)로 궁동 108-1 일대 지구단위계획구역이 지정되었고, 서울특별시고시 제2022-80호(2022. 2. 24.)로 지구단위계획이 결정된 궁동 108-1 일대 특별계획구역에 대하여 2026년 제7차 서울특별시 도시·건축공동위원회 심의결과(수정가결)를 반영하여 서울특별시 구로구 공고 제2026-964호(2026.05.21.)로 재열람공고를 거쳐 「국토의 계획 및 이용에 관한 법률」 제30조 및 같은 법 시행령 제25조 규정에 따라 다음과 같이 도시관리계획을 결정(변경)하고, 「국토의 계획 및 이용에 관한 법률」 제32조 및 같은 법 시행령 제27조, 「토지이용규제 기본법」 제8조 및 같은 법 시행령 제7조의 규정에 따라 지형도면을 고시합니다.",
+    "organ_code": "6110000",
+    "organ_name": "서울특별시",
+    "notice_type": "결정+지적",
+    "classify_g": "",
+    "classify_m": "",
+    "site_code": "11530",
+    "site_name": "구로구",
+    "location": "구로구 궁동 108-1번지",
+    "doc_url": "https://urban.seoul.go.kr/UpisArchive/DATA/PM/pdf/11530TTC202509150003/%5B%EA%B3%A0%EC%8B%9C%EB%AC%B8%5D%20%EB%8F%84%EC%8B%9C%EA%B4%80%EB%A6%AC%EA%B3%84%ED%9A%8D%28%EA%B6%81%EB%8F%99108-1%EC%9D%BC%EB%8C%80%20%EC%A7%80%EA%B5%AC%EB%8B%A8%EC%9C%84%EA%B3%84%ED%9A%8D%20%EB%B0%8F%20%EA%B6%81%EB%8F%99%20108-1%EC%9D%BC%EB%8C%80%20%ED%8A%B9%EB%B3%84%EA%B3%84%ED%9A%8D%EA%B5%AC%EC%97%AD%20%EC%84%B8%EB%B6%80%EA%B0%9C%EB%B0%9C%EA%B3%84%ED%9A%8D%29%20%EA%B2%B0%EC%A0%95%28%EB%B3%80%EA%B2%BD%29%20%EB%B0%8F%20%EC%A7%80%ED%98%95%EB%8F%84%EB%A9%B4%20%EA%B3%A0%EC%8B%9C.pdf",
+    "page_url": "https://urban.seoul.go.kr/view/html/PMNU4030100001?noticeCode=11530NTC202509150003",
+    "center_grade": null,
+    "center_name": null,
+    "category": "결정고시"
   }
 ]
