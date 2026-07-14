@@ -208,5 +208,25 @@
     "center_grade": null,
     "center_name": null,
     "category": "결정고시"
+  },
+  {
+    "notice_code": "11000NTC202607060016",
+    "notice_no": "2026-52",
+    "notice_date": "2026-01-29",
+    "title": "도시관리계획(용도지역, 지구단위계획) 결정(경미한 변경), 여의도 대교아파트 재건축 정비계획 결정(경미한 변경) 및 지형도면 고시",
+    "content": "여의도 대교아파트 재건축 정비계획 결정(경미한 변경) 및 지형도면 고시",
+    "organ_code": "6110000",
+    "organ_name": "서울특별시",
+    "notice_type": "결정",
+    "classify_g": "",
+    "classify_m": "",
+    "site_code": "11000",
+    "site_name": "서울특별시",
+    "location": "영등포구 여의도동 41번지",
+    "doc_url": "https://urban.seoul.go.kr/UpisArchive/DATA/PM/pdf/11000TTC202607060016/%EA%B3%A0%EC%8B%9C%EB%AC%B8%28%EC%A0%9C2026-52%ED%98%B8%29_%EC%97%AC%EC%9D%98%EB%8F%84%EB%8C%80%EA%B5%90%20%EC%A0%95%EB%B9%84%EA%B3%84%ED%9A%8D%20%EA%B2%BD%EB%AF%B8%ED%95%9C%20%EB%B3%80%EA%B2%BD.hwp",
+    "page_url": "https://urban.seoul.go.kr/view/html/PMNU4030100001?noticeCode=11000NTC202607060016",
+    "center_grade": "도심",
+    "center_name": "여의도·영등포",
+    "category": "결정고시"
   }
 ]
