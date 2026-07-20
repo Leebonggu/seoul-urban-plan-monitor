@@ -258,5 +258,25 @@
     "center_grade": null,
     "center_name": null,
     "category": "결정고시"
+  },
+  {
+    "notice_code": "11305NTC202511190006",
+    "notice_no": "2026-295",
+    "notice_date": "2026-05-28",
+    "title": "재정비촉진지구 재정비촉진계획(존치관리구역 지구단위계획) 결정(변경) 및 지형도면 고시",
+    "content": "1. 미아사거리역 존치관리구역 지구단위계획 등 5개 구역에 대하여 2026년 제2차 서울특별시 도시재정비위원회 심의(2026.03.24.) 등을 거쳐「도시재정비 촉진을 위한 특별법」제12조제1항에 따라 재정비촉진계획을 변경 결정하고, 같은 법 제12조제3항 및 같은 법 시행령 제15조에 따라 이를 고시하며, 같은 법 제13조 및「국토의 계획 및 이용에 관한 법률」제50조에 따라 지구단위계획을 변경 결정합니다.2. 아울러 재정비촉진계획(존치관리구역 지구단위계획) 변경 결정에 대하여「국토의 계획및 이용에 관한 법률」제32조와 토지이용규제 기본법」제8조 및 같은 법 시행령 제7조에 따라 지형도면을 고시합니다.",
+    "organ_code": "6110000",
+    "organ_name": "서울특별시",
+    "notice_type": "결정",
+    "classify_g": "",
+    "classify_m": "",
+    "site_code": "11305",
+    "site_name": "강북구",
+    "location": "미아동 70번지",
+    "doc_url": "https://urban.seoul.go.kr/UpisArchive/DATA/PM/pdf/11305TTC202511190006/%EC%84%9C%EC%9A%B8%ED%8A%B9%EB%B3%84%EC%8B%9C%20%EA%B3%A0%EC%8B%9C%20%EC%A0%9C2026-295%ED%98%B8%282026.5.28.%29-%EC%9E%AC%EC%A0%95%EB%B9%84%EC%B4%89%EC%A7%84%EA%B3%84%ED%9A%8D%28%EC%A1%B4%EC%B9%98%EA%B4%80%EB%A6%AC%EA%B5%AC%EC%97%AD%20%EC%A7%80%EA%B5%AC%EB%8B%A8%EC%9C%84%EA%B3%84%ED%9A%8D%29%EA%B2%B0%EC%A0%95%28%EB%B3%80%EA%B2%BD%29%20%EB%B0%8F%20%EC%A7%80%ED%98%95%EB%8F%84%EB%A9%B4%20%EA%B3%A0%EC%8B%9C.pdf",
+    "page_url": "https://urban.seoul.go.kr/view/html/PMNU4030100001?noticeCode=11305NTC202511190006",
+    "center_grade": "지역중심",
+    "center_name": "미아",
+    "category": "결정고시"
   }
 ]
