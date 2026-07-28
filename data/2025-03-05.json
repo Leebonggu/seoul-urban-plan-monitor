@@ -17,5 +17,25 @@
     "page_url": "https://urban.seoul.go.kr/view/html/PMNU4030100001?noticeCode=11170NTC202504010003",
     "center_grade": null,
     "center_name": null
+  },
+  {
+    "notice_code": "11000NTC202607130002",
+    "notice_no": "2026-106",
+    "notice_date": "2025-03-05",
+    "title": "도시계획시설(학교) 세부시설조성계획 결정(변경) 및 지형도면 고시 (고려대학교)",
+    "content": "서울특별시고시  제46호(1974.04.18.)로  도시계획시설(학교)  결정되고,  서울특별시고시  제2025호-585호(2025.10.30.)로 세부시설조성계획 결정(변경)된 서울특별시 성북구 안암동5가 1-2 일대 고려대학교에 대하여 「국토의 계획 및 이용에 관한 법률」 제30조, 같은법 시행령 제25조, 「도시·군계획시설의 결정·구조 및 설치기준에 관한 규칙」 제2조 규정에 따라 다음과 같이 도시계획시설(학교) 변경 및 세부시설조성계획 변경 결정 고시하고, 「국토의 계획 및 이용에 관한 법률」 제32조, 「토지이용규제기본법」 제8조 및 같은법 시행령 제7조의 규정에 따라 지형도면을 고시하고자 합니다.",
+    "organ_code": "6110000",
+    "organ_name": "서울특별시",
+    "notice_type": "도시계획시설",
+    "classify_g": "",
+    "classify_m": "",
+    "site_code": "11000",
+    "site_name": "",
+    "location": "성북구 안암동5가 1-2 일대",
+    "doc_url": "https://urban.seoul.go.kr/UpisArchive/DATA/PM/pdf/11000NTC202607130002/%EC%84%9C%EC%9A%B8%ED%8A%B9%EB%B3%84%EC%8B%9C_%EC%A0%9C2026-106%ED%98%B8_%EA%B3%A0%EC%8B%9C.pdf",
+    "page_url": "https://urban.seoul.go.kr/view/html/PMNU4030300001?noticeCode=11000NTC202607130002",
+    "center_grade": null,
+    "center_name": null,
+    "category": "도시계획시설"
   }
 ]
