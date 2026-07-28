@@ -158,5 +158,25 @@
     "center_grade": null,
     "center_name": null,
     "category": "결정고시"
+  },
+  {
+    "notice_code": "11000NTC202607280008",
+    "notice_no": "2026-204",
+    "notice_date": "2026-04-16",
+    "title": "신이문2역세권(이문동 170-65번지 일대) 장기전세주택 도시정비형 재개발사업 정비구역 지정 및 정비계획 결정, 지구단위계획구역 지정 및 지구단위계획 결정 및 지형도면 고시",
+    "content": "신이문2역세권(이문동 170-65번지 일대) 장기전세주택 도시정비형 재개발사업 정비구역 지정 및 정비계획 결정, 지구단위계획구역 지정 및 지구단위계획 결정 및 지형도면 고시",
+    "organ_code": "6110000",
+    "organ_name": "서울특별시",
+    "notice_type": "결정+지적",
+    "classify_g": "",
+    "classify_m": "",
+    "site_code": "11000",
+    "site_name": "서울특별시",
+    "location": "이문동 170-65번지 일대",
+    "doc_url": "https://urban.seoul.go.kr/UpisArchive/DATA/PM/pdf/11000TTC202607280008/%EA%B3%A0%EC%8B%9C%EB%AC%B8%282026-204%ED%98%B8%29.pdf",
+    "page_url": "https://urban.seoul.go.kr/view/html/PMNU4030100001?noticeCode=11000NTC202607280008",
+    "center_grade": null,
+    "center_name": null,
+    "category": "결정고시"
   }
 ]
