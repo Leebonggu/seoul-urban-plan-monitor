@@ -132,5 +132,25 @@
     "center_grade": "지역중심",
     "center_name": "천호·길동",
     "category": "결정고시"
+  },
+  {
+    "notice_code": "11710NTC202511260002",
+    "notice_no": "2026-113",
+    "notice_date": "2026-03-05",
+    "title": "천마근린공원 조성계획결정(변경) 및 지형도면 고시",
+    "content": "붙임문서 참고",
+    "organ_code": "6110000",
+    "organ_name": "서울특별시",
+    "notice_type": "결정",
+    "classify_g": "",
+    "classify_m": "",
+    "site_code": "11710",
+    "site_name": "송파구",
+    "location": "서울특별시 송파구 마천동 산 2",
+    "doc_url": "https://urban.seoul.go.kr/UpisArchive/DATA/PM/pdf/11710TTC202511260002/%EA%B3%A0%EC%8B%9C%EB%AC%B8%28%EC%84%9C%EA%B3%A0%20%EC%A0%9C2026-113%ED%98%B8%29_%EC%B2%9C%EB%A7%88%EA%B7%BC%EB%A6%B0%EA%B3%B5%EC%9B%90%20%EC%A1%B0%EC%84%B1%EA%B3%84%ED%9A%8D%EA%B2%B0%EC%A0%95%28%EB%B3%80%EA%B2%BD%29.pdf",
+    "page_url": "https://urban.seoul.go.kr/view/html/PMNU4030100001?noticeCode=11710NTC202511260002",
+    "center_grade": null,
+    "center_name": null,
+    "category": "결정고시"
   }
 ]

@@ -218,5 +218,25 @@
     "center_grade": "광역중심",
     "center_name": "마곡",
     "category": "결정고시"
+  },
+  {
+    "notice_code": "11305NTC202602240008",
+    "notice_no": "2026-270",
+    "notice_date": "2026-05-21",
+    "title": "수유동 392-9번지 일대(수유동2지역) 소규모주택정비 관리계획(모아타운 관리계획) 승인 및 지형도면 고시",
+    "content": "서울특별시 강북구 수유동 392-9번지 일대(수유동2지역) 소규모주택정비 관리지역(모아타운) 지정을 위하여 빈집 및 소규모주택 정비에 관한 특례법 제43조의2(소규모주택정비 관리계획의 수립)에 따라 소규모주택정비 관리계획(모아타운 관리계획) 승인 및 토지이용규제기본법 제8조 및 같은 법 시행령 제7조 규정에 따라 지형도면을 고시합니다.",
+    "organ_code": "6110000",
+    "organ_name": "서울특별시",
+    "notice_type": "결정+지적",
+    "classify_g": "",
+    "classify_m": "",
+    "site_code": "11305",
+    "site_name": "강북구",
+    "location": "수유동392-9",
+    "doc_url": "https://urban.seoul.go.kr/UpisArchive/DATA/PM/pdf/11305TTC202602240008/%EC%84%9C%EC%9A%B8%EC%8B%9C%EB%B3%B4%20%EC%A0%9C4150%ED%98%B8%282026.5.21.%29-%EC%88%98%EC%9C%A0%EB%8F%992%EC%A7%80%EC%97%AD%20%EA%B3%A0%EC%8B%9C_%EC%B6%94%EC%B6%9C.pdf",
+    "page_url": "https://urban.seoul.go.kr/view/html/PMNU4030100001?noticeCode=11305NTC202602240008",
+    "center_grade": null,
+    "center_name": null,
+    "category": "결정고시"
   }
 ]
