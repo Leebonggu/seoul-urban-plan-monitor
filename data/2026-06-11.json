@@ -378,5 +378,25 @@
     "center_grade": null,
     "center_name": null,
     "category": "결정고시"
+  },
+  {
+    "notice_code": "11560NTC202608070010",
+    "notice_no": "2026-325",
+    "notice_date": "2026-06-11",
+    "title": "신길16-2구역 주택정비형 재개발사업 정비계획 결정 및 정비구역 지정",
+    "content": "신길16-2구역 주택정비형 재개발사업 정비계획 결정 및 정비구역 지정",
+    "organ_code": "6110000",
+    "organ_name": "서울특별시",
+    "notice_type": "결정",
+    "classify_g": "",
+    "classify_m": "",
+    "site_code": "11560",
+    "site_name": "영등포구",
+    "location": "신길동 314-14번지 일대",
+    "doc_url": "https://urban.seoul.go.kr/UpisArchive/DATA/PM/pdf/11560TTC202608070010/%28%EA%B3%A0%EC%8B%9C%EB%AC%B8%29%20%EC%8B%A0%EA%B8%B816-2%EA%B5%AC%EC%97%AD%20%EC%A0%95%EB%B9%84%EA%B5%AC%EC%97%AD%20%EC%A7%80%EC%A0%95%20%EA%B3%A0%EC%8B%9C%20%28%EC%84%9C%EA%B3%A0%EC%8B%9C%20%EC%A0%9C2026-325%ED%98%B8%29.pdf",
+    "page_url": "https://urban.seoul.go.kr/view/html/PMNU4030100001?noticeCode=11560NTC202608070010",
+    "center_grade": "지역중심",
+    "center_name": "천호·길동",
+    "category": "결정고시"
   }
 ]
