@@ -58,5 +58,25 @@
     "center_grade": null,
     "center_name": null,
     "category": "결정고시"
+  },
+  {
+    "notice_code": "11440NTC202608120008",
+    "notice_no": "2026-112",
+    "notice_date": "2026-07-16",
+    "title": "주택건설사업계획 변경 승인 및 지형도면 고시",
+    "content": "마포구 신수동 91-90일대 신수동무쇠막지역주택조합에서 시행하는 공동주택 및 부대복리시설의 주택건설사업에 대하여, 「주택법」 제15조에 따라 주택건설사업 변경계획을 승인하고, 「국토의 계획 및 이용에 관한 법률」제30조 및 같은 법 시행령 제25조에 따라 도시관리계획(지구단위계획구역 및 지구단위계획)을 변경 결정(경미한 사항)하고, 「토지이용규제 기본법」제8조 규정에 의거 지형도면을 고시합니다.",
+    "organ_code": "3130000",
+    "organ_name": "마포구",
+    "notice_type": "결정+지적",
+    "classify_g": "",
+    "classify_m": "",
+    "site_code": "11440",
+    "site_name": "마포구",
+    "location": "신수로6길 22-3",
+    "doc_url": "https://urban.seoul.go.kr/UpisArchive/DATA/PM/pdf/11440TTC202608120008/%EB%AC%B4%EC%87%A0%EB%A7%89%20%EA%B3%A0%EC%8B%9C%EB%AC%B8%28%EC%95%88%29%20%282026.7.16.%29.pdf",
+    "page_url": "https://urban.seoul.go.kr/view/html/PMNU4030100001?noticeCode=11440NTC202608120008",
+    "center_grade": null,
+    "center_name": null,
+    "category": "결정고시"
   }
 ]
