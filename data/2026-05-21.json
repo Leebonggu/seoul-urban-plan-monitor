@@ -258,5 +258,25 @@
     "center_grade": null,
     "center_name": null,
     "category": "결정고시"
+  },
+  {
+    "notice_code": "11000NTC202608140001",
+    "notice_no": "2026-284",
+    "notice_date": "2026-05-21",
+    "title": "도시계획시설(학교) 세부시설조성계획 결정(변경) 및 지형도면 고시(서강대학교)",
+    "content": "대흥 제2구역 주택재개발 정비구역과 중첩되어 현재 도로 및 주택용지로 사용중인 학교시설을 일부 해제하고, 서강대학교 첨단(신기술)분야 미래인재 육성 및 산ㆍ학ㆍ연 협력시설 확충을 위한 혁신성장시설(학생창의연구관) 설치 계획을 반영하여 세부시설조성계획을 결정(변경)하고자 함",
+    "organ_code": "6110000",
+    "organ_name": "서울특별시",
+    "notice_type": "결정+지적",
+    "classify_g": "",
+    "classify_m": "",
+    "site_code": "11000",
+    "site_name": "서울특별시",
+    "location": "마포구 신수동 1-1",
+    "doc_url": "https://urban.seoul.go.kr/UpisArchive/DATA/PM/pdf/11000TTC202608140001/%EA%B3%A0%EC%8B%9C%EB%AC%B8.pdf",
+    "page_url": "https://urban.seoul.go.kr/view/html/PMNU4030100001?noticeCode=11000NTC202608140001",
+    "center_grade": "지역중심",
+    "center_name": "마포",
+    "category": "결정고시"
   }
 ]

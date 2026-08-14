@@ -138,5 +138,25 @@
     "center_grade": null,
     "center_name": null,
     "category": "결정고시"
+  },
+  {
+    "notice_code": "11000NTC202608140003",
+    "notice_no": "2026-436",
+    "notice_date": "2026-07-30",
+    "title": "도시관리계획(도시계획시설:학교) 결정(변경) 및  세부시설조성계획 결정(변경) 및 지형도면 고시(국민대학교)",
+    "content": "성북구 정릉동 산1-214번지 일대 학교법인 소유 토지를 학교시설로 편입하여 제5캠퍼스로 조성하고, 제5캠퍼스 내 교육연구동(체육대학 교사시설 및 평생교육시설) 신축계획을 반영하여 도시관리계획(도시계획시설:학교) 결정(변경) 및 세부시설조성계획을 결정(변경)하고자 함",
+    "organ_code": "6110000",
+    "organ_name": "서울특별시",
+    "notice_type": "결정+지적",
+    "classify_g": "",
+    "classify_m": "",
+    "site_code": "11000",
+    "site_name": "서울특별시",
+    "location": "성북구 정릉동 산1-214",
+    "doc_url": "https://urban.seoul.go.kr/UpisArchive/DATA/PM/pdf/11000TTC202608140003/%EA%B3%A0%EC%8B%9C%EB%AC%B8.pdf",
+    "page_url": "https://urban.seoul.go.kr/view/html/PMNU4030100001?noticeCode=11000NTC202608140003",
+    "center_grade": null,
+    "center_name": null,
+    "category": "결정고시"
   }
 ]

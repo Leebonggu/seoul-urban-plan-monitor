@@ -78,5 +78,25 @@
     "center_grade": null,
     "center_name": null,
     "category": "결정고시"
+  },
+  {
+    "notice_code": "11000NTC202608140002",
+    "notice_no": "2026-409",
+    "notice_date": "2026-07-16",
+    "title": "도시계획시설(학교) 세부시설조성계획 결정(변경) 및 지형도면 고시 (가톨릭대학교)",
+    "content": "서초구 반포동 505번지 일대 가톨릭대학교에 대하여 암치료센터 건립을 위해, 장기계획인 서울성모병원 외래센터를 금회 가톨릭대학교 서울성모 암병원으로 계획 변경하고, 준공된 건축물 내용 반영을 위해 세부시설조성계획을 결정(변경)하고자 함.",
+    "organ_code": "6110000",
+    "organ_name": "서울특별시",
+    "notice_type": "결정+지적",
+    "classify_g": "",
+    "classify_m": "",
+    "site_code": "11000",
+    "site_name": "서울특별시",
+    "location": "서초구 반포동 505번지 ",
+    "doc_url": "https://urban.seoul.go.kr/UpisArchive/DATA/PM/pdf/11000TTC202608140002/%EA%B3%A0%EC%8B%9C%EB%AC%B8.pdf",
+    "page_url": "https://urban.seoul.go.kr/view/html/PMNU4030100001?noticeCode=11000NTC202608140002",
+    "center_grade": null,
+    "center_name": null,
+    "category": "결정고시"
   }
 ]
