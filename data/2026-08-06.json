@@ -178,5 +178,25 @@
     "center_grade": null,
     "center_name": null,
     "category": "결정고시"
+  },
+  {
+    "notice_code": "11000NTC202608240006",
+    "notice_no": "2026-447",
+    "notice_date": "2026-08-06",
+    "title": "오목교역 역세권 활성화사업(도시정비형재개발) 정비구역 지정 및 정비계획 결정, 지구단위계획 결정 지형도면 고",
+    "content": "서울특별시 양천구 신정동 86-45번지 일대 오목교역 역세권 활성화사업 (도시정비형 재개발)을 위하여 2026년 6차 도시계획위원회(2026.04.15.) 심의를 거쳐 「도시 및 주거환경정비법」 제 16조에 따라 도시정비형 재개발사업의 정비계획 결정 및 정비구역 지정, 「도시 및 주거환경정비법」 제17조 및 「국토의 계획 및 이용에 관한 법률」 제30조에 따라 지구단위계획구역, 지구단위계획을 결정하고 「토지이용규제 기본법」 제8조 및 같은 법 시행령 제7조의 규정에 의하여 지형도면을 고시합니다.",
+    "organ_code": "6110000",
+    "organ_name": "서울특별시",
+    "notice_type": "결정",
+    "classify_g": "",
+    "classify_m": "",
+    "site_code": "11470",
+    "site_name": "양천구",
+    "location": "신정동 86-45번지 일대",
+    "doc_url": "https://urban.seoul.go.kr/UpisArchive/DATA/PM/pdf/11000TTC202608240006/%EA%B3%A0%EC%8B%9C%EB%AC%B8.pdf",
+    "page_url": "https://urban.seoul.go.kr/view/html/PMNU4030100001?noticeCode=11000NTC202608240006",
+    "center_grade": null,
+    "center_name": null,
+    "category": "결정고시"
   }
 ]
