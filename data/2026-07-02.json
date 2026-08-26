@@ -178,5 +178,25 @@
     "center_grade": "지역중심",
     "center_name": "미아",
     "category": "결정고시"
+  },
+  {
+    "notice_code": "11680NTC202606110002",
+    "notice_no": "2026-123",
+    "notice_date": "2026-07-02",
+    "title": "도시계획시설(종합의료시설)사업 실시계획인가 고시",
+    "content": "울특별시 고시 제2020-356호(2020. 8. 27.)로 최초 결정되고, 서울특별시 강남구 고시 제2026-27호(2026. 2. 12.)로 결정(변경), 서울특별시 강남구 공고 제2026-1361호(2026. 5. 28.)로 실시계획인가 열람공고된 도시계획시설(종합의료시설)에 대하여, 「국토의 계획 및 이용에 관한 법률」제88조에 의거 도시계획시설사업(종합의료시설) 실시계획을 인가하고, 「국토의 계획 및 이용에 관한 법률」제91조, 같은법 시행령 제100조에 의거 고시합니다. ",
+    "organ_code": "3220000",
+    "organ_name": "강남구",
+    "notice_type": "결정+실시",
+    "classify_g": "",
+    "classify_m": "",
+    "site_code": "11680",
+    "site_name": "강남구",
+    "location": "강남구 도곡동 146-92일원",
+    "doc_url": "https://urban.seoul.go.kr/UpisArchive/DATA/PM/pdf/11680TTC202606110002/%EB%B6%99%EC%9E%841_%EC%8B%A4%EC%8B%9C%EA%B3%84%ED%9A%8D%EC%9D%B8%EA%B0%80%20%EA%B3%A0%EC%8B%9C%EB%AC%B8%28%EA%B0%95%EB%82%A8%EA%B5%AC%20%EA%B3%A0%EC%8B%9C%20%EC%A0%9C2026%20123%ED%98%B8%29%20%281%29.hwp",
+    "page_url": "https://urban.seoul.go.kr/view/html/PMNU4030100001?noticeCode=11680NTC202606110002",
+    "center_grade": "도심",
+    "center_name": "강남",
+    "category": "결정고시"
   }
 ]
