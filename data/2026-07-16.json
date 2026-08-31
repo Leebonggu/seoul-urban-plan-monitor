@@ -118,5 +118,25 @@
     "center_grade": "광역중심",
     "center_name": "용산",
     "category": "결정고시"
+  },
+  {
+    "notice_code": "11680NTC202608310001",
+    "notice_no": "2026-413",
+    "notice_date": "2026-07-16",
+    "title": "도시관리계획(국제교류복합지구 지구단위계획) 결정(변경) 및 지형도면 고시",
+    "content": "강남구 삼성동 168-1 일대 삼성역 역세권 활성화사업을 위하여 도시관리계획(국제교류복합지구 지구단위계획)을 결정(변경)하는 사항임",
+    "organ_code": "6110000",
+    "organ_name": "서울특별시",
+    "notice_type": "결정+지적",
+    "classify_g": "",
+    "classify_m": "",
+    "site_code": "11680",
+    "site_name": "강남구",
+    "location": "삼성동 168-1",
+    "doc_url": "https://urban.seoul.go.kr/UpisArchive/DATA/PM/pdf/11680TTC202608310001/seoulsibo_20260716_%EC%82%BC%EC%84%B1%EC%97%AD%20%EC%97%AD%EC%84%B8%EA%B6%8C%20%ED%99%9C%EC%84%B1%ED%99%94%EC%82%AC%EC%97%85%20%EA%B2%B0%EC%A0%95%EA%B3%A0%EC%8B%9C.pdf",
+    "page_url": "https://urban.seoul.go.kr/view/html/PMNU4030100001?noticeCode=11680NTC202608310001",
+    "center_grade": null,
+    "center_name": null,
+    "category": "결정고시"
   }
 ]
