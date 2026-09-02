@@ -228,5 +228,25 @@
     "center_grade": "도심",
     "center_name": "강남",
     "category": "결정고시"
+  },
+  {
+    "notice_code": "11290NTC202609010009",
+    "notice_no": "2026-7",
+    "notice_date": "2026-01-15",
+    "title": "벌집어린이공원 공원조성계획결정(변경) 및 지형도면 고시",
+    "content": "서울특별고시 제2003-41호(2003.03.08.)로 도시계획시설(공원) 결정되고, 서울특별시 성북구 고시 제2010-79호(2010.08.31.)로 조성계획(최초) 수립된 성북구 종암동 134-3 일대 벌집어린이공원에 대하여, 2023년 제3차 도시공원위원회 심의를 거쳐 「도시공원 및 녹지 등에 관한 법률」 제16조의 2 규정에 따라 다음과 같이 공원조성계획을 결정(변경)하고 지형도면 등을 고시합니다.",
+    "organ_code": "3070000",
+    "organ_name": "성북구",
+    "notice_type": "도시계획시설",
+    "classify_g": "",
+    "classify_m": "",
+    "site_code": "11000",
+    "site_name": "",
+    "location": "성북구 종암동 134-3 일대",
+    "doc_url": "https://urban.seoul.go.kr/UpisArchive/DATA/PM/pdf/11290NTC202609010009/%EC%84%B1%EB%B6%81%EA%B5%AC_%EC%A0%9C2026-7%ED%98%B8_%EA%B3%A0%EC%8B%9C.pdf",
+    "page_url": "https://urban.seoul.go.kr/view/html/PMNU4030300001?noticeCode=11290NTC202609010009",
+    "center_grade": null,
+    "center_name": null,
+    "category": "도시계획시설"
   }
 ]
