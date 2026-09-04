@@ -248,5 +248,25 @@
     "center_grade": null,
     "center_name": null,
     "category": "도시계획시설"
+  },
+  {
+    "notice_code": "11290NTC202609020001",
+    "notice_no": "2026-8",
+    "notice_date": "2026-01-15",
+    "title": "범바위어린이공원 공원조성계획결정(변경) 및 지형도면 고시",
+    "content": "총독부고시 제208호(1940.3.12.) 및 성북구고시 제2022-195호(2022.12.8.)로 최종 고시되고 서울시고시 제93호(1984.2.21.) 공원조성계획(변경)결정된 범바위어린이공원에 대하여 「국토의 계획 및 이용에 관한 법률」 제30조와 제32조, 동법 시행령 제25조27조 및 「도시공원 및 녹지 등에 관한 법률」 제16조의2 규정에 따라 다음과 같이 공원조성계획을 결정(변경)하고 지형도면 등을 고시합니다.",
+    "organ_code": "3070000",
+    "organ_name": "성북구",
+    "notice_type": "도시계획시설",
+    "classify_g": "",
+    "classify_m": "",
+    "site_code": "11290",
+    "site_name": "",
+    "location": "성북구 안암동2가 140-3",
+    "doc_url": "https://urban.seoul.go.kr/UpisArchive/DATA/PM/pdf/11290TTC202609020001/%EC%84%B1%EB%B6%81%EA%B5%AC_%EC%A0%9C2026-8%ED%98%B8_%EA%B3%A0%EC%8B%9C.pdf",
+    "page_url": "https://urban.seoul.go.kr/view/html/PMNU4030300001?noticeCode=11290NTC202609020001",
+    "center_grade": null,
+    "center_name": null,
+    "category": "도시계획시설"
   }
 ]
