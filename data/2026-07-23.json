@@ -178,5 +178,25 @@
     "center_grade": null,
     "center_name": null,
     "category": "결정고시"
+  },
+  {
+    "notice_code": "11000NTC202609080003",
+    "notice_no": "2026-422",
+    "notice_date": "2026-07-23",
+    "title": "마곡 도시개발사업 개발계획 변경수립 및 실시계획 변경인가 고시(제2026-422호)",
+    "content": "마곡 도시개발구역에 대하여,「도시개발법」제4조제17조에 따라 도시개발계획 변경수립 및 실시계획 변경인가 하고 같은 법 제9조제18조 및 같은법 시행령 제15조제40조에 따라 이를 고시하며,\n「국토의 계획 및 이용에 관한 법률」제32조 및 같은 법 시행령 제27조와「토지이용규제 기본법」제8조 및 같은 법 시행령 제7조에 따라 지형도면을 고시합니다.",
+    "organ_code": "6110000",
+    "organ_name": "서울특별시",
+    "notice_type": "결정",
+    "classify_g": "",
+    "classify_m": "",
+    "site_code": "11000",
+    "site_name": "서울특별시",
+    "location": "서울시 강서구 마곡동 일원",
+    "doc_url": "https://urban.seoul.go.kr/UpisArchive/DATA/PM/pdf/11000TTC202609080003/%EB%A7%88%EA%B3%A1%20%EB%8F%84%EC%8B%9C%EA%B0%9C%EB%B0%9C%EC%82%AC%EC%97%85%20%EA%B0%9C%EB%B0%9C%EA%B3%84%ED%9A%8D%20%EB%B3%80%EA%B2%BD%EC%88%98%EB%A6%BD%20%EB%B0%8F%20%EC%8B%A4%EC%8B%9C%EA%B3%84%ED%9A%8D%20%EB%B3%80%EA%B2%BD%EC%9D%B8%EA%B0%80%20%EA%B3%A0%EC%8B%9C%28%EC%84%9C%EC%9A%B8%ED%8A%B9%EB%B3%84%EC%8B%9C2026-422%ED%98%B8%29.pdf",
+    "page_url": "https://urban.seoul.go.kr/view/html/PMNU4030100001?noticeCode=11000NTC202609080003",
+    "center_grade": "광역중심",
+    "center_name": "마곡",
+    "category": "결정고시"
   }
 ]
