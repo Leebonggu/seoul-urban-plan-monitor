@@ -198,5 +198,25 @@
     "center_grade": "광역중심",
     "center_name": "마곡",
     "category": "결정고시"
+  },
+  {
+    "notice_code": "11200NTC202609090006",
+    "notice_no": "2026-107",
+    "notice_date": "2026-07-23",
+    "title": "주택건설사업계획 승인 및 도시관리계획(마장동 790-6 외 3필지 공공매입임대주택 지구단위계획구역 및 계획) 결정 및 지형도면 고시",
+    "content": "서울특별시 성동구 마장동 790-6 일원 주택건설사업에 대하여 주택법 제15조에 따라 주택 건설사업계획을 승인하고 이를 고시하며, 같은법 제19조에 따라 의제 처리된 국토의 계획 및 이용에 관한 법률 제30조에 따른 도시관리계획 결정에 대하여 같은 법 제32조 및 토지이용규제 기본법 제8조에 따라 지형도면을 고시합니다.",
+    "organ_code": "3030000",
+    "organ_name": "성동구",
+    "notice_type": "결정+지적",
+    "classify_g": "",
+    "classify_m": "",
+    "site_code": "11200",
+    "site_name": "성동구",
+    "location": "성동구 마장동 790-6 일원",
+    "doc_url": "https://urban.seoul.go.kr/UpisArchive/DATA/PM/pdf/11200TTC202609090006/%EC%84%B1%EB%8F%99%EA%B5%AC%20%EA%B3%A0%EC%8B%9C%20%EC%A0%9C2026-107%ED%98%B8%20%28%EC%82%AC%EC%97%85%EA%B3%84%ED%9A%8D%20%EC%8A%B9%EC%9D%B8%20%EB%B0%8F%20%EC%A7%80%EA%B5%AC%EB%8B%A8%EC%9C%84%EA%B3%84%ED%9A%8D%20%EA%B2%B0%EC%A0%95%20%EA%B3%A0%EC%8B%9C%29.pdf",
+    "page_url": "https://urban.seoul.go.kr/view/html/PMNU4030100001?noticeCode=11200NTC202609090006",
+    "center_grade": null,
+    "center_name": null,
+    "category": "결정고시"
   }
 ]
