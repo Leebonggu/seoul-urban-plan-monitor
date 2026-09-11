@@ -1,0 +1,74 @@
+name: 보도자료(주택) 일일 수집
+
+on:
+  schedule:
+    - cron: '0 3 * * 1-5'    # 평일 UTC 03:00 (KST 12:00 — 조간 발표 후)
+    - cron: '0 13 * * 1-5'   # 평일 UTC 13:00 (KST 22:00 — 석간 발표 후)
+  workflow_dispatch:
+    inputs:
+      backfill:
+        description: '최초 백필 (첫 페이지 20건을 수집만 하고 발행 스킵 마킹)'
+        type: boolean
+        default: false
+      limit:
+        description: '발행 건수 제한'
+        type: number
+        default: 5
+
+permissions:
+  contents: write
+
+jobs:
+  fetch-news:
+    runs-on: ubuntu-latest
+    env:
+      WP_URL: ${{ secrets.WP_URL }}
+      WP_USER: ${{ secrets.WP_USER }}
+      WP_APP_PASSWORD: ${{ secrets.WP_APP_PASSWORD }}
+      WP_NEWS_CATEGORY_ID: ${{ secrets.WP_NEWS_CATEGORY_ID }}
+      ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install dependencies
+        run: pip install requests beautifulsoup4 lxml anthropic
+
+      - name: Fetch news (backfill or incremental)
+        run: |
+          if [ "${{ github.event.inputs.backfill }}" = "true" ]; then
+            python fetch_news_daily.py --backfill
+          else
+            python fetch_news_daily.py
+          fi
+
+      - name: Commit data changes
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/news/ || true
+          if git diff --staged --quiet; then
+            echo "No new news data"
+          else
+            COUNT=$(git diff --staged --stat | grep -c '.json' || echo 0)
+            git commit -m "data(news): 보도자료 업데이트 (${COUNT}개 파일 변경)"
+            git pull --rebase origin main || true
+            git push
+          fi
+
+      - name: Publish to WordPress
+        if: env.WP_URL != '' && github.event.inputs.backfill != 'true'
+        run: |
+          python publish_news_daily.py --limit ${{ github.event.inputs.limit || 5 }}
+
+      - name: Commit published records
+        if: env.WP_URL != '' && github.event.inputs.backfill != 'true'
+        run: |
+          git pull --rebase origin main || true
+          git add data/news/wp_published.json || true
+          git diff --staged --quiet || git commit -m "data(news): WP 발행 기록 업데이트"
+          git push || true
