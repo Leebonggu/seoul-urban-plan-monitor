@@ -20,7 +20,7 @@ PROMPTS_DIR = os.path.join(os.path.dirname(__file__), "prompts")
 DATA_DIR = os.path.join(os.path.dirname(__file__), "data")
 USAGE_LOG_PATH = os.path.join(DATA_DIR, "usage_log.jsonl")
 
-SPECIALIST_MODEL = "claude-haiku-4-5"
+SPECIALIST_MODEL = "claude-sonnet-5"
 EDITOR_MODEL = "claude-sonnet-5"
 
 # 편집장이 최종 생성할 필드 스키마
@@ -118,9 +118,22 @@ _SPECIALIST_FOCUS = {
 }
 
 
+_NO_FABRICATION_RULE = """
+
+## 공통 절대 규칙 — 사실 날조 금지
+이 분석은 실제 블로그에 발행됩니다. 틀린 사실 한 줄이 글 전체의 신뢰를 무너뜨립니다.
+- 고시 내용에 **없는 수치를 만들지 않는다**: 면적·세대수·용적률·건폐율·높이·사업비·공사기간.
+- **기간·연수를 추정하지 않는다**: "수십 년간", "40년 가까이", "30년째" 등. 고시문에 연도가 없으면 쓰지 않는다.
+- **구체적 과거 사례를 연도·지명·기업명과 함께 인용하지 않는다.** 기억에 의존한 인용은 대부분 부정확하다.
+  비교가 필요하면 고유명사 없이 일반적 메커니즘으로 서술한다.
+- **건물 용도를 단정하지 않는다**: 고시문이 "복합개발"이라고만 하면 "아파트", "오피스텔" 등으로 구체화하지 않는다.
+- 근거가 없으면 그 문장을 **쓰지 않는다**. 분석이 짧아지는 것이 틀리는 것보다 낫다.
+- 고시문에 정보가 없다는 사실 자체를 짚는 것은 좋다 ("이번 고시문에는 용적률이 명시돼 있지 않다")."""
+
+
 def _run_specialist(client: anthropic.Anthropic, record: dict, persona_file: str) -> str:
     """단일 전문가 분석 실행. 결과는 텍스트."""
-    persona = _read_prompt_file(persona_file)
+    persona = _read_prompt_file(persona_file) + _NO_FABRICATION_RULE
     focus = _SPECIALIST_FOCUS[persona_file]
     user_content = f"""## 고시문 정보
 {_record_summary(record)}
@@ -133,7 +146,7 @@ def _run_specialist(client: anthropic.Anthropic, record: dict, persona_file: str
 
     message = client.messages.create(
         model=SPECIALIST_MODEL,
-        max_tokens=600,
+        max_tokens=4000,
         system=persona,
         messages=[{"role": "user", "content": user_content}],
     )
