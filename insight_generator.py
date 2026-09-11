@@ -25,7 +25,7 @@ EDITOR_MODEL = "claude-sonnet-5"
 
 # 편집장이 최종 생성할 필드 스키마
 OUTPUT_FORMAT = """{
-  "hook": "독자의 관심을 끄는 도입부 1~2문장. 질문형이나 흥미로운 사실로 시작",
+  "hook": "독자의 관심을 끄는 도입부 1~2문장. 질문형으로 열거나, 고시 내용에 실제로 적힌 사실로 시작. 흥미를 위해 연수·규모 같은 수치를 지어내지 말 것 ('40년 가까이', '수십 년째' 등 근거 없는 표현 금지)",
   "summary": "이 고시가 무엇인지 쉽게 풀어쓴 설명. 3~5문장.",
   "background": "이 고시가 나오게 된 배경. 해당 지역의 맥락, 개발 흐름, 왜 지금 이 결정이 나왔는지. 3~5문장.",
   "key_changes": "핵심 변경 내용. 용적률·건폐율·높이 등 수치 포함. 3~5문장.",
@@ -67,6 +67,11 @@ def _read_prompt_file(filename: str) -> str:
     path = os.path.join(PROMPTS_DIR, filename)
     with open(path, "r", encoding="utf-8") as f:
         return f.read()
+
+
+def _response_text(message) -> str:
+    """응답에서 텍스트만 추출. Sonnet 5는 thinking 블록을 함께 반환한다."""
+    return "".join(b.text for b in message.content if b.type == "text").strip()
 
 
 # ─── 고시문 정보 포매터 ───────────────────────────────────────────────────────
@@ -132,7 +137,7 @@ def _run_specialist(client: anthropic.Anthropic, record: dict, persona_file: str
         system=persona,
         messages=[{"role": "user", "content": user_content}],
     )
-    return message.content[0].text.strip()
+    return _response_text(message)
 
 
 # ─── 2단계: 편집장 통합 ───────────────────────────────────────────────────────
@@ -153,7 +158,15 @@ def _build_editor_system() -> list[dict]:
 - 같은 문장 시작 패턴(주어+서술어 나열, "첫째/둘째/셋째" 식 기계적 병렬)을 반복하지 않는다.
 - 각 필드 안에서 사실 나열에 그치지 말고 인과관계·비교·맥락을 최소 한 번은 짚는다 (단, 근거는 고시 내용·정책 레퍼런스·전문가 분석 안에 있을 때만 사용).
 - 과장된 수식어("혁신적인", "획기적인")나 근거 없는 추정 표현을 피한다. 확신이 없으면 문장 자체를 빼거나 조건을 명시한다.
-- 원문·전문가 분석에 없는 사실·수치·통계를 지어내지 않는다.
+
+## 사실 검증 — 발행 전 마지막 관문
+당신은 이 글의 마지막 검수자입니다. 전문가 분석에 아래가 섞여 있으면 **그대로 옮기지 말고 삭제하거나 일반적 서술로 바꾸세요.**
+- **연도·지명·기업명이 붙은 구체적 과거 사례** ("2019년 강남구 OO부지 개발 사례를 보면~"). 전문가가 기억에 의존해 지어낸 것일 가능성이 높습니다. 고유명사 없는 일반적 패턴 서술로 바꾸세요.
+- **고시 내용에 없는 수치** — 면적·세대수·용적률·사업비·공사기간. "약 3만 평대로 추정" 같은 표현이 보이면 삭제하세요.
+- `key_stats`에는 **고시 내용에 명시적으로 적힌 값만** 넣습니다. 채울 항목이 부족하면 항목 수를 줄이세요 — 빈칸을 추정으로 메우지 마세요.
+- 고시문이 다루지 않는 후속 절차의 소요 기간을 단정하지 마세요 ("통상 1~2년" 등은 근거가 있을 때만).
+
+원문·전문가 분석에 근거가 없는 사실은, 글이 빈약해지더라도 쓰지 않습니다.
 
 ## 참고: 서울시 정책 컨텍스트
 
@@ -205,11 +218,11 @@ def _run_editor(
 
     message = client.messages.create(
         model=EDITOR_MODEL,
-        max_tokens=3500,
+        max_tokens=16000,
         system=system_blocks,
         messages=[{"role": "user", "content": user_content}],
     )
-    return message.content[0].text.strip(), message.usage
+    return _response_text(message), message.usage
 
 
 # ─── 사용량 로깅 ─────────────────────────────────────────────────────────────

@@ -13,7 +13,7 @@ logger = logging.getLogger(__name__)
 
 PROMPTS_DIR = os.path.join(os.path.dirname(__file__), "prompts")
 INTRO_MODEL = "claude-sonnet-5"
-INTRO_MAX_TOKENS = 700
+INTRO_MAX_TOKENS = 4000
 
 
 def _read_intro_prompt() -> str:
@@ -56,7 +56,8 @@ def generate_intro(record: dict) -> str | None:
             system=_read_intro_prompt(),
             messages=[{"role": "user", "content": user_content}],
         )
-        return msg.content[0].text.strip()
+        # Sonnet 5는 thinking 블록을 함께 반환하므로 텍스트 블록만 골라낸다
+        return "".join(b.text for b in msg.content if b.type == "text").strip()
     except Exception as e:
         logger.error(f"인트로 생성 실패: {e}")
         return None
