@@ -8,6 +8,22 @@ def _auth():
     return (WP_USER, WP_APP_PASSWORD)
 
 
+def _raise_for_status(resp):
+    """실패 시 WP가 돌려준 에러 코드·메시지까지 담아 예외를 발생시킨다.
+
+    raise_for_status()만 쓰면 본문이 사라져 403의 원인(권한 부족인지 WAF 차단인지)을
+    구분할 수 없다.
+    """
+    if resp.ok:
+        return
+    try:
+        body = resp.json()
+        detail = f"{body.get('code', '?')}: {body.get('message', '')}"
+    except ValueError:
+        detail = resp.text[:300]
+    raise requests.HTTPError(f"{resp.status_code} {resp.reason} — {detail}", response=resp)
+
+
 def upload_image(image_path: str) -> dict:
     """이미지를 WP Media Library에 업로드."""
     filename = os.path.basename(image_path)
@@ -22,7 +38,7 @@ def upload_image(image_path: str) -> dict:
             data=f.read(),
             timeout=60,
         )
-    resp.raise_for_status()
+    _raise_for_status(resp)
     return resp.json()
 
 
@@ -45,7 +61,7 @@ def create_post(title: str, html: str, status: str = "publish", categories: list
         json=payload,
         timeout=30,
     )
-    resp.raise_for_status()
+    _raise_for_status(resp)
     return resp.json()
 
 
