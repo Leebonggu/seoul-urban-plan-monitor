@@ -188,5 +188,25 @@
     "page_url": "https://urban.seoul.go.kr/view/html/PMNU4030100001?noticeCode=11305NTC202601060008",
     "center_grade": null,
     "center_name": null
+  },
+  {
+    "notice_code": "11680NTC202608130011",
+    "notice_no": "2025-687",
+    "notice_date": "2025-10-31",
+    "title": "영동한양빌라 가로주택정비사업 조합설립(변경)인가 및 지형도면 고시",
+    "content": "서울특별시 강남구 청담동 34번지외 3필지(34-1, -10, -11) 영동한양빌라 가로주택정비사업에 대하여 「빈집 및 소규모주택 정비에 관한 특례법」 제23조(조합설립인가 등) 제9항에 의거 사업시행구역 등의 지형도면을 아래와 같이 고시합니다.",
+    "organ_code": "3220000",
+    "organ_name": "강남구",
+    "notice_type": "결정+지적",
+    "classify_g": "",
+    "classify_m": "",
+    "site_code": "11000",
+    "site_name": "서울특별시",
+    "location": "서울특별시 강남구 청담동 34번지외 3필지(34-1, -10, -11)",
+    "doc_url": "https://urban.seoul.go.kr/UpisArchive/DATA/PM/pdf/11680NTC202608130011/%EA%B0%95%EB%82%A8%EA%B5%AC_%EC%A0%9C2025-687%ED%98%B8_%EA%B3%A0%EC%8B%9C.pdf",
+    "page_url": "https://urban.seoul.go.kr/view/html/PMNU4030100001?noticeCode=11680NTC202608130011",
+    "center_grade": "도심",
+    "center_name": "강남",
+    "category": "결정고시"
   }
 ]

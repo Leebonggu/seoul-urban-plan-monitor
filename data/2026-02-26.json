@@ -251,5 +251,25 @@
     "center_grade": "도심",
     "center_name": "한양도성(서울도심)",
     "category": "결정고시"
+  },
+  {
+    "notice_code": "11215NTC202609070011",
+    "notice_no": "2026-102",
+    "notice_date": "2026-02-26",
+    "title": "구의자양 재정비촉진지구 재정비촉진계획(자양5촉진구역) 결정(변경) 및 지형도면 고시(자양5 촉진구역 지정(변경) 및 자양13 존치관리구역 지정)",
+    "content": "우리구 자양동 680-81번지 일대 서울특별시 고시 제2006-357호(2006. 10. 19.) 재정비촉진지구 지정, 서울특별시 고시 제 2009-225호(2009. 6. 4.) 재정비촉진계획 결정고시, 서울특별시 고시 제2018-15호(2018. 1. 18.)로 변경결정 고시된 「구의자양 재정비촉진지구 재정비촉진계획」에 대하여, 「도시재정비 촉진을 위한 특별법」제5조 및 제12조에 따라 재정비촉진계획(자양5재정비촉진구역 및 자양13존치관리구역)을 결정(변경)하고 같은법 시행령 제5조 및 제15조에 규정에 따라 고시되었음을 알려드립니다.",
+    "organ_code": "6110000",
+    "organ_name": "서울특별시",
+    "notice_type": "결정+지적",
+    "classify_g": "",
+    "classify_m": "",
+    "site_code": "11215",
+    "site_name": "광진구",
+    "location": "광진구 구의동 246번지, 자양동 680번지 일대",
+    "doc_url": "https://urban.seoul.go.kr/UpisArchive/DATA/PM/pdf/11215TTC202609070011/%EA%B3%A0%EC%8B%9C%EB%AC%B8%28%EC%84%9C%EC%9A%B8%ED%8A%B9%EB%B3%84%EC%8B%9C%EA%B3%A0%EC%8B%9C%20%EC%A0%9C2026-102%ED%98%B8%29.pdf",
+    "page_url": "https://urban.seoul.go.kr/view/html/PMNU4030100001?noticeCode=11215NTC202609070011",
+    "center_grade": null,
+    "center_name": null,
+    "category": "결정고시"
   }
 ]
