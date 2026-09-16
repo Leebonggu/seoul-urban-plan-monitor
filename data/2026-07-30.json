@@ -218,5 +218,25 @@
     "center_grade": "광역중심",
     "center_name": "창동·상계",
     "category": "결정고시"
+  },
+  {
+    "notice_code": "11260NTC202609160012",
+    "notice_no": "2026-88",
+    "notice_date": "2026-07-30",
+    "title": "면목역3의8구역 가로주택정비사업 지형도면 고시",
+    "content": "\n서울특별시 중랑구 면목5동 152-1번지 일대 「면목역3의8구역 가로주택정비사업」의 조합설립(경미한)변경인가 신청과 관련하여, 「토지이용규제 기본법」제8조에 따라 사업시행구역에 관한 지형도면을 다음과 같이 고시합니다.",
+    "organ_code": "3060000",
+    "organ_name": "중랑구",
+    "notice_type": "결정+지적",
+    "classify_g": "",
+    "classify_m": "",
+    "site_code": "11260",
+    "site_name": "중랑구",
+    "location": "면목5동 156-1번지 일대",
+    "doc_url": "https://urban.seoul.go.kr/UpisArchive/DATA/PM/pdf/11260TTC202609160012/%EC%84%9C%EC%9A%B8%ED%8A%B9%EB%B3%84%EC%8B%9C%20%EC%A4%91%EB%9E%91%EA%B5%AC%20%EA%B3%A0%EC%8B%9C%20%28%EC%A0%9C2026-88%ED%98%B8%29.pdf",
+    "page_url": "https://urban.seoul.go.kr/view/html/PMNU4030100001?noticeCode=11260NTC202609160012",
+    "center_grade": null,
+    "center_name": null,
+    "category": "결정고시"
   }
 ]
