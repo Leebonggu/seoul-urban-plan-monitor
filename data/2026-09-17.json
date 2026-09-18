@@ -58,5 +58,25 @@
     "center_grade": null,
     "center_name": null,
     "category": "결정고시"
+  },
+  {
+    "notice_code": "11000NTC202609180009",
+    "notice_no": "2026-521",
+    "notice_date": "2026-09-17",
+    "title": "도시계획시설(전기공급설비, 문화시설, 도로), 용도지역 변경 결정(경미한 변경) 및 지형도면 고시",
+    "content": "도시계획시설(전기공급설비, 문화시설, 도로) 경미한 변경\n용도지역(주거지역 -&gt; 자연녹지이역) 경미한 변경",
+    "organ_code": "6110000",
+    "organ_name": "서울특별시",
+    "notice_type": "결정+지적",
+    "classify_g": "",
+    "classify_m": "",
+    "site_code": "11000",
+    "site_name": "서울특별시",
+    "location": "마포구 합정동 일대",
+    "doc_url": "https://urban.seoul.go.kr/UpisArchive/DATA/PM/pdf/11000TTC202609180009/%EA%B3%A0%EC%8B%9C%EB%AC%B8.pdf",
+    "page_url": "https://urban.seoul.go.kr/view/html/PMNU4030100001?noticeCode=11000NTC202609180009",
+    "center_grade": "지역중심",
+    "center_name": "마포",
+    "category": "결정고시"
   }
 ]
