@@ -178,5 +178,25 @@
     "center_grade": null,
     "center_name": null,
     "category": "결정고시"
+  },
+  {
+    "notice_code": "11260NTC202609280010",
+    "notice_no": "2026-258",
+    "notice_date": "2026-05-14",
+    "title": "묵2동 243-7번지 일대 소규모주택정비 관리계획(모아타운 관리계획) 승인 및 지형도면 고시",
+    "content": "서울특별시 중랑구 묵2동 243-7번지 일대 소규모주택정비 관리지역(모아타운)\n지정을 위하여 「빈집 및 소규모주택 정비에 관한 특례법」제43조의2(소규모주\n택정비 관리계획의 수립)에 따라 소규모주택정비 관리계획(모아타운 관리계획)\n승인 및 「토지이용규제기본법」제8조 및 같은 법 시행령 제7조 규정에 따라\n지형도면을 고시합니다.",
+    "organ_code": "6110000",
+    "organ_name": "서울특별시",
+    "notice_type": "결정",
+    "classify_g": "",
+    "classify_m": "",
+    "site_code": "11260",
+    "site_name": "중랑구",
+    "location": "묵2동 243-7번지 일대",
+    "doc_url": "https://urban.seoul.go.kr/UpisArchive/DATA/PM/pdf/11260TTC202609280010/%EB%AC%B52%EB%8F%99%20243-7%20%EA%B3%A0%EC%8B%9C%EB%AC%B8.pdf",
+    "page_url": "https://urban.seoul.go.kr/view/html/PMNU4030100001?noticeCode=11260NTC202609280010",
+    "center_grade": null,
+    "center_name": null,
+    "category": "결정고시"
   }
 ]
