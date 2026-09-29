@@ -258,5 +258,25 @@
     "center_grade": "도심",
     "center_name": "여의도·영등포",
     "category": "결정고시"
+  },
+  {
+    "notice_code": "11260NTC202609290022",
+    "notice_no": "2026-453",
+    "notice_date": "2026-08-06",
+    "title": "면목38동 453-1번지 일대 소규모주택정비 관리계획(모아타운 관리계획) 승인 및 지형도면 고시",
+    "content": "노후,불량 주택이 혼재되어 밀집한 지역으로 개발이 어려운 지역에서의 열악한 주거환경 개선을 위한 소규모주택정비사업의 계획적, 효율적 추진을 위한 관리지역 지정",
+    "organ_code": "6110000",
+    "organ_name": "서울특별시",
+    "notice_type": "결정",
+    "classify_g": "",
+    "classify_m": "",
+    "site_code": "11260",
+    "site_name": "중랑구",
+    "location": "면목38동 453-1번지 일대",
+    "doc_url": "https://urban.seoul.go.kr/UpisArchive/DATA/PM/pdf/11260TTC202609290022/260806_%EC%84%9C%EC%9A%B8%ED%8A%B9%EB%B3%84%EC%8B%9C%EA%B3%A0%EC%8B%9C%20%EC%A0%9C2026-453%ED%98%B8.pdf",
+    "page_url": "https://urban.seoul.go.kr/view/html/PMNU4030100001?noticeCode=11260NTC202609290022",
+    "center_grade": null,
+    "center_name": null,
+    "category": "결정고시"
   }
 ]
