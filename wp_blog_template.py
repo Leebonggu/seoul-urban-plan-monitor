@@ -1,16 +1,16 @@
 import os as _os
 import re as _re
 
-_COUPANG_BANNER_1 = (
-    '<script src="https://ads-partners.coupang.com/g.js"></script>'
-    '<script>new PartnersCoupang.G({"id":982014,"template":"carousel",'
-    '"trackingCode":"AF1900878","width":"100%","height":"140","tsource":""});</script>'
+# 광고는 WP Ad Inserter 플러그인이 숏코드 자리에 렌더링한다.
+# 본문에 <script>를 직접 넣으면 NinjaFirewall이 REST 발행 요청을 403으로 차단한다.
+# 블록 1: 쿠팡 키워드기반(982014), 블록 2: 쿠팡 고객관심기반(982015)
+_COUPANG_DISCLOSURE = (
+    '<p style="font-size:12px;color:#9ca3af;margin:0 0 8px;">'
+    '이 포스팅은 쿠팡 파트너스 활동의 일환으로, 이에 따른 일정액의 수수료를 제공받습니다.'
+    '</p>'
 )
-_COUPANG_BANNER_2 = (
-    '<script src="https://ads-partners.coupang.com/g.js"></script>'
-    '<script>new PartnersCoupang.G({"id":982015,"template":"carousel",'
-    '"trackingCode":"AF1900878","width":"100%","height":"140","tsource":""});</script>'
-)
+_COUPANG_BANNER_1 = '[adinserter block="1"]'
+_COUPANG_BANNER_2 = '[adinserter block="2"]'
 
 
 def _bold_numbers(text: str) -> str:
@@ -162,10 +162,7 @@ def generate_wp_content(record: dict, insight: dict | None = None) -> dict:
         # 부동산 영향 직후 — 쿠팡 동적 배너 #1 키워드기반 (관심도 최고점)
         p.append(
             '<div style="margin-bottom:16px;">'
-            '<p style="font-size:12px;color:#9ca3af;margin:0 0 8px;">'
-            '이 포스팅은 쿠팡 파트너스 활동의 일환으로, 이에 따른 일정액의 수수료를 제공받습니다.'
-            '</p>'
-            f'{_COUPANG_BANNER_1}'
+            f'{_COUPANG_DISCLOSURE}{_COUPANG_BANNER_1}'
             '</div>'
         )
         p.append(_divider())

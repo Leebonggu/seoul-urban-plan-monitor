@@ -7,7 +7,7 @@ import logging
 
 import anthropic
 
-from wp_blog_template import _COUPANG_BANNER_2
+from wp_blog_template import _COUPANG_BANNER_2, _COUPANG_DISCLOSURE
 
 logger = logging.getLogger(__name__)
 
@@ -161,10 +161,7 @@ def render(record: dict, intro: str | None = None) -> dict:
     # ── 쿠팡 배너 ───────────────────────────────────────────────────────────
     p.append(
         '<div style="margin-bottom:16px;">'
-        '<p style="font-size:12px;color:#9ca3af;margin:0 0 8px;">'
-        '이 포스팅은 쿠팡 파트너스 활동의 일환으로, 이에 따른 일정액의 수수료를 제공받습니다.'
-        '</p>'
-        f'{_COUPANG_BANNER_2}'
+        f'{_COUPANG_DISCLOSURE}{_COUPANG_BANNER_2}'
         '</div>'
     )
 
