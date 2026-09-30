@@ -138,5 +138,25 @@
     "center_grade": "광역중심",
     "center_name": "잠실",
     "category": "결정고시"
+  },
+  {
+    "notice_code": "11680NTC202609300016",
+    "notice_no": "2026-496",
+    "notice_date": "2026-09-03",
+    "title": "대모산근린공원(개포지구) 조성계획 결정(변경) 및 지형도면 고시",
+    "content": "건설부고시 제138호(1977.7.9.)로 최초 도시계획시설(공원) 결정 및 서울특별시고시 제2020-254호(2020.6.29.)로 최종 도시계획시설(공원) 결정되고, 서울특별시고시 제2025-696호(2025.12.11.)로 공원조성계획 결정(변경)된 대모산근린공원에 대하여, 서울특별시 도시공원위원회 심의를 완료하고 「국토의 계획 및 이용에 관한 법률」제30조, 제32조 및 같은 법 시행령 제25조, 「도시공원 및 녹지 등에 관한 법률」제16조의2 규정에 따라 아래와 같이 공원조성계획 결정(변경)하고 지형도면을 고시합니다.",
+    "organ_code": "6110000",
+    "organ_name": "서울특별시",
+    "notice_type": "결정",
+    "classify_g": "",
+    "classify_m": "",
+    "site_code": "11680",
+    "site_name": "강남구",
+    "location": "서울특별시 강남구 개포동 104-1",
+    "doc_url": "https://urban.seoul.go.kr/UpisArchive/DATA/PM/pdf/11680TTC202609300016/%EA%B3%A0%EC%8B%9C%EB%AC%B8%28%EC%84%9C%EA%B3%A0%20%EC%A0%9C2026-496%ED%98%B8%29_%EB%8C%80%EB%AA%A8%EC%82%B0%EA%B7%BC%EB%A6%B0%EA%B3%B5%EC%9B%90%28%EA%B0%9C%ED%8F%AC%EC%A7%80%EA%B5%AC%29%20%EC%A1%B0%EC%84%B1%EA%B3%84%ED%9A%8D%EA%B2%B0%EC%A0%95%28%EB%B3%80%EA%B2%BD%29.pdf",
+    "page_url": "https://urban.seoul.go.kr/view/html/PMNU4030100001?noticeCode=11680NTC202609300016",
+    "center_grade": "도심",
+    "center_name": "강남",
+    "category": "결정고시"
   }
 ]
