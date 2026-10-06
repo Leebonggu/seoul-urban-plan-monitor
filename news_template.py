@@ -14,6 +14,8 @@ logger = logging.getLogger(__name__)
 PROMPTS_DIR = os.path.join(os.path.dirname(__file__), "prompts")
 INTRO_MODEL = "claude-sonnet-5"
 INTRO_MAX_TOKENS = 4000
+# 인트로는 짧은 요약이라 깊은 thinking이 필요 없다 (기본 high → low)
+INTRO_EFFORT = "low"
 
 
 def _read_intro_prompt() -> str:
@@ -53,6 +55,7 @@ def generate_intro(record: dict) -> str | None:
         msg = client.messages.create(
             model=INTRO_MODEL,
             max_tokens=INTRO_MAX_TOKENS,
+            output_config={"effort": INTRO_EFFORT},
             system=_read_intro_prompt(),
             messages=[{"role": "user", "content": user_content}],
         )

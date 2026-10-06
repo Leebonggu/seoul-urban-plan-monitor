@@ -2,8 +2,11 @@
 고시문 멀티에이전트 인사이트 생성기.
 
 파이프라인:
-  1단계 (전문가 패널) — 도시계획 교수·실전 투자자·생활 전문가 각각 분석 (Haiku)
-  2단계 (편집장 통합) — 세 분석을 하나의 블로그 포스트 JSON으로 합성 (Sonnet)
+  1단계 (전문가 패널) — 도시계획 교수·실전 투자자·생활 전문가 각각 분석 (Sonnet 5, effort=low)
+  2단계 (편집장 통합) — 세 분석을 하나의 블로그 포스트 JSON으로 합성 (Sonnet 5, effort=medium)
+
+Sonnet 5는 기본 effort=high로 thinking을 돌려 출력 토큰 대부분이 thinking에 쓰인다.
+전문가 분석(200~400자)은 low, 편집장 통합은 medium으로 낮춰 비용을 줄인다.
 
 정적 컨텍스트(페르소나·정책 레퍼런스·출력 형식)는 편집장 단계에서 프롬프트 캐싱으로 재사용됩니다.
 매 고시문마다 토큰 사용량을 data/usage_log.jsonl에 기록합니다.
@@ -22,6 +25,8 @@ USAGE_LOG_PATH = os.path.join(DATA_DIR, "usage_log.jsonl")
 
 SPECIALIST_MODEL = "claude-sonnet-5"
 EDITOR_MODEL = "claude-sonnet-5"
+SPECIALIST_EFFORT = "low"
+EDITOR_EFFORT = "medium"
 
 # 편집장이 최종 생성할 필드 스키마
 OUTPUT_FORMAT = """{
@@ -131,8 +136,8 @@ _NO_FABRICATION_RULE = """
 - 고시문에 정보가 없다는 사실 자체를 짚는 것은 좋다 ("이번 고시문에는 용적률이 명시돼 있지 않다")."""
 
 
-def _run_specialist(client: anthropic.Anthropic, record: dict, persona_file: str) -> str:
-    """단일 전문가 분석 실행. 결과는 텍스트."""
+def _run_specialist(client: anthropic.Anthropic, record: dict, persona_file: str) -> tuple[str, object]:
+    """단일 전문가 분석 실행. (텍스트, usage) 반환."""
     persona = _read_prompt_file(persona_file) + _NO_FABRICATION_RULE
     focus = _SPECIALIST_FOCUS[persona_file]
     user_content = f"""## 고시문 정보
@@ -147,10 +152,11 @@ def _run_specialist(client: anthropic.Anthropic, record: dict, persona_file: str
     message = client.messages.create(
         model=SPECIALIST_MODEL,
         max_tokens=4000,
+        output_config={"effort": SPECIALIST_EFFORT},
         system=persona,
         messages=[{"role": "user", "content": user_content}],
     )
-    return _response_text(message)
+    return _response_text(message), message.usage
 
 
 # ─── 2단계: 편집장 통합 ───────────────────────────────────────────────────────
@@ -232,6 +238,7 @@ def _run_editor(
     message = client.messages.create(
         model=EDITOR_MODEL,
         max_tokens=16000,
+        output_config={"effort": EDITOR_EFFORT},
         system=system_blocks,
         messages=[{"role": "user", "content": user_content}],
     )
@@ -240,7 +247,7 @@ def _run_editor(
 
 # ─── 사용량 로깅 ─────────────────────────────────────────────────────────────
 
-def _log_usage(record: dict, usage, specialist_calls: int) -> None:
+def _log_usage(record: dict, usage, specialist_calls: int, specialist_usages: list) -> None:
     """토큰 사용량을 콘솔에 출력하고 data/usage_log.jsonl 에 append."""
     entry = {
         "ts": datetime.now(timezone.utc).isoformat(),
@@ -248,11 +255,18 @@ def _log_usage(record: dict, usage, specialist_calls: int) -> None:
         "specialist_model": SPECIALIST_MODEL,
         "editor_model": EDITOR_MODEL,
         "specialist_calls": specialist_calls,
+        "specialist_effort": SPECIALIST_EFFORT,
+        "editor_effort": EDITOR_EFFORT,
+        "specialist_input_tokens": sum(getattr(u, "input_tokens", 0) for u in specialist_usages),
+        "specialist_output_tokens": sum(getattr(u, "output_tokens", 0) for u in specialist_usages),
         "editor_input_tokens": getattr(usage, "input_tokens", 0),
         "editor_output_tokens": getattr(usage, "output_tokens", 0),
         "editor_cache_creation": getattr(usage, "cache_creation_input_tokens", 0),
         "editor_cache_read": getattr(usage, "cache_read_input_tokens", 0),
     }
+    print(
+        f"    [전문가 합계] in={entry['specialist_input_tokens']} out={entry['specialist_output_tokens']}"
+    )
     print(
         f"    [편집장] in={entry['editor_input_tokens']} out={entry['editor_output_tokens']} "
         f"cache(w/r)={entry['editor_cache_creation']}/{entry['editor_cache_read']}"
@@ -270,8 +284,8 @@ def _log_usage(record: dict, usage, specialist_calls: int) -> None:
 def generate_insight(record: dict) -> dict | None:
     """고시문 레코드에 대해 멀티에이전트 인사이트를 생성합니다.
 
-    1단계: 도시계획 교수·실전 투자자·생활 전문가 각각 분석 (Haiku)
-    2단계: 편집장이 세 분석을 OUTPUT_FORMAT JSON으로 통합 (Sonnet)
+    1단계: 도시계획 교수·실전 투자자·생활 전문가 각각 분석
+    2단계: 편집장이 세 분석을 OUTPUT_FORMAT JSON으로 통합
 
     Returns:
         OUTPUT_FORMAT 스키마를 따르는 dict. 실패 시 None.
@@ -290,11 +304,13 @@ def generate_insight(record: dict) -> dict | None:
         "persona_resident.md",
     ]
     analyses = {}
+    specialist_usages = []
     for persona_file in specialists:
         label = persona_file.replace("persona_", "").replace(".md", "")
         try:
             print(f"    [{label}] 분석 중...")
-            analyses[persona_file] = _run_specialist(client, record, persona_file)
+            analyses[persona_file], usage = _run_specialist(client, record, persona_file)
+            specialist_usages.append(usage)
         except Exception as e:
             print(f"    [{label}] 분석 실패: {e}")
             analyses[persona_file] = "(분석 실패)"
@@ -309,7 +325,7 @@ def generate_insight(record: dict) -> dict | None:
             investor_analysis=analyses["persona_investor.md"],
             resident_analysis=analyses["persona_resident.md"],
         )
-        _log_usage(record, usage, specialist_calls=len(specialists))
+        _log_usage(record, usage, specialist_calls=len(specialists), specialist_usages=specialist_usages)
 
         # 마크다운 코드블록 제거
         if raw.startswith("```"):
