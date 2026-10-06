@@ -60,15 +60,15 @@ jobs:
           fi
 
       - name: Install poppler and Korean fonts
-        if: env.WP_URL != ''
+        if: vars.WP_PUBLISH_ENABLED == 'true' && env.WP_URL != ''
         run: sudo apt-get update && sudo apt-get install -y poppler-utils fonts-noto-cjk
 
       - name: Install Python dependencies for publishing
-        if: env.WP_URL != ''
+        if: vars.WP_PUBLISH_ENABLED == 'true' && env.WP_URL != ''
         run: pip install pdf2image Pillow anthropic
 
       - name: Publish to WordPress
-        if: env.WP_URL != ''
+        if: vars.WP_PUBLISH_ENABLED == 'true' && env.WP_URL != ''
         run: |
           if [ "${{ github.event.inputs.backfill }}" = "true" ]; then
             python publish_daily.py --backfill --count ${{ github.event.inputs.count || 10 }}
@@ -77,7 +77,7 @@ jobs:
           fi
 
       - name: Commit published records
-        if: env.WP_URL != ''
+        if: vars.WP_PUBLISH_ENABLED == 'true' && env.WP_URL != ''
         run: |
           git pull --rebase || true
           git add data/wp_published.json || true

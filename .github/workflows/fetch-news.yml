@@ -61,12 +61,12 @@ jobs:
           fi
 
       - name: Publish to WordPress
-        if: env.WP_URL != '' && github.event.inputs.backfill != 'true'
+        if: vars.WP_PUBLISH_ENABLED == 'true' && env.WP_URL != '' && github.event.inputs.backfill != 'true'
         run: |
           python publish_news_daily.py --limit ${{ github.event.inputs.limit || 5 }}
 
       - name: Commit published records
-        if: env.WP_URL != '' && github.event.inputs.backfill != 'true'
+        if: vars.WP_PUBLISH_ENABLED == 'true' && env.WP_URL != '' && github.event.inputs.backfill != 'true'
         run: |
           git pull --rebase origin main || true
           git add data/news/wp_published.json || true
