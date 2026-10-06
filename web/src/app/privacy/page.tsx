@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/privacy" },
   title: "개인정보처리방침",
   description:
     "서울 결정고시 모니터의 개인정보처리방침. 수집하는 개인정보, 쿠키 및 광고, 데이터 출처 안내.",

@@ -39,6 +39,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   return {
     title,
     description,
+    alternates: {
+      canonical: `/gosi/${notice_code}`,
+    },
     openGraph: {
       title,
       description,

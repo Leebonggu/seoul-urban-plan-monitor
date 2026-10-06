@@ -4,6 +4,7 @@ import SouthwestPlan from "@/components/SouthwestPlan";
 export const dynamic = "force-static";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/southwest" },
   title: "서남권 대개조 2.0 요약",
   description:
     "서울시 서남권 대개조 2.0 정책 핵심 요약. 7.3조 투자, 준공업지역 용적률 400%, 남부순환 지하도로, 마곡·G밸리 산업 거점 혁신.",

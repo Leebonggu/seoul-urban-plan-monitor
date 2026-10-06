@@ -59,9 +59,6 @@ export const metadata: Metadata = {
     index: true,
     follow: true,
   },
-  alternates: {
-    canonical: SITE_URL,
-  },
   verification: {
     google: "FXncF_H5GbKmmq5_GngTbwnNCljEHwJirfkI5F104ag",
     other: {
