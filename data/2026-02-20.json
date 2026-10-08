@@ -17,5 +17,25 @@
     "page_url": "https://urban.seoul.go.kr/view/html/PMNU4030100001?noticeCode=11170NTC202602190001",
     "center_grade": "광역중심",
     "center_name": "용산"
+  },
+  {
+    "notice_code": "99999NTC202610070010",
+    "notice_no": "2026-74",
+    "notice_date": "2026-02-20",
+    "title": "서울신내3 국민임대주택단지 예정지구 지정 변경(22차) 및 실시계획 변경(21차) 승인",
+    "content": "국토교통부고시 제2025-616호(2025. 10. 31)로 예정지구 지정 변경 및 실시계획 변경 승인 고시된 \"서울신내3 국민임대주택단지 예정지구\"에 대하여 종전 「국민임대주택건설 등에 관한 특별조치법」 제5조 및 제11조에 따라 서울신내3 국민임대주택단지 예정지구 지정 변경 및 실시계획 변경을 승인하고, 같은 법 제7조 및 제11조, 「국토의 계획 및 이용에 관한 법률」 제32조 및 「토지이용규제 기본법」 제8조에 의거 지형도면 등을 고시합니다. 관계 서류는 서울특별시 중랑구 도시계획과(02-2094-2176) 및 서울주택도시개발공사 도시개발계획부(02-3410-7592)에 비치하여 일반인에게 보이고 있으며, 지형도면 등은 국토이용정보체계(토지이음, http://www.eum.go.kr)에서 열람이 가능합니다.",
+    "organ_code": "1613000",
+    "organ_name": "국토교통부",
+    "notice_type": "결정+지적",
+    "classify_g": "",
+    "classify_m": "",
+    "site_code": "11000",
+    "site_name": "서울특별시",
+    "location": "중랑구 신내동 일원",
+    "doc_url": "https://urban.seoul.go.kr/UpisArchive/DATA/PM/pdf/99999TTC202610070010/%EA%B5%AD%ED%86%A0%EA%B5%90%ED%86%B5%EB%B6%80_%EC%A0%9C2026-74%ED%98%B8_%EA%B3%A0%EC%8B%9C.pdf",
+    "page_url": "https://urban.seoul.go.kr/view/html/PMNU4030100001?noticeCode=99999NTC202610070010",
+    "center_grade": null,
+    "center_name": null,
+    "category": "결정고시"
   }
 ]

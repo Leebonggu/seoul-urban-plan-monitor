@@ -78,5 +78,25 @@
     "center_grade": null,
     "center_name": null,
     "category": "결정고시"
+  },
+  {
+    "notice_code": "11545NTC202608120005",
+    "notice_no": "2026-103",
+    "notice_date": "2026-10-01",
+    "title": "시흥동 891번지 개발행위허가 제한지역 지정 및 지형도면 고시",
+    "content": "1. 제한지역\n  ○ 위  치 : 서울특별시 금천구 시흥1동 891번지 \n  ○ 면  적 : 4,857.4㎡\n2. 제한근거 및 사유\n  ○ 근  거 : 「국토의 계획 및 이용에 관한 법률」 제63조\n  ○ 사  유 : 정비구역 지정 전 비경제적인 건축행위 및 투기수요 유입 방지\n3. 제한대상 행위\n  ○ 건축물의 건축\n    - 「건축법」 제11조에 따른 건축허가 및 제14조에 따른 건축신고\n    - 「건축법」 제19조에 따른 주택으로의 용도변경\n    - 「건축물대장의 기재 및 관리 등에 관한 규칙」 제15조에 따른 일반건축물의 집합건축물로의 전환\n    - 기타 세대수를 증가시키는 일체 행위\n  ○ 토지분할\n  ○ 상가 분할 등 건축물 대장의 전환",
+    "organ_code": "3170000",
+    "organ_name": "금천구",
+    "notice_type": "결정+지적",
+    "classify_g": "",
+    "classify_m": "",
+    "site_code": "11545",
+    "site_name": "금천구",
+    "location": "시흥1동 891번지",
+    "doc_url": "https://urban.seoul.go.kr/UpisArchive/DATA/PM/pdf/11545TTC202608120005/%EA%B3%A0%EC%8B%9C%EB%AC%B8%28%EC%95%88%29.pdf",
+    "page_url": "https://urban.seoul.go.kr/view/html/PMNU4030100001?noticeCode=11545NTC202608120005",
+    "center_grade": null,
+    "center_name": null,
+    "category": "결정고시"
   }
 ]

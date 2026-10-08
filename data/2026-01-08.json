@@ -93,5 +93,25 @@
     "page_url": "https://urban.seoul.go.kr/view/html/PMNU4030100001?noticeCode=11710NTC202512240001",
     "center_grade": null,
     "center_name": null
+  },
+  {
+    "notice_code": "11000NTC202609180004",
+    "notice_no": "2026-17",
+    "notice_date": "2026-01-08",
+    "title": "난곡동 697-20번지 일대 소규모주택정비 관리계획(모아타운 관리계획) 승인 및 지형도면 고시",
+    "content": "서울특별시 관악구 난곡동 697-20번지 일대 모아타운(소규모주택정비 관리지역) 지정을 위하여 「빈집 및 소규모주택 정비에 관한 특별법」 제43조의2(소규모주택정비 관리계획의 수립)에 따라 소규모주택정비 관리계획(모아타운 관리계획) 승인 및 「토지이용규제 기본법」 제8조 및 같은 법 시행령 제7조 규정에 따라 지형도면을 고시합니다.",
+    "organ_code": "6110000",
+    "organ_name": "서울특별시",
+    "notice_type": "결정+지적",
+    "classify_g": "",
+    "classify_m": "",
+    "site_code": "11000",
+    "site_name": "서울특별시",
+    "location": "난곡동 697-20",
+    "doc_url": "https://urban.seoul.go.kr/UpisArchive/DATA/PM/pdf/11000NTC202609180004/%EC%84%9C%EC%9A%B8%ED%8A%B9%EB%B3%84%EC%8B%9C_%EC%A0%9C2026-17%ED%98%B8_%EA%B3%A0%EC%8B%9C.pdf",
+    "page_url": "https://urban.seoul.go.kr/view/html/PMNU4030100001?noticeCode=11000NTC202609180004",
+    "center_grade": null,
+    "center_name": null,
+    "category": "결정고시"
   }
 ]
