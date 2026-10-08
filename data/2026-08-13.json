@@ -138,5 +138,25 @@
     "center_grade": null,
     "center_name": null,
     "category": "결정고시"
+  },
+  {
+    "notice_code": "11260NTC202610080015",
+    "notice_no": "2026-92",
+    "notice_date": "2026-08-13",
+    "title": "면목역6의1구역 가로주택정비사업 지형도면 고시",
+    "content": "서울특별시 중랑구 면목동 63-28번지 일대 「면목역6의1구역 가로주택정비사업」 사업시행구역과 \n관련하여 「토지이용규제 기본법」 제8조에 따라 사업시행구역에 관한 지형도면을 다음과 같이 \n고시합니다.",
+    "organ_code": "3060000",
+    "organ_name": "중랑구",
+    "notice_type": "결정+지적",
+    "classify_g": "",
+    "classify_m": "",
+    "site_code": "11260",
+    "site_name": "중랑구",
+    "location": " 면목동 63-28번지",
+    "doc_url": "https://urban.seoul.go.kr/UpisArchive/DATA/PM/pdf/11260TTC202610080015/%EC%A0%9C2812%ED%98%B8%288.13.%29.pdf",
+    "page_url": "https://urban.seoul.go.kr/view/html/PMNU4030100001?noticeCode=11260NTC202610080015",
+    "center_grade": "지역중심",
+    "center_name": "목동",
+    "category": "결정고시"
   }
 ]
