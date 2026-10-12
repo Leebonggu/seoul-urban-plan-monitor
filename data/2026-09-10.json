@@ -98,5 +98,25 @@
     "center_grade": "도심",
     "center_name": "한양도성(서울도심)",
     "category": "결정고시"
+  },
+  {
+    "notice_code": "11740NTC202607140012",
+    "notice_no": "2026-512",
+    "notice_date": "2026-09-10",
+    "title": "도시계획시설(명일근린공원) 조성계획 결정(변경)을 위한 열람공고",
+    "content": "건설부고시 제465호(1971.8.6.)로 도시계획시설(공원)로 결정되고, 서울특별시고시 제 2021-677호(2021.12.9.)로 최종 공원조성계획 결정(변경) 및 지형도면 고시된 명일근린공원에 대하여 2026년 제5차 서울특별시 도시공원위원회 심의를 거쳐 「국토의계획 및 이용에 관한 법률」 제30조, 제32조 및 같은 법 시행령 제25조, 「도시공원 및 녹지 등에 관한 법률」 제16조의 2, 「토지이용규제 기본법」 제8조 및 같은 법 시행령 제7조 규정에 따라 다음과 같이 공원조성 계획을 결정(변경)하고 지형도면을 고시합니다.",
+    "organ_code": "6110000",
+    "organ_name": "서울특별시",
+    "notice_type": "결정+실시",
+    "classify_g": "",
+    "classify_m": "",
+    "site_code": "11740",
+    "site_name": "강동구",
+    "location": "서울특별시 강동구 상일동 135번지 일대",
+    "doc_url": "https://urban.seoul.go.kr/UpisArchive/DATA/PM/pdf/11740TTC202607140012/260910_%EC%8B%9C%EB%B3%B4_%EB%AA%85%EC%9D%BC%EA%B7%BC%EB%A6%B0%EA%B3%B5%EC%9B%90%20%EC%A1%B0%EC%84%B1%EA%B3%84%ED%9A%8D%20%EA%B2%B0%EC%A0%95%28%EB%B3%80%EA%B2%BD%29%20%EB%B0%8F%20%EC%A7%80%ED%98%95%EB%8F%84%EB%A9%B4%20%EA%B3%A0%EC%8B%9C.pdf",
+    "page_url": "https://urban.seoul.go.kr/view/html/PMNU4030100001?noticeCode=11740NTC202607140012",
+    "center_grade": null,
+    "center_name": null,
+    "category": "결정고시"
   }
 ]
