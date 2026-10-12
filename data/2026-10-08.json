@@ -18,5 +18,25 @@
     "center_grade": null,
     "center_name": null,
     "category": "결정고시"
+  },
+  {
+    "notice_code": "11620NTC202610120009",
+    "notice_no": "2026-98",
+    "notice_date": "2026-10-08",
+    "title": "도시관리계획(도시계획시설:공원, 주차장) 결정(변경) 및 지형도면 고시",
+    "content": "건설부고시 제320호(1970.7.2.)로 최초결정된 관악구 신림동 103-141번지 도시계획시설(공원) 부지 내 주차장 설치를 위한 도시계획시설(주차장) 중복결정에 대하여「국토의 계획 및 이용에 관한 법률」제30조, 같은 법 시행령 제25조 및「서울특별시 도시계획 조례」제67조 규정에 따라 도시계획시설(공원, 주차장) 결정(변경)하고,「국토의 계획 및 이용에 관한 법률」제32조 및「토지이용규제 기본법」제8조 및 같은 법 시행령 제7조 규정에 따라 지형도면을 작성하여 이를 고시합니다.",
+    "organ_code": "3200000",
+    "organ_name": "관악구",
+    "notice_type": "결정",
+    "classify_g": "",
+    "classify_m": "",
+    "site_code": "11620",
+    "site_name": "관악구",
+    "location": "신림동 103-141번지",
+    "doc_url": "https://urban.seoul.go.kr/UpisArchive/DATA/PM/pdf/11620TTC202610120009/%EA%B4%80%EC%95%85%EA%B5%AC%EA%B3%A0%EC%8B%9C%20%EC%A0%9C2026-98%ED%98%B8.pdf",
+    "page_url": "https://urban.seoul.go.kr/view/html/PMNU4030100001?noticeCode=11620NTC202610120009",
+    "center_grade": null,
+    "center_name": null,
+    "category": "결정고시"
   }
 ]
