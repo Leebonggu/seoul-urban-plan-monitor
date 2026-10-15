@@ -1,5 +1,59 @@
 [
   {
+    "ntt_no": "468202",
+    "title": "(국감보도참고자료) 서울시는 정비계획 결정 기간을 획기적으로 단축, 현장에선 자치구 처리단계에서 지연 사례가 더 큰 문제로 지적 (20261015, 행안위)",
+    "dept": "주택실 주거정비과",
+    "contact": "",
+    "category": "주택",
+    "reg_date": "2026-10-15",
+    "mod_date": "",
+    "body_html": "(국감보도참고자료) 서울시는 정비계획 결정 기간을 획기적으로 단축, 현장에선 자치구 처리단계에서 지연 사례가 더 큰 문제로 지적 (20261015, 행안위)",
+    "attachments": [
+      {
+        "name": "(국감보도참고자료) 서울시는 정비계획 결정 기간을 획기적으로 단축, 현장에선 자치구 처리단계에서 지연 사례가 더 큰 문제로 지적 (20261015, 행안위).hwp",
+        "url": "https://seoulboard.seoul.go.kr/comm/getFile?srvcId=BBSTY1&upperNo=468202&fileTy=ATTACH&fileNo=1&bbsNo=158"
+      }
+    ],
+    "page_url": "https://www.seoul.go.kr/news/news_report.do?bbsNo=158&nttNo=468202",
+    "fetched_at": "2026-10-15T17:34:20"
+  },
+  {
+    "ntt_no": "468194",
+    "title": "(국감보도참고자료) 올해 공공주택 공급 목표 1만호 중 현재 약 5천호만 공급하는 등 공공주택 공급에 소극적인 것 아닌지 (20261015, 행안위)",
+    "dept": "주택실 공공주택과",
+    "contact": "",
+    "category": "주택",
+    "reg_date": "2026-10-15",
+    "mod_date": "",
+    "body_html": "(국감보도참고자료) 올해 공공주택 공급 목표 1만호 중 현재 약 5천호만 공급하는 등 공공주택 공급에 소극적인 것 아닌지 (20261015, 행안위)",
+    "attachments": [
+      {
+        "name": "(국감보도참고자료) 올해 공공주택 공급 목표 1만호 중 현재 약 5천호만 공급하는 등 공공주택 공급에 소극적인 것 아닌지 (20261015, 행안위).hwp",
+        "url": "https://seoulboard.seoul.go.kr/comm/getFile?srvcId=BBSTY1&upperNo=468194&fileTy=ATTACH&fileNo=1&bbsNo=158"
+      }
+    ],
+    "page_url": "https://www.seoul.go.kr/news/news_report.do?bbsNo=158&nttNo=468194",
+    "fetched_at": "2026-10-15T17:34:21"
+  },
+  {
+    "ntt_no": "468192",
+    "title": "(국감보도참고자료) 서울시, GTX-A 조기 개통위해 어떤 보강공법도 수용할 것 (261015, 행안위)",
+    "dept": "도시기반시설본부 도시기반시설본부",
+    "contact": "",
+    "category": "주택",
+    "reg_date": "2026-10-15",
+    "mod_date": "",
+    "body_html": "(국감보도참고자료) 서울시, GTX-A 조기 개통위해 어떤 보강공법도 수용할 것 (261015, 행안위)",
+    "attachments": [
+      {
+        "name": "(국감보도참고자료) 서울시, GTX-A 조기 개통위해 어떤 보강공법도 수용할 것 (261015, 행안위).hwp",
+        "url": "https://seoulboard.seoul.go.kr/comm/getFile?srvcId=BBSTY1&upperNo=468192&fileTy=ATTACH&fileNo=1&bbsNo=158"
+      }
+    ],
+    "page_url": "https://www.seoul.go.kr/news/news_report.do?bbsNo=158&nttNo=468192",
+    "fetched_at": "2026-10-15T17:34:22"
+  },
+  {
     "ntt_no": "468149",
     "title": "서울시, 모아주택 초기사업비 전국 최초 융자…7개 구역 총 80억",
     "dept": "주택실 모아주택과",
