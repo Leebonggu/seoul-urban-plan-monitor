@@ -298,5 +298,25 @@
     "center_grade": "지역중심",
     "center_name": "목동",
     "category": "결정고시"
+  },
+  {
+    "notice_code": "11000NTC202610180002",
+    "notice_no": "2026-464",
+    "notice_date": "2026-08-06",
+    "title": "도시계획시설(도로) 사업 실시계획(최초) 작성 고시",
+    "content": "1. 서울특별시고시 제2010-48호(2010. 2. 18.)호 및 제2026-262호(2026. 5. 14.)호로 결정(변경)되고, 서울특별시공고 제2026-1856(2026. 6. 18.)호로 실시계획작성 열람공고 된 도로에 대하여 실시계획(최초) 작성 고시합니다.\n2.「국토의 계획 및 이용에 관한 법률」제88조 및 같은 법률 시행령 제97조에 따라 실시계획을 작성하고「국토의 계획 및 이용에 관한 법률」제91조 및 같은 법률 시행령 제100조 등 규정에 따라 이를 고시합니다.\n3. 관계도서는 서울특별시 미래공간기획관 미래공간담당관에 비치되었으며 자세한 사항은 미래공간담당관(☎02-2133-7626)으로 문의하시기 바랍니다.",
+    "organ_code": "6110000",
+    "organ_name": "서울특별시",
+    "notice_type": "실시",
+    "classify_g": "",
+    "classify_m": "",
+    "site_code": "11000",
+    "site_name": "서울특별시",
+    "location": "",
+    "doc_url": "https://urban.seoul.go.kr/UpisArchive/DATA/PM/pdf/11000TTC202610180002/%EA%B3%A0%EC%8B%9C%EB%AC%B8%28%EC%84%9C%EC%9A%B8%ED%8A%B9%EB%B3%84%EC%8B%9C%EA%B3%A0%EC%8B%9C%20%EC%A0%9C2026-464%ED%98%B8%29.pdf",
+    "page_url": "https://urban.seoul.go.kr/view/html/PMNU4030100001?noticeCode=11000NTC202610180002",
+    "center_grade": null,
+    "center_name": null,
+    "category": "결정고시"
   }
 ]
