@@ -158,5 +158,25 @@
     "center_grade": null,
     "center_name": null,
     "category": "결정고시"
+  },
+  {
+    "notice_code": "11560NTC202610190006",
+    "notice_no": "2026-158",
+    "notice_date": "2026-10-01",
+    "title": "도시관리계획(부도심권 지구단위계획) 결정(변경) 및 지형도면 고시",
+    "content": "서울특별시고시 제2012-22호(2012. 1. 26.)로 결정(변경)된 부도심권 지구단위계획에 대하여「국토의 계획 및 이용에 관한 법률」 제30조, 같은 법 시행령 제25조의 규정에 따라 지구단위계획의 경미한 사항을 결정(변경)하고, 같은 법 제32조와 「토지이용규제 기본법」 제8조 및 같은 법 시행령 제7조의 규정에 의하여 지형도면을 고시합니다.",
+    "organ_code": "3180000",
+    "organ_name": "영등포구",
+    "notice_type": "결정",
+    "classify_g": "",
+    "classify_m": "",
+    "site_code": "11560",
+    "site_name": "영등포구",
+    "location": "문래동, 영등포동, 당산동 일대",
+    "doc_url": "https://urban.seoul.go.kr/UpisArchive/DATA/PM/pdf/11560TTC202610190006/%EA%B3%A0%EC%8B%9C%EB%AC%B8%28%ED%9A%8D%EC%A7%80%EA%B3%84%ED%9A%8D%20%EC%98%81%EB%93%B1%ED%8F%AC%EB%8F%993%EA%B0%80%2012%202%29.pdf",
+    "page_url": "https://urban.seoul.go.kr/view/html/PMNU4030100001?noticeCode=11560NTC202610190006",
+    "center_grade": "도심",
+    "center_name": "여의도·영등포",
+    "category": "결정고시"
   }
 ]
