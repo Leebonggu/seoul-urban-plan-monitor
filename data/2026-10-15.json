@@ -198,5 +198,25 @@
     "center_grade": "도심",
     "center_name": "한양도성(서울도심)",
     "category": "결정고시"
+  },
+  {
+    "notice_code": "11305NTC202610210011",
+    "notice_no": "2026-566",
+    "notice_date": "2026-10-15",
+    "title": "강북구 번동 429-114번지(번동1지역) 일대 소규모주택정비 관리계획 (모아타운 관리계획) 변경 승인 및 지형도면 고시",
+    "content": "서울특별시 고시 제2022-232호(2022.5.26.)에 따라 모아타운(소규모주택정비 관리지역)으로 지정된번동1지역(번동 429-114번지 일대) 모아타운(소규모주택정비 관리지역)에 대하여 26년 제8차 서울특별시 소규모주택정비 통합심의 소위원회(2026.6.25.) 결과를 반영하여「빈집 및 소규모주택 정비에 관한 특례법」 제43조의2(소규모주택정비 관리계획의 수립)에 따라 소규모주택정비 관리계획(모아타운 관리계획) 변경 승인및「토지이용규제기본법」제8조 및 같은법시행령제7조 규정에 따라 지형도면을 고시합니다.",
+    "organ_code": "6110000",
+    "organ_name": "서울특별시",
+    "notice_type": "결정+지적",
+    "classify_g": "",
+    "classify_m": "",
+    "site_code": "11305",
+    "site_name": "강북구",
+    "location": "번동429-114",
+    "doc_url": "https://urban.seoul.go.kr/UpisArchive/DATA/PM/pdf/11305TTC202610210011/%EA%B0%95%EB%B6%81%EA%B5%AC%20%EB%B2%88%EB%8F%99%20429-114%EB%B2%88%EC%A7%80%28%EB%B2%88%EB%8F%991%EC%A7%80%EC%97%AD%29%20%EC%9D%BC%EB%8C%80%20%EC%86%8C%EA%B7%9C%EB%AA%A8%EC%A3%BC%ED%83%9D%EC%A0%95%EB%B9%84%20%EA%B4%80%EB%A6%AC%EA%B3%84%ED%9A%8D%28%EB%AA%A8%EC%95%84%ED%83%80%EC%9A%B4%20%EA%B4%80%EB%A6%AC%EA%B3%84%ED%9A%8D%29%20%EB%B3%80%EA%B2%BD%20%EC%8A%B9%EC%9D%B8%20%EB%B0%8F%20%EC%A7%80%ED%98%95%EB%8F%84%EB%A9%B4%20%EA%B3%A0%EC%8B%9C.pdf",
+    "page_url": "https://urban.seoul.go.kr/view/html/PMNU4030100001?noticeCode=11305NTC202610210011",
+    "center_grade": null,
+    "center_name": null,
+    "category": "결정고시"
   }
 ]
