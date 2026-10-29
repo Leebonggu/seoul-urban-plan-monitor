@@ -458,5 +458,25 @@
     "center_grade": "지역중심",
     "center_name": "천호·길동",
     "category": "결정고시"
+  },
+  {
+    "notice_code": "11380NTC202610200006",
+    "notice_no": "2026-321",
+    "notice_date": "2026-06-11",
+    "title": "백련근린공원 조성계획 결정(변경) 및 지형도면 고시",
+    "content": "건설교통부 고시 제2181호(1966.2.7.)로 도시계획시설(공원)로 최초 결정 고시되고, 서울특별시고시 제2026-107호(2026.3.5.)로 도시계획시설(공원) 최종 결정(변경) 되었으며, 건설교통부 고시 제201호(1990.4.25.)로 공원조성계획이 최초 고시되었고, 서울특별시고시 제2023-468호(2023.10.26.)로 공원조성계획 결정(변경)된 백련근린공원에 대하여 공원조성계획을 변경하고자 「국토의 계획 및 이용에 관한 법률」 제30조, 제32조, 같은 법 시행령 제25조 및 「도시공원 및 녹지 등에 관한 법률」 제16조의2에 따라 다음과 같이 공원조성계획 결정(변경) 및 지형도면을 고시합니다.",
+    "organ_code": "6110000",
+    "organ_name": "서울특별시",
+    "notice_type": "결정+지적",
+    "classify_g": "",
+    "classify_m": "",
+    "site_code": "11380",
+    "site_name": "은평구",
+    "location": "서울시 서대문구 홍은동 산11번지 일대",
+    "doc_url": "https://urban.seoul.go.kr/UpisArchive/DATA/PM/pdf/11380TTC202610200006/%28%EC%84%9C%EA%B3%A0%20%EC%A0%9C2026-321%ED%98%B8%29%20%EB%B0%B1%EB%A0%A8%EA%B7%BC%EB%A6%B0%EA%B3%B5%EC%9B%90%20%EC%A1%B0%EC%84%B1%EA%B3%84%ED%9A%8D%20%EA%B2%B0%EC%A0%95%28%EB%B3%80%EA%B2%BD%29%20%EB%B0%8F%20%EC%A7%80%ED%98%95%EB%8F%84%EB%A9%B4%20%EA%B3%A0%EC%8B%9C.pdf",
+    "page_url": "https://urban.seoul.go.kr/view/html/PMNU4030100001?noticeCode=11380NTC202610200006",
+    "center_grade": null,
+    "center_name": null,
+    "category": "결정고시"
   }
 ]

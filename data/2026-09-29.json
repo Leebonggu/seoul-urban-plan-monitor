@@ -18,5 +18,25 @@
     "center_grade": null,
     "center_name": null,
     "category": "결정고시"
+  },
+  {
+    "notice_code": "11500NTC202511240004",
+    "notice_no": "2026-528",
+    "notice_date": "2026-09-29",
+    "title": "도시관리계획(가양동 CJ공장부지 지구단위계획 및 특별계획구역 세부개발계획) 결정(변경) 및 지형도면 고시",
+    "content": "서울특별시고시 제2012-285호(2012.10.25.) 및 서울특별시고시 제2022-138호(2022.03.31.) 결정되고, 강서구고시 제2025-50호(2025.05.29.)로 결정(변경)된 가양동 CJ공장부지 지구단위계획 결정 및 특별계획구역 세부개발계획 결정(변경)에 대하여 2026년 제13차 서울시 도시건축공동위원회(2026.07.22.) 심의결과(수정가결)를 반영하여, 「국토의 계획 및 이용에 관한 법률」제30조 및 동법 시행령 제25조에 따라 도시관리계획(가양동 CJ공장부지 지구단위계획 및 특별계획구역 세부개발계획)을 결정(변경)하고, 「국토의 계획 및 이용에 관한 법률」제32조, 「토지이용규제 기본법」제8조 및 동법 시행령 제7조에 따라 지형도면을 고시합니다.",
+    "organ_code": "6110000",
+    "organ_name": "서울특별시",
+    "notice_type": "결정+지적",
+    "classify_g": "",
+    "classify_m": "",
+    "site_code": "11500",
+    "site_name": "강서구",
+    "location": "가양동 92-1번지 일대",
+    "doc_url": "https://urban.seoul.go.kr/UpisArchive/DATA/PM/pdf/11500TTC202511240004/%EA%B3%A0%EC%8B%9C%EB%AC%B8%28%EC%84%9C%EC%9A%B8%ED%8A%B9%EB%B3%84%EC%8B%9C%20%EA%B3%A0%EC%8B%9C%202026-528%ED%98%B8%29.pdf",
+    "page_url": "https://urban.seoul.go.kr/view/html/PMNU4030100001?noticeCode=11500NTC202511240004",
+    "center_grade": null,
+    "center_name": null,
+    "category": "결정고시"
   }
 ]
