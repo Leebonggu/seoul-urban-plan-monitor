@@ -278,5 +278,25 @@
     "center_grade": "광역중심",
     "center_name": "창동·상계",
     "category": "결정고시"
+  },
+  {
+    "notice_code": "11140NTC202610210008",
+    "notice_no": "2026-580",
+    "notice_date": "2026-10-15",
+    "title": "충무로5 도시정비형 재개발사업 정비구역 지정정비계획 결정, 지구단위계획구역 지정지구단위계획 결정 및 지형도면 고시",
+    "content": "서울특별시 중구 충무로2가 49-12 일대 충무로5 도시정비형 재개발사업 정비구역 지정 및\n정비계획 결정(안)(충무로5 지구단위계획 및 구역 지정(안) 신설포함)에 관하여 2026년 제4차\n서울특별시 도시계획위원회 심의(2026.03.18.)를 거쳐 「도시 및 주거환경정비법」 제8조, 제16조에\n따라 도시정비형 재개발구역 지정 및 정비계획 결정하고, 「국토의 계획 및 이용에 관한 법률」\n제30조, 제50조에 따라 지구단위계획구역 및 지구단위계획 결정하며, 「토지이용규제 기본법」\n제8조에 따라 지형도면을 고시합니다.\n2026년 10월 15일\n서 울 특 별 시 장",
+    "organ_code": "6110000",
+    "organ_name": "서울특별시",
+    "notice_type": "결정+지적",
+    "classify_g": "",
+    "classify_m": "",
+    "site_code": "11140",
+    "site_name": "중구",
+    "location": "중구 충무로2가 49-12",
+    "doc_url": "https://urban.seoul.go.kr/UpisArchive/DATA/PM/pdf/11140TTC202610210008/%EA%B3%A0%EC%8B%9C%EB%AC%B8%28%EC%B6%A9%EB%AC%B4%EB%A1%9C5%20%EB%8F%84%EC%8B%9C%EC%A0%95%EB%B9%84%ED%98%95%20%EC%9E%AC%EA%B0%9C%EB%B0%9C%EC%82%AC%EC%97%85%20%EC%A0%95%EB%B9%84%EA%B5%AC%EC%97%AD%20%EC%A7%80%EC%A0%95%20%EB%B0%8F%20%EC%A0%95%EB%B9%84%EA%B3%84%ED%9A%8D%20%EA%B2%B0%EC%A0%95%29.pdf",
+    "page_url": "https://urban.seoul.go.kr/view/html/PMNU4030100001?noticeCode=11140NTC202610210008",
+    "center_grade": "도심",
+    "center_name": "한양도성(서울도심)",
+    "category": "결정고시"
   }
 ]

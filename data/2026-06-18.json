@@ -258,5 +258,25 @@
     "center_grade": null,
     "center_name": null,
     "category": "결정고시"
+  },
+  {
+    "notice_code": "11000NTC202609150002",
+    "notice_no": "2026-349",
+    "notice_date": "2026-06-18",
+    "title": "청화아파트 재건축사업 정비구역 지정 및 정비계획 결정, 지구단위계획구역 지정 및 지구단위계획 결정  지형도면 고시",
+    "content": "서울특별시 용산구 이태원동 22-2번지 일원 청화아파트의 재건축사업 시행을 위하여 「도시 및 주거환경정비법」 제15조 및 제16조에 따라 주민공람, 주민설명회, 구의회의견청취, 2026년 제1차 도시계획위원회 신속통합기획 정비사업 등 수권분과위원회(2026.2.6.) 심의 및 주민(재)공람 등을 거쳐 정비구역 지정 및 정비계획 결정하고, 「도시 및 주거환경정비법」 제17조 및 「국토의 계획 및 이용에 관한 법률」 제50조에 따라 지구단위계획구역 지정 및 지구단위계획 결정 고시하며, 「토지이용규제 기본법」 제8조에 따라 지형도면을 고시합니다.",
+    "organ_code": "6110000",
+    "organ_name": "서울특별시",
+    "notice_type": "결정+지적",
+    "classify_g": "",
+    "classify_m": "",
+    "site_code": "11000",
+    "site_name": "서울특별시",
+    "location": "용산구 이태원동 22-2",
+    "doc_url": "https://urban.seoul.go.kr/UpisArchive/DATA/PM/pdf/11000TTC202609150002/%EA%B3%A0%EC%8B%9C%EB%AC%B8%28%EC%95%88%29_%EC%B2%AD%ED%99%94%282026-349%29.pdf",
+    "page_url": "https://urban.seoul.go.kr/view/html/PMNU4030100001?noticeCode=11000NTC202609150002",
+    "center_grade": "광역중심",
+    "center_name": "용산",
+    "category": "결정고시"
   }
 ]
