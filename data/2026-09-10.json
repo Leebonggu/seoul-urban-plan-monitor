@@ -158,5 +158,25 @@
     "center_grade": "광역중심",
     "center_name": "용산",
     "category": "결정고시"
+  },
+  {
+    "notice_code": "11200NTC202611100006",
+    "notice_no": "2026-515",
+    "notice_date": "2026-09-10",
+    "title": "응봉근린공원 조성계획 결정(경미한 변경) 및 지형도면 고시",
+    "content": "1977.7.9. 도시계획시설(공원) 최초 결정되고, 서울특별시 고시 제2026-243호(2026.5.7.)로 \n공원조성계획 결정(변경)된 응봉근린공원에 대하여「국토의 계획 및 이용에 관한 법률」제30\n조제32조 및 동법 시행령 제25조와「도시공원 및 녹지 등에 관한 법률」제16조의2 규정에 따\n라, 다음과 같이 공원조성계획을 변경 결정하고 지형도면 등을 고시합니다.\n",
+    "organ_code": "6110000",
+    "organ_name": "서울특별시",
+    "notice_type": "결정+지적",
+    "classify_g": "",
+    "classify_m": "",
+    "site_code": "11200",
+    "site_name": "성동구",
+    "location": "성동구 금호동1가 산37-1일대",
+    "doc_url": "https://urban.seoul.go.kr/UpisArchive/DATA/PM/pdf/11200TTC202611100006/%EC%84%9C%EC%9A%B8%ED%8A%B9%EB%B3%84%EC%8B%9C%EA%B3%A0%EC%8B%9C%20%EC%A0%9C2026-515%ED%98%B8%28%EC%9D%91%EB%B4%89%EA%B7%BC%EB%A6%B0%EA%B3%B5%EC%9B%90%29.pdf",
+    "page_url": "https://urban.seoul.go.kr/view/html/PMNU4030100001?noticeCode=11200NTC202611100006",
+    "center_grade": null,
+    "center_name": null,
+    "category": "결정고시"
   }
 ]

@@ -178,5 +178,25 @@
     "center_grade": null,
     "center_name": null,
     "category": "결정고시"
+  },
+  {
+    "notice_code": "11200NTC202611100003",
+    "notice_no": "2026-119",
+    "notice_date": "2026-08-27",
+    "title": "성동구 고시 제2026-119",
+    "content": " 서울특별시 고시 제254호(2006.7.20.)로 최초 도시계획시설(공원) 결정되고 서울특별시 성동구 고시 제2011-81호(2011.11.3.)로 도시계획시설결정(변경), 서울특별시 성동구 고시 제51호(2007.7.3.)로 최초 공원조성계획결정되고 서울특별시 성동구 공고 제2009-478호(2009.7.9.)로 공원조성계획결정(변경)된 금동어린이공원 조성계획 변경에 대하여「국토의 계획 및 이용에 관한 법률」제30조32조, 같은법 시행령 제25조 및「도시공원 및 녹지 등에 관한 법률」제16조의2 규정에 따라 다음과 같이 공원조성계획결정(변경)하고 지형도면을 고시합니다.",
+    "organ_code": "3030000",
+    "organ_name": "성동구",
+    "notice_type": "결정+지적",
+    "classify_g": "",
+    "classify_m": "",
+    "site_code": "11200",
+    "site_name": "성동구",
+    "location": "서울특별시 성동구 금호동2가 1218번지 일대",
+    "doc_url": "https://urban.seoul.go.kr/UpisArchive/DATA/PM/pdf/11200TTC202611100003/%EC%84%B1%EB%8F%99%EA%B5%AC%20%EA%B3%A0%EC%8B%9C%20%EC%A0%9C2026-119.hwp",
+    "page_url": "https://urban.seoul.go.kr/view/html/PMNU4030100001?noticeCode=11200NTC202611100003",
+    "center_grade": null,
+    "center_name": null,
+    "category": "결정고시"
   }
 ]

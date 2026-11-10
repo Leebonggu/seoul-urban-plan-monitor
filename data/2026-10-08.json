@@ -118,5 +118,25 @@
     "center_grade": null,
     "center_name": null,
     "category": "결정고시"
+  },
+  {
+    "notice_code": "11200NTC202611100001",
+    "notice_no": "2026-135",
+    "notice_date": "2026-10-08",
+    "title": "성동구 용답동 108-1번지 일대 주택재개발정비사업 어린이공원 조성계획결정 및 지형도면 고시",
+    "content": "서울특별시고시 제2007-332호(2007.09.27.)로 도시계획시설(공원) 지정, 성동구고시 제2020-98호(2020.09.17.)로 지정(변경) 고시된 성동구 용답동 108-1번지 일대 주택재개발정비사업구역 내 어린이공원에 대하여 「국토의 계획 및이용에 관한 법률」제30조와 제32조, 같은 법 시행령 제25조 및 「도시공원 및 녹지 등에 관한 법률」제16조의2에 따라 다음과 같이 공원조성계획을 결정하고 지형도면을 고시합니다",
+    "organ_code": "3030000",
+    "organ_name": "성동구",
+    "notice_type": "결정+지적",
+    "classify_g": "",
+    "classify_m": "",
+    "site_code": "11200",
+    "site_name": "성동구",
+    "location": "성동구 용답동 108-1번지 일대",
+    "doc_url": "https://urban.seoul.go.kr/UpisArchive/DATA/PM/pdf/11200TTC202611100001/%EA%B3%A0%EC%8B%9C%EB%AC%B8.pdf",
+    "page_url": "https://urban.seoul.go.kr/view/html/PMNU4030100001?noticeCode=11200NTC202611100001",
+    "center_grade": null,
+    "center_name": null,
+    "category": "결정고시"
   }
 ]
