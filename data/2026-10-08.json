@@ -138,5 +138,25 @@
     "center_grade": null,
     "center_name": null,
     "category": "결정고시"
+  },
+  {
+    "notice_code": "11710NTC202609220030",
+    "notice_no": "2026-121",
+    "notice_date": "2026-10-08",
+    "title": "행위제한개발행위허가 제한 및 지형도면 고시",
+    "content": "서울특별시 송파구 고시 제2023-120호(2023. 10. 12.)로 행위제한 고시하였으나 아직까지 정비계획 수립이 완료되지 않은 아시아선수촌아파트 외 3개 단지 및 신규 정비계획 수립중인 풍납동 413-1번지 일원 풍납현대아파트에 대하여 「도시 및 주거환경정비법」 제19조 및 같은법 시행령 제16조 규정, 「국토의 계획 및 이용에 관한 법률」 제63조 및 같은법 시행령 제60조 규정에 의거 행위제한개발행위허가제한 고시하고 「토지이용규제기본법」 제8조 및 같은법 시행령 제7조 규정에 의한 지형도면을 함께 고시합니다.",
+    "organ_code": "3230000",
+    "organ_name": "송파구",
+    "notice_type": "결정+지적",
+    "classify_g": "",
+    "classify_m": "",
+    "site_code": "11000",
+    "site_name": "서울특별시",
+    "location": "잠실동 86번지 일대",
+    "doc_url": "https://urban.seoul.go.kr/UpisArchive/DATA/PM/pdf/11710NTC202609220030/%EC%86%A1%ED%8C%8C%EA%B5%AC_%EC%A0%9C2026-121%ED%98%B8_%EA%B3%A0%EC%8B%9C.pdf",
+    "page_url": "https://urban.seoul.go.kr/view/html/PMNU4030100001?noticeCode=11710NTC202609220030",
+    "center_grade": "광역중심",
+    "center_name": "잠실",
+    "category": "결정고시"
   }
 ]
